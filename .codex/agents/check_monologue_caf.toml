@@ -1,0 +1,7 @@
+name = "check_monologue_caf"
+description = "Calculates one independent seven-field CAF run for a W4, W8, or W12 benchmark transcript."
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+developer_instructions = """
+Read track_B/prompts/check_monologue_caf.md first and follow it literally as the canonical role contract. Accept only benchmark transcripts supplied by the parent orchestrator on W4, W8, or W12. Count words AS-IS without cleaning the transcript. Never read other project files, write files, or combine multiple runs. Return explicit STEP 1-4 work and the final seven-field JSON to the parent orchestrator.
+"""

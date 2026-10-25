@@ -1,0 +1,97 @@
+---
+title: Быстрый старт нового урока в отдельном чате
+created: 2026-08-26
+updated: 2026-10-24
+tags: [english, lesson, codex, opencode, claude, github, protocol]
+status: active
+related: [../AGENTS.md, ../CLAUDE.md, ../session.md, today.md, progress.json, ../track_B/local/protocol.md]
+---
+
+# Быстрый старт нового урока (`track_A/LESSON_START.md`)
+
+Это **единая точка входа** для проведения урока в любой среде (**OpenCode**, **OpenAI Codex**, **Claude Code**, **Cursor / Windsurf** или облачный веб-агент на GitHub).
+
+### Какие команды понимает агент:
+- **Обычный следующий урок (по расписанию):**
+  > `Начинаем урок` *(или: `Прочитай AGENTS.md и track_A/LESSON_START.md. Начинаем следующий урок строго по ним.`)*
+- **Урок-повторение после долгого перерыва (без сдвига номера урока):**
+  > `У меня был перерыв, давай проведём урок-повторение пройденного (уроки 1–8) по track_A/LESSON_START.md.`
+- **Замечание прямо во время урока:**
+  > `Запиши в корректировки урока: [что не понравилось / как надо делать]` — оркестратор сразу записывает это в раздел `Pending` файла `Корректировки_урока.md`, не ломая ход урока.
+- **Разбор претензий и починка системы (отдельный чат):**
+  > `Прочитай AGENTS.md (Сценарий Б) и Корректировки_урока.md. Посмотри последний урок — мне не понравилось [X], давай исправим.`
+
+---
+
+## 1. Пошаговый алгоритм оркестратора при старте урока
+
+Для обычного урока **ЗАПРЕЩЕНО** перечитывать весь `session.md`, `track_A/logs/session_history_1_34.md`, `План_реализации.md`, файлы в `track_B/research/` и всю базу `course_base/`.
+
+1. **Синхронизировать Git (если доступен терминал):** молча выполнить `git pull --rebase`, чтобы гарантированно получить актуальную базу после предыдущего занятия. Работа всегда ведётся в основной ветке `main` (отдельные ветки под каждый урок создавать не нужно; если облачный агент автоматически создал ветку, в конце урока он создаёт/вливает PR в `main`).
+2. **Прочитать правила и прогресс:** прочитать `AGENTS.md`, `track_B/local/protocol.md` и `track_A/progress.json`. Вычислить номер текущего урока `lesson_number = days_completed + 1` и взять из `track_A/progress.json` канонические накопительные списки `covered_grammar` и `introduced_material`.
+3. **Выбрать режим урока (Обычный урок `Lesson N` ИЛИ `Refresher` после перерыва):**
+   - **Если ученик попросил обычный урок:** прочитать **только текущую неделю (`current_week`) и текущий день (`current_day`)** из `track_A/program/program.json` (и ровно один файл из `course_base/` или `track_A/program/course_base_index.md`, только если он явно требуется блоком сегодняшнего дня).
+   - **Если ученик попросил повторить пройденное после перерыва (`Refresher Lesson`):** не сдвигать `days_completed` и не брать новую тему из `program.json`. Собрать комбинированный 45-минутный план повторения строго по уже пройденным `covered_grammar` и `introduced_material` из `track_A/progress.json`:
+     1) **SRS-пакет (5–7 мин):** первые 5 карточек из `track_B/local/db/srs_items.json` по ключу `(due_lesson ASC, lapses DESC, id ASC)` через `srs_review`;
+     2) **Обзорная практика грамматики (15–20 мин):** короткое напоминание ключевых контрастов из `covered_grammar` и 6 проверочных предложений по всем пройденным темам через `grammar_lesson` -> `check_grammar` (новые правила не вводить!);
+     3) **Разговорная разминка по фактам курса (15–20 мин):** живой диалог на 4–5 реплик по ключевым тезисам и цифрам из `introduced_material` через `tutor_speaking` (без новых карточек и без новых паттернов).
+4. **Собрать пакет SRS-повторов:** из `track_B/local/db/srs_items.json` выбрать карточки с условием:
+   - `status != "deprecated"`
+   - `reps > 0`
+   - `due_lesson <= lesson_number`
+   Отсортировать строго детерминированно по ключу **`(due_lesson ASC, lapses DESC, id ASC)`** и взять **первые максимум 5 карточек**. Порядок элементов в исходном JSON не использовать.
+5. **Проверить контракт аналитики и pending-правки:** прочитать `track_B/prompts/analytics_contract.md` и раздел `Pending` в `Корректировки_урока.md`.
+6. **Записать `track_A/today.md`:** сформировать файл плана дня строго по каноническому формату из `track_B/local/protocol.md` (обычный урок 40–50 мин, day 7 — 30–45 мин, hard cap 60 мин; пакет SRS в формате P21; списки `covered_grammar` и `introduced_material` из `progress.json`), показать ученику один компактный план в чате и **дождаться подтверждения**.
+7. **Провести блоки урока по маршруту:** передать каждый блок соответствующему субагенту (или исполнить в режиме строгой ролевой изоляции `Single-Agent Fallback` по `track_B/prompts/<role>.md`, если среда не поддерживает субагентов). Все учебные материалы (карточки, правила, тексты, вопросы, разбор ошибок) выдаются **целиком прямо в чате**.
+8. **Закрыть урок сразу после финального блока (Closure + Git Push):** запросить у ученика фактическое время продуктивной учёбы (`actual_learning_min`) в целых минутах (и отдельно `model_wait_min`, если были задержки ответа модели). После явного ответа ученика молча обновить:
+   - дневной лог `track_A/logs/YYYY-MM-DD.md` (по шаблону `track_A/logs/_template_daily.md`),
+   - `track_B/local/db/lesson_sessions.json` (для урока-повторения указать в `notes`: `"Refresher lesson after break"`),
+   - `track_B/local/db/daily_tasks.json`,
+   - `track_B/local/db/error_events.json` (все обнаруженные случаи из `ANALYTICS_PACKET`),
+   - `track_B/local/db/error_log.json` (только повторяющиеся/критичные ошибки по `covered_grammar`),
+   - `track_B/local/db/speaking_recordings.json` (если в уроке был устный/письменный монолог или питч),
+   - `track_B/local/db/assessments.json` (если проводился weekly review или benchmark),
+   - `track_B/local/db/srs_items.json` (обновить **только** показанные карточки; на обычном уроке добавить не более 2 новых карточек из реально разобранного материала с `status: "active"`, `reps: 1`, `lapses: 0`, `interval_lessons: 1`, `due_lesson: lesson_number + 1`; на уроке-повторении `Refresher` новые карточки не добавлять),
+   - `track_A/today.md` (`status: completed`, отметить чекбоксы `Closure`),
+   - `track_A/progress.json` (для обычного урока увеличить `days_completed`, сдвинуть `current_week` / `current_day`, обновить `last_completed_date` и пополнить `covered_grammar` / `introduced_material`; для урока-повторения `Refresher` обновить `last_completed_date` и `note`, оставив `days_completed` прежним, чтобы следующий урок шёл по плану),
+   - верхнюю секцию `Текущий статус` и новую запись в корневом `session.md`.
+   - **Сохранить в Git / GitHub:** если доступен терминал/Git, выполнить `git add -A && git commit -m "Lesson N completed" && git push` в ветку `main` (а если агент работает в облачной песочнице с отдельной веткой — сделать коммит, пуш и создать/слить Pull Request в `main`).
+   Без ответа ученика о фактическом времени в минутах статус `completed` уроку не ставится.
+
+---
+
+## 2. Что оркестратор передаёт в каждый учебный блок
+
+- буквальное содержимое `track_A/today.md`;
+- узкий payload только текущего блока (карточки для SRS, тема для грамматики, факты для чтения, данные для data speaking, возражения для mock pitch);
+- списки `covered_grammar` и `introduced_material` из `today.md`;
+- режим `mode: practice` или `mode: benchmark`;
+- буквальное содержимое `track_B/prompts/analytics_contract.md` (чтобы агент вернул `ANALYTICS_PACKET` оркестратору).
+
+---
+
+## 3. Таблица маршрутизации по дням 7-урочного цикла (100% единые имена ролей)
+
+Единственный источник правды по промптам — папка **`track_B/prompts/`**. Все 12 ролей имеют идентичные имена в `track_B/prompts/`, `.codex/agents/` и `.opencode/agents/`:
+
+| День цикла | Главный навык | Канонический промпт (`track_B/prompts/`) | Субагент Codex (`.codex/agents/`) | Субагент OpenCode (`.opencode/agents/`) |
+|---:|---|---|---|---|
+| **1** | Grammar | `srs_review.md` -> `grammar_lesson.md` -> `check_grammar.md` | `srs_review` -> `grammar_lesson` -> `check_grammar` | `@srs-review` -> `@grammar-lesson` -> `@check-grammar` |
+| **2** | Speaking | `srs_review.md` -> `tutor_speaking.md` | `srs_review` -> `tutor_speaking` | `@srs-review` -> `@tutor-speaking` |
+| **3** | Reading | `srs_review.md` -> `reading_tutor.md` | `srs_review` -> `reading_tutor` | `@srs-review` -> `@reading-tutor` |
+| **4** | Data speaking | `srs_review.md` -> `data_speaking.md` | `srs_review` -> `data_speaking` | `@srs-review` -> `@data-speaking` |
+| **5** | Patterns + Listening | `srs_review.md` -> `patterns_listening.md` | `srs_review` -> `patterns_listening` | `@srs-review` -> `@patterns-listening` |
+| **6 (W1–W5)** | Pitch practice | `srs_review.md` -> `pitch_coach.md` | `srs_review` -> `pitch_coach` | `@srs-review` -> `@pitch-coach` |
+| **6 (W6–W12)** | Mock pitch | `srs_review.md` -> `mock_pitch.md` | `srs_review` -> `mock_pitch` | `@srs-review` -> `@mock-pitch` |
+| **7** | Weekly review / Benchmark | `weekly_review.md` (+ на W4/W8/W12 day 6: `check_monologue.md` + `check_monologue_caf.md` ×3) | `weekly_review` (`check_monologue` + `check_monologue_caf` ×3) | `@weekly-review` (`@check-monologue` + `@check-monologue-caf` ×3) |
+
+### Важные правила исполнения блоков:
+- **SRS-блок:** выдаётся одним нумерованным пакетом до 5 карточек (`front`), ученик отвечает одним сообщением на все 1–5, получает одну общую проверку и (только при ошибках) один общий retry ошибочных номеров до 2 learner-active минут. Время сверх 5 минут вычитается из главного блока урока.
+- **Параллельность:** только 3 прогона `check_monologue_caf.md` (`check_monologue_caf`) на контрольных точках W4/W8/W12 запускаются параллельно (затем оркестратор считает медиану по `track_B/local/median.js`). Все остальные блоки идут строго последовательно.
+
+---
+
+## 4. Как вносить правки в механику уроков (внутри урока и в отдельном чате)
+
+1. **Прямо во время урока:** если ученику что-то не нравится (например, слишком длинные вопросы, неудобная подача карточек или странный пример), ученик пишет прямо в чат урока: *«Запиши в корректировки: мне не нравится X, хочу чтобы было Y»*. Оркестратор сразу записывает это в раздел `Pending` файла `Корректировки_урока.md` и продолжает урок с учётом пожелания.
+2. **В отдельном чате после урока:** ученик запускает любого агента и пишет: *«Прочитай AGENTS.md (Сценарий Б) и Корректировки_урока.md. Посмотри, как прошёл последний урок — давай исправим замечания»*. Агент сверяется с реестром патчей `P1–P24` в `Корректировки_урока.md` (чтобы не сломать старые правила), правит нужные промпты в `track_B/prompts/` и пушит изменения в `main`.

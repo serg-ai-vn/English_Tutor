@@ -1,0 +1,27 @@
+{
+  "current_week": 2,
+  "current_day": 2,
+  "start_date": "2026-08-18",
+  "last_completed_date": "2026-09-01",
+  "days_completed": 8,
+  "covered_grammar": [
+    "Present simple vs present continuous for facts, routines, and current changes (Lesson 1)",
+    "Past simple vs past continuous and used to (Lesson 2)",
+    "Present perfect with for, since, already, and yet, contrasted with past simple (Lesson 3)",
+    "Practised passive forms: is designed, is being repositioned, has been made (Lesson 3)",
+    "Will vs be going to for spontaneous decisions, belief predictions, existing plans/intentions, and evidence-based predictions (Lesson 8)"
+  ],
+  "introduced_material": [
+    "S14: The number that really stands out is that + clause.",
+    "S15: The data clearly shows a strong link between + noun phrase A + and + noun phrase B.",
+    "There is a striking mismatch between national ambitions and on-the-ground capacity.",
+    "English is learned THROUGH commanding AI: the child uses English as a key to solve real tasks.",
+    "The IELTS bubble: families spend up to 100 million VND on test preparation, yet children cannot hold a conversation.",
+    "The white spot: nobody offers English through AI project work with a public English defense for 10-14-year-olds.",
+    "Decision 2371 and the learned reform figures in SRS ids 26 and 49-51 (102,097 unfilled teaching positions, ~22,000 in English; 30 million students across 50,000 institutions; compulsory from Grade 1 in 2026/27, second language by 2035).",
+    "English centers are ready to buy off-the-shelf programs.",
+    "Vocab ids 39-41: undermine (v), mitigate (v), guardrails (n).",
+    "Grammar minimal-pair cards ids 60-61: will (decision now / belief prediction) vs be going to (existing plan / present evidence)."
+  ],
+  "note": "Lessons 1-8 completed. Next: Lesson 9, Week 2 Day 2 speaking. First oldest-due-first SRS batch of 5 cards for Lesson 9: ids 15, 50, 51, 54, 39 (id 40 carries over to Lesson 10)."
+}

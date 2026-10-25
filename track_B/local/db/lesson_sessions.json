@@ -1,0 +1,165 @@
+[
+  {
+    "lesson_number": 1,
+    "lesson_date": "2026-08-18",
+    "week": 1,
+    "cycle_day": 1,
+    "main_skill": "legacy multi-block lesson",
+    "planned_learning_min": 55,
+    "actual_learning_min": null,
+    "wall_clock_span_min": 117.4,
+    "model_wait_min": null,
+    "time_status": "transcript_span_only",
+    "time_source": "OpenCode message timestamps from first to last exported message",
+    "variance_reasons": [
+      "legacy multi-block format",
+      "language-mode correction during lesson",
+      "missing listening link repair",
+      "message span includes model and tool waits"
+    ],
+    "transcript_source": "Черновики/1st-lesson-success.json",
+    "completed": true,
+    "notes": "117.4 minutes is an auditable chat span, not verified productive learning time. Do not use it as actual_learning_min."
+  },
+  {
+    "lesson_number": 2,
+    "lesson_date": "2026-08-19",
+    "week": 1,
+    "cycle_day": 2,
+    "main_skill": "legacy multi-block lesson",
+    "planned_learning_min": 55,
+    "actual_learning_min": null,
+    "wall_clock_span_min": 101.6,
+    "model_wait_min": null,
+    "time_status": "transcript_span_only",
+    "time_source": "OpenCode message timestamps from first to last exported message",
+    "variance_reasons": [
+      "SRS instruction ambiguity and extended clarification",
+      "missing-book instruction repair",
+      "system corrections were discussed during the lesson",
+      "message span includes model and tool waits"
+    ],
+    "transcript_source": "Черновики/lesson-2.json",
+    "completed": true,
+    "notes": "101.6 minutes is an auditable chat span, not verified productive learning time."
+  },
+  {
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "week": 1,
+    "cycle_day": 3,
+    "main_skill": "legacy multi-block lesson",
+    "planned_learning_min": 55,
+    "actual_learning_min": null,
+    "wall_clock_span_min": 130.5,
+    "model_wait_min": null,
+    "time_status": "transcript_span_only",
+    "time_source": "OpenCode message timestamps from first to last exported message",
+    "variance_reasons": [
+      "legacy four-block lesson",
+      "unplanned extra passive block",
+      "lesson-end timebox was not enforced",
+      "message span includes model and tool waits"
+    ],
+    "transcript_source": "Черновики/starting-lesson-3.json",
+    "completed": true,
+    "notes": "130.5 minutes is an auditable chat span, not verified productive learning time."
+  },
+  {
+    "lesson_number": 4,
+    "lesson_date": "2026-08-28",
+    "week": 1,
+    "cycle_day": 4,
+    "main_skill": "data speaking",
+    "planned_learning_min": 40,
+    "actual_learning_min": 30,
+    "wall_clock_span_min": null,
+    "model_wait_min": null,
+    "time_status": "explicit_actual",
+    "time_source": "learner answer in Черновики/Lesson 4.md, top-level USER 14",
+    "variance_reasons": [
+      "completed under the planned window; exact block split was not recorded"
+    ],
+    "transcript_source": "Черновики/Lesson 4.md",
+    "completed": true,
+    "notes": null
+  },
+  {
+    "lesson_number": 5,
+    "lesson_date": "2026-08-29",
+    "week": 1,
+    "cycle_day": 5,
+    "main_skill": "patterns and listening",
+    "planned_learning_min": 45,
+    "actual_learning_min": 60,
+    "wall_clock_span_min": null,
+    "model_wait_min": null,
+    "time_status": "explicit_actual",
+    "time_source": "learner answer in Черновики/Lesson 5.md, top-level USER 19",
+    "variance_reasons": [
+      "SRS warm-up ran for 15 minutes instead of the five-minute hard stop"
+    ],
+    "transcript_source": "Черновики/Lesson 5.md",
+    "completed": true,
+    "notes": "Hard cap reached exactly. No make-up work should be added."
+  },
+  {
+    "lesson_number": 6,
+    "lesson_date": "2026-08-30",
+    "week": 1,
+    "cycle_day": 6,
+    "main_skill": "pitch practice",
+    "planned_learning_min": 50,
+    "actual_learning_min": 30,
+    "wall_clock_span_min": null,
+    "model_wait_min": null,
+    "time_status": "explicit_productive_only",
+    "time_source": "learner answer in Черновики/Lesson 6.md, top-level USER 10",
+    "variance_reasons": [
+      "stronger-model responses added repeated waits of roughly 2-3 minutes; total wait was not measured"
+    ],
+    "transcript_source": "Черновики/Lesson 6.md",
+    "completed": true,
+    "notes": "Actual learning time excludes model latency. Future logs must keep productive time and wall-clock/model wait separate."
+  },
+  {
+    "lesson_number": 7,
+    "lesson_date": "2026-08-31",
+    "week": 1,
+    "cycle_day": 7,
+    "main_skill": "light weekly speaking review",
+    "planned_learning_min": 30,
+    "actual_learning_min": 30,
+    "wall_clock_span_min": null,
+    "model_wait_min": null,
+    "time_status": "explicit_productive_approximate",
+    "time_source": "learner's explicit answer in current Codex lesson chat",
+    "variance_reasons": [
+      "model wait excluded but not measured",
+      "voice-first response was manually self-edited before submission"
+    ],
+    "transcript_source": "current Codex lesson chat",
+    "completed": true,
+    "notes": "Learner first spoke the response, then manually corrected approximately half of the speech-to-text transcript and checked approximately two constructions in notes. Raw transcript/audio not retained; do not use as spontaneous-fluency benchmark."
+  },
+  {
+    "lesson_number": 8,
+    "lesson_date": "2026-09-01",
+    "week": 2,
+    "cycle_day": 1,
+    "main_skill": "grammar accuracy: will vs be going to",
+    "planned_learning_min": 45,
+    "actual_learning_min": 40,
+    "wall_clock_span_min": null,
+    "model_wait_min": null,
+    "time_status": "explicit_productive_only",
+    "time_source": "learner's explicit answer in current Codex lesson chat",
+    "variance_reasons": [
+      "model and tool waits were excluded but not measured",
+      "one under-specified controlled-practice item required clarification and replacement"
+    ],
+    "transcript_source": "current Codex lesson chat",
+    "completed": true,
+    "notes": "SRS hard stop observed. ids 41 and 49 shown; ids 50, 51, 39, and 40 unseen. The original client-request item was ambiguous: both will and be going to can be correct depending on decision-now versus existing-intention meaning. The learner identified the ambiguity and then completed the explicit contrast correctly."
+  }
+]

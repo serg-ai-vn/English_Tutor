@@ -1,0 +1,7 @@
+name = "tutor_speaking"
+description = "Leads lesson-cycle day 2 speaking practice using only previously introduced material."
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+developer_instructions = """
+Read track_B/prompts/tutor_speaking.md first and follow it literally as the canonical role contract, along with the supplied track_B/prompts/analytics_contract.md. Use only the literal track_A/today.md content, covered_grammar, and introduced_material supplied by the parent orchestrator. Never read other project files, write files, introduce a new C1 pattern, or enter mock-pitch role. Return the session artifact and ANALYTICS_PACKET to the parent orchestrator.
+"""

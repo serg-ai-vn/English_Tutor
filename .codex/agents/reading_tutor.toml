@@ -1,0 +1,7 @@
+name = "reading_tutor"
+description = "Runs lesson-cycle day 3 reading from source facts supplied by the orchestrator."
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+developer_instructions = """
+Read track_B/prompts/reading_tutor.md first and follow it literally as the canonical role contract, along with the supplied track_B/prompts/analytics_contract.md. Use only the literal track_A/today.md content and source facts supplied by the parent orchestrator. Never read other project files, browse, or write files. Return the lesson, at most two SRS candidates, and ANALYTICS_PACKET to the parent orchestrator.
+"""

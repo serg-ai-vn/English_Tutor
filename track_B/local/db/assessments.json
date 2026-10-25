@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "assessed_at": "2026-08-12",
+    "type": "test",
+    "scores": {"test": "EF SET (полный 50 минут)", "final": 52, "reading": 56, "listening": 48, "cefr": "B2 Upper Intermediate"},
+    "notes": "Полный EF SET даёт CEFR-позицию; Cambridge test отклонён владельцем 2026-08-13 как дублирующий (без необходимости)."
+  },
+  {
+    "id": 2,
+    "assessed_at": "2026-08-18",
+    "lesson_number": 1,
+    "type": "practice_grammar",
+    "scores": {"target_tense_errors": 0},
+    "notes": "Present simple vs present continuous target held in five course-related sentences. This is practice evidence, not a benchmark.",
+    "source_file": "track_A/logs/2026-08-18.md"
+  },
+  {
+    "id": 3,
+    "assessed_at": "2026-08-19",
+    "lesson_number": 2,
+    "type": "practice_grammar",
+    "scores": {"overall": 7, "target_structures_correct": "5/5"},
+    "notes": "Past simple/continuous and used to. Main residual issue was prepositions; practice score only.",
+    "source_file": "track_A/logs/2026-08-19.md"
+  },
+  {
+    "id": 4,
+    "assessed_at": "2026-08-19",
+    "lesson_number": 2,
+    "type": "practice_monologue",
+    "scores": {"grammar": 5, "vocabulary": 6, "persuasiveness": 6},
+    "notes": "Two-minute why-now output. Missing finite verb and number agreement were priority issues. Not a formal CAF benchmark.",
+    "source_file": "track_A/logs/2026-08-19.md"
+  },
+  {
+    "id": 5,
+    "assessed_at": "2026-08-20",
+    "lesson_number": 3,
+    "type": "practice_grammar",
+    "scores": {"present_perfect": 9},
+    "notes": "Present Perfect controlled practice; practice score only.",
+    "source_file": "track_A/logs/2026-08-20.md"
+  },
+  {
+    "id": 6,
+    "assessed_at": "2026-08-20",
+    "lesson_number": 3,
+    "type": "practice_speaking",
+    "scores": {"present_perfect_control": 8.5},
+    "notes": "Why-now dialogue and summary. Most corrections transferred; since vs from repeated.",
+    "source_file": "track_A/logs/2026-08-20.md"
+  },
+  {
+    "id": 7,
+    "assessed_at": "2026-08-20",
+    "lesson_number": 3,
+    "type": "practice_grammar",
+    "scores": {"advanced_passives": 5.5},
+    "notes": "Passive auxiliary be/been/being was unstable. This extra block belonged to the legacy overloaded lesson format.",
+    "source_file": "track_A/logs/2026-08-20.md"
+  }
+]

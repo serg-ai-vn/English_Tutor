@@ -1,0 +1,2122 @@
+[
+  {
+    "id": "EE-L01-U21",
+    "lesson_number": 1,
+    "lesson_date": "2026-08-18",
+    "block": "grammar_check",
+    "source_file": "Черновики/1st-lesson-success.json",
+    "source_turn": "USER 21",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "currenly",
+        "correction": "currently",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "an AI English Course",
+        "correction": "an AI English course",
+        "category": "word_form",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "children 10-14 years old",
+        "correction": "children aged 10-14",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "compulsary",
+        "correction": "compulsory",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "from Grade 1 in 2026-27 school year",
+        "correction": "from Grade 1 in the 2026-27 school year",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "with public defense",
+        "correction": "with a public defense",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L01-U27",
+    "lesson_number": 1,
+    "lesson_date": "2026-08-18",
+    "block": "listening_response",
+    "source_file": "Черновики/1st-lesson-success.json",
+    "source_turn": "USER 27",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "studens",
+        "correction": "students",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "for chitting their assigment",
+        "correction": "for cheating on their assignments",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "he saks",
+        "correction": "he asks",
+        "category": "spelling",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "has been seen",
+        "correction": "has seen",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "different types of title",
+        "correction": "different types of headlines",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "get for each student an amazing one-to-one AI tutor",
+        "correction": "give each student an amazing one-to-one AI tutor",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "and will be realy great",
+        "correction": "and it will be really useful",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "step by step educational procces",
+        "correction": "a step-by-step educational process",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "grow up on 1-2 level",
+        "correction": "improve by one or two grade levels",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "at the same period",
+        "correction": "over the same period",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L01-U35",
+    "lesson_number": 1,
+    "lesson_date": "2026-08-18",
+    "block": "speaking_dialogue",
+    "source_file": "Черновики/1st-lesson-success.json",
+    "source_turn": "USER 35",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "those 5 lesson",
+        "correction": "those five lessons",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "are MVP version",
+        "correction": "are an MVP version",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "what exactly doom kids they will how to use to build something",
+        "correction": "what exactly the children will do and how they will use AI to build something",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "it will be website website",
+        "correction": "it will be a website",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "They will tell about their hobbies",
+        "correction": "They will talk about their hobbies",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "They will try to be creative no because",
+        "correction": "They will try to be creative because they will work on the design",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "work with design",
+        "correction": "work on the design",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L01-U38",
+    "lesson_number": 1,
+    "lesson_date": "2026-08-18",
+    "block": "speaking_dialogue",
+    "source_file": "Черновики/1st-lesson-success.json",
+    "source_turn": "USER 38",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "They will work With their own",
+        "correction": "They will create their own design",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "we study with the vocabulary",
+        "correction": "we study the vocabulary",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "the promt's structure",
+        "correction": "the prompt structure",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "we practicing to use",
+        "correction": "we practise using",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "create their own wishes",
+        "correction": "express what they want",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "more close for their wishes",
+        "correction": "closer to what they want",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L01-U41",
+    "lesson_number": 1,
+    "lesson_date": "2026-08-18",
+    "block": "speaking_dialogue",
+    "source_file": "Черновики/1st-lesson-success.json",
+    "source_turn": "USER 41",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "checks uh they for example present perfect",
+        "correction": "checks whether they used the present perfect",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "should give their feedback",
+        "correction": "should give feedback",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "what they and what they don't like",
+        "correction": "what they like and what they don't like",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "write one more time but with their changes",
+        "correction": "rewrite it with their changes",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "in on previous",
+        "correction": "in the previous version",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "defense work",
+        "correction": "the defense",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "present their sight",
+        "correction": "present their site",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "protect their decisions",
+        "correction": "defend their decisions",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "Why are choose",
+        "correction": "why they chose",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "instead another one",
+        "correction": "instead of another one",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "what didn't like",
+        "correction": "what they didn't like",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "from They are classmates",
+        "correction": "from their classmates",
+        "category": "grammar",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "EE-L01-U44",
+    "lesson_number": 1,
+    "lesson_date": "2026-08-18",
+    "block": "speaking_dialogue",
+    "source_file": "Черновики/1st-lesson-success.json",
+    "source_turn": "USER 44",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "why your kid needs these AI course",
+        "correction": "why your child needs this AI course",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "at first English is very important",
+        "correction": "first, English is very important",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "Up to 76% schoolchildren extreme stress",
+        "correction": "Up to 76% of schoolchildren report extreme stress",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "preparing for the test for exams",
+        "correction": "preparing for tests and exams",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "there kids can see their result",
+        "correction": "children can see their results there",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "share with their result with their friends",
+        "correction": "share their result with their friends",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "they can send the they're have they are getting skills",
+        "correction": "they gain skills that help them control and change their reality",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "low"
+      },
+      {
+        "error_text": "You stop to feel English difficult",
+        "correction": "You stop feeling that English is difficult",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "it starts to be interesting challenge",
+        "correction": "it becomes an interesting challenge",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "you want to see new result",
+        "correction": "you want to see new results",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "the second the very important reason",
+        "correction": "the second very important reason",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "AI at all",
+        "correction": "AI itself",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "AI is a future",
+        "correction": "AI is the future",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "skills which helps you",
+        "correction": "skills that help you",
+        "category": "grammar",
+        "covered_status": "covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L01-U47",
+    "lesson_number": 1,
+    "lesson_date": "2026-08-18",
+    "block": "speaking_dialogue",
+    "source_file": "Черновики/1st-lesson-success.json",
+    "source_turn": "USER 47",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "through deep research and true",
+        "correction": "through research, and unfortunately it is true",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "when we leave in the world",
+        "correction": "when we live in a world",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "1000 kilobytes information",
+        "correction": "1,000 kilobytes of information",
+        "category": "grammar",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "you are always in stress",
+        "correction": "you are always under stress",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "I didn't talk it to parents",
+        "correction": "I haven't talked about it with parents",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "I'm only practicing to do it",
+        "correction": "I'm only practising how to do it",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "it really important information",
+        "correction": "it is really important information",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "let's finish that",
+        "correction": "let's finish here",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L01-U52",
+    "lesson_number": 1,
+    "lesson_date": "2026-08-18",
+    "block": "speaking_summary",
+    "source_file": "Черновики/1st-lesson-success.json",
+    "source_turn": "USER 52",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "this is one summary",
+        "correction": "this is a summary",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "the course is the court consists",
+        "correction": "the course consists",
+        "category": "broken_phrase",
+        "covered_status": "covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "five lessons where are creating their websites",
+        "correction": "five lessons in which students create their websites",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "practicing with structure",
+        "correction": "practising the structure",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "practicing to give critical feedback",
+        "correction": "practising giving critical feedback",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "children 10-14",
+        "correction": "children aged 10-14",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "level A2B one",
+        "correction": "at level A2-B1",
+        "category": "chunk",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "the result is website",
+        "correction": "the result is a website",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "with their information design about",
+        "correction": "with information about themselves and their own design",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "low"
+      },
+      {
+        "error_text": "the last lesson is defense Public defense",
+        "correction": "the last lesson is a public defense",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L02-U16",
+    "lesson_number": 2,
+    "lesson_date": "2026-08-19",
+    "block": "srs_review",
+    "source_file": "Черновики/lesson-2.json",
+    "source_turn": "USER 16",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "doing something to lose a trust",
+        "correction": "doing something that weakens trust",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "mitigate It means do something",
+        "correction": "mitigate means doing something",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "get lower risks",
+        "correction": "reduce risks",
+        "category": "chunk",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "you have low point and high high point",
+        "correction": "you have a low point and a high point",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "make a middle poin",
+        "correction": "reach a middle point",
+        "category": "chunk",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "why we have three same words",
+        "correction": "why we have the same three words",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "I don't understand I'm it makes me frustrated",
+        "correction": "I don't understand; it makes me frustrated",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "EE-L02-U40",
+    "lesson_number": 2,
+    "lesson_date": "2026-08-19",
+    "block": "grammar_controlled",
+    "source_file": "Черновики/lesson-2.json",
+    "source_turn": "USER 40",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "nobody wasn't listening",
+        "correction": "nobody was listening",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "Teachers didn't used to use",
+        "correction": "Teachers didn't use to use",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "Student used to write essay",
+        "correction": "Students used to write essays",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L02-U43",
+    "lesson_number": 2,
+    "lesson_date": "2026-08-19",
+    "block": "grammar_instruction",
+    "source_file": "Черновики/lesson-2.json",
+    "source_turn": "USER 43",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "Write me russian text",
+        "correction": "Write a Russian text for me",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "tranlate",
+        "correction": "translate",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L02-U45",
+    "lesson_number": 2,
+    "lesson_date": "2026-08-19",
+    "block": "grammar_translation",
+    "source_file": "Черновики/lesson-2.json",
+    "source_turn": "USER 45",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "technogy",
+        "correction": "technology",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "in the class",
+        "correction": "in class",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "preparing to exam",
+        "correction": "preparing for the exam",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "videogames",
+        "correction": "video games",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "waiting their refunds",
+        "correction": "waiting for their refunds",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "by hands",
+        "correction": "by hand",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L02-U51",
+    "lesson_number": 2,
+    "lesson_date": "2026-08-19",
+    "block": "reading_summary",
+    "source_file": "Черновики/lesson-2.json",
+    "source_turn": "USER 51",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "compulsary",
+        "correction": "compulsory",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "in 2026\\27",
+        "correction": "in 2026/27",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "Before it was compulsary from Grade 3",
+        "correction": "Before the reform, English was compulsory from Grade 3",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "makes English a second language before 2035",
+        "correction": "aims to make English a second language by 2035",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "across 50000 institution",
+        "correction": "across 50,000 institutions",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "unfilled teacher position nationwide",
+        "correction": "unfilled teaching positions nationwide",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "programms",
+        "correction": "programs",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L02-U53",
+    "lesson_number": 2,
+    "lesson_date": "2026-08-19",
+    "block": "speaking_monologue",
+    "source_file": "Черновики/lesson-2.json",
+    "source_turn": "USER 53",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "it was grade from grade three",
+        "correction": "English was compulsory from Grade 3",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "As of May 2026 About 102,000 unfilled teaching positions nationwide",
+        "correction": "As of May 2026, there were about 102,000 unfilled teaching positions nationwide",
+        "category": "broken_phrase",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "22,000 of them are English positions",
+        "correction": "22,000 of them are English-teaching positions",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "This conditions makes",
+        "correction": "These conditions create",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "real posibilities",
+        "correction": "real capacity",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "There for",
+        "correction": "Therefore",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U10",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "srs_review",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 10",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "Undermine it in simple words it is to lose the trust",
+        "correction": "In simple words, undermine means to weaken trust",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "mitigate it is a middle between low point and high point",
+        "correction": "mitigate means to make something less severe or harmful",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "guardrails it imeans do something to protect do something to control",
+        "correction": "guardrails are measures that protect and control a system",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "workflow we can which can control AI",
+        "correction": "a workflow that can control AI",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U14",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "srs_review",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 14",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "cusp ... means In Prot Protest in process",
+        "correction": "cusp means the point just before a major change",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling",
+        "confidence": "low"
+      },
+      {
+        "error_text": "I think it's mean",
+        "correction": "I think it means",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "a line what can show analytics",
+        "correction": "a line that can show data",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "numbers or percent",
+        "correction": "numbers or percentages",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "distribution ... it's a process",
+        "correction": "distribution is the way values are spread across a range",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "in this meaning what you wrote me",
+        "correction": "in the meaning you gave me",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U20",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "grammar_controlled",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 20",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "They have already finish the website",
+        "correction": "They have already finished the website",
+        "category": "grammar",
+        "covered_status": "covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U22",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "grammar_instruction",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 22",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "Write me russian sentences",
+        "correction": "Write some Russian sentences for me",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "wiil transalte",
+        "correction": "will translate",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U24",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "grammar_translation",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 24",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "worked on English course through AI",
+        "correction": "worked on an English-through-AI course",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "launched 5 lessons",
+        "correction": "launched a five-lesson course",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "usual English lessons",
+        "correction": "regular English lessons",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U28",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "speaking_dialogue",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 28",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "Lot's of things",
+        "correction": "Lots of things",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "from May 2026",
+        "correction": "since May 2026",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "Decision has made English compulsary",
+        "correction": "Decision 2371 has made English compulsory",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "has aimed to make",
+        "correction": "aims to make",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "languge",
+        "correction": "language",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U31",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "speaking_dialogue",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 31",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "22 000 unfilled teaching position",
+        "correction": "22,000 unfilled teaching positions",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "has made unique avabilities",
+        "correction": "has created unique opportunities",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U34",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "speaking_dialogue",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 34",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "From this year to now is too short period",
+        "correction": "Since then, there has been too little time",
+        "category": "broken_phrase",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "preparing enogh professionals",
+        "correction": "training enough professionals",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "especially combined with teaching positions",
+        "correction": "especially professionals with both AI and teaching skills",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "centers have made only AI courses",
+        "correction": "centers have created only AI courses",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "I have combined both of them",
+        "correction": "I have combined the two fields",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "guess what market needs",
+        "correction": "understand what the market needs",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U37",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "speaking_retry",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 37",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "Lot of things",
+        "correction": "A lot of things",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "from May 2026",
+        "correction": "since May 2026",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "has aimed to make",
+        "correction": "aims to make",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "underground capacity",
+        "correction": "on-the-ground capacity",
+        "category": "chunk",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "positions in English teaching",
+        "correction": "English-teaching positions",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "Very important to understand",
+        "correction": "It is very important to understand",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "From this year to now is too short a period",
+        "correction": "Since then, there has been too little time",
+        "category": "broken_phrase",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "guess what the market needs",
+        "correction": "understand what the market needs",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U42",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "pitch_instruction",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 42",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "Write me russian sentences",
+        "correction": "Write some Russian sentences for me",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "wiil translate",
+        "correction": "will translate",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L03-U44",
+    "lesson_number": 3,
+    "lesson_date": "2026-08-20",
+    "block": "pitch_passive_controlled",
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 44",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "was created by the 5 lessons",
+        "correction": "was designed around five lessons",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "90-mimute duration each of them",
+        "correction": "each lasting 90 minutes",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "English is rethought as an AI language",
+        "correction": "English is being repositioned as the language of AI",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "English has made compulsary",
+        "correction": "English has been made compulsory",
+        "category": "grammar",
+        "covered_status": "covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L04-U06",
+    "lesson_number": 4,
+    "lesson_date": "2026-08-28",
+    "block": "srs_review",
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 6",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "How far values from average",
+        "correction": "how far values are from the average",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L04-U07",
+    "lesson_number": 4,
+    "lesson_date": "2026-08-28",
+    "block": "srs_review",
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 7",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "to spread values across a range",
+        "correction": "the way values are spread across a range",
+        "category": "word_form",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L04-U08",
+    "lesson_number": 4,
+    "lesson_date": "2026-08-28",
+    "block": "srs_review",
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 8",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "already made decisions ready made programs",
+        "correction": "ready-made programs",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L04-U09",
+    "lesson_number": 4,
+    "lesson_date": "2026-08-28",
+    "block": "srs_review",
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 9",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "It is a It is a between goals and real situation",
+        "correction": "It is a gap between the goals and the real situation",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L04-U10",
+    "lesson_number": 4,
+    "lesson_date": "2026-08-28",
+    "block": "data_speaking_professional",
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 10",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "this is the the best for and off the shelf programs",
+        "correction": "this is the best time for off-the-shelf programs",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "This is the best times",
+        "correction": "This is the best time",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "22,000 Anfield teaching positions",
+        "correction": "22,000 unfilled teaching positions",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling",
+        "confidence": "low"
+      },
+      {
+        "error_text": "it's impossible to find them",
+        "correction": "it is difficult to fill them",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "institutions will find decisions",
+        "correction": "institutions will look for solutions",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "create this decision",
+        "correction": "create this solution",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "You can win this",
+        "correction": "You can succeed in this market",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "courses which can give for one on one tutoring",
+        "correction": "courses that can provide one-on-one tutoring",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "for the same price",
+        "correction": "at the same price",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "a chance for success",
+        "correction": "a chance of success",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L04-U11",
+    "lesson_number": 4,
+    "lesson_date": "2026-08-28",
+    "block": "data_speaking_transfer",
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 11",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "You can only the percent of effectivity and will understand everything",
+        "correction": "You can look at the efficiency figures and understand the main change",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      },
+      {
+        "error_text": "effectivity",
+        "correction": "efficiency",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "more student",
+        "correction": "more students",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "for the center it money",
+        "correction": "For the centre, it means more income",
+        "category": "broken_phrase",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "if say about expect",
+        "correction": "if we talk about the wider impact",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "low"
+      },
+      {
+        "error_text": "it can be reputation",
+        "correction": "it can improve the centre's reputation",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "unfilled teaching position",
+        "correction": "unfilled teaching positions",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "students will have better results",
+        "correction": "the data may suggest that students could get better results",
+        "category": "task_pragmatics",
+        "covered_status": "task_pragmatics"
+      }
+    ]
+  },
+  {
+    "id": "EE-L04-U12",
+    "lesson_number": 4,
+    "lesson_date": "2026-08-28",
+    "block": "data_speaking_retry",
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 12",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "this data shows",
+        "correction": "this data may suggest",
+        "category": "task_pragmatics",
+        "covered_status": "task_pragmatics"
+      }
+    ]
+  },
+  {
+    "id": "EE-L05-U06",
+    "lesson_number": 5,
+    "lesson_date": "2026-08-29",
+    "block": "srs_review",
+    "source_file": "Черновики/Lesson 5.md",
+    "source_turn": "top-level USER 6",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "The Aisles Bubble",
+        "correction": "The IELTS bubble",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling",
+        "confidence": "low"
+      },
+      {
+        "error_text": "family spent up to 100 million VND",
+        "correction": "families spend up to 100 million VND",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "hold the conversation",
+        "correction": "hold a conversation",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L05-U08",
+    "lesson_number": 5,
+    "lesson_date": "2026-08-29",
+    "block": "srs_review",
+    "source_file": "Черновики/Lesson 5.md",
+    "source_turn": "top-level USER 8",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "Apex SAAS",
+        "correction": "Apax, SAS",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling",
+        "confidence": "low"
+      },
+      {
+        "error_text": "short models",
+        "correction": "short modules",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "EE-L05-U10-U11",
+    "lesson_number": 5,
+    "lesson_date": "2026-08-29",
+    "block": "srs_review",
+    "source_file": "Черновики/Lesson 5.md",
+    "source_turn": "top-level USER 10 and USER 11",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "The white sport",
+        "correction": "The white spot",
+        "category": "chunk",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "10 14 years old",
+        "correction": "10-14-year-olds",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "10 14 years olds",
+        "correction": "10-14-year-olds",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L05-U16",
+    "lesson_number": 5,
+    "lesson_date": "2026-08-29",
+    "block": "listening_summary",
+    "source_file": "Черновики/Lesson 5.md",
+    "source_turn": "top-level USER 16",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "Sao Khan",
+        "correction": "Sal Khan",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling",
+        "confidence": "low"
+      },
+      {
+        "error_text": "opens the talk with threatening",
+        "correction": "opens the talk with threatening headlines",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "starts from news",
+        "correction": "starts with news headlines",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "the way how to mitigate this problem",
+        "correction": "a way to mitigate this problem",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "opportunitues",
+        "correction": "opportunities",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "opportunities which AI gives",
+        "correction": "opportunities that AI offers",
+        "category": "vocabulary",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "give each student one-on-one tutor",
+        "correction": "give each student a one-on-one tutor",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L05-U17",
+    "lesson_number": 5,
+    "lesson_date": "2026-08-29",
+    "block": "listening_shadowing",
+    "source_file": "Черновики/Lesson 5.md",
+    "source_turn": "top-level USER 17",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "at the cusp of",
+        "correction": "on the cusp of",
+        "category": "chunk",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "W're",
+        "correction": "We're",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "We're going to do that is by giving",
+        "correction": "The way we're going to do that is by giving",
+        "category": "broken_phrase",
+        "covered_status": "not_yet_covered",
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "id": "EE-L06-U04",
+    "lesson_number": 6,
+    "lesson_date": "2026-08-30",
+    "block": "srs_review",
+    "source_file": "Черновики/Lesson 6.md",
+    "source_turn": "top-level USER 4",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "gap between goals and real situation",
+        "correction": "gap between the goals and the real situation",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L06-U06",
+    "lesson_number": 6,
+    "lesson_date": "2026-08-30",
+    "block": "srs_review",
+    "source_file": "Черновики/Lesson 6.md",
+    "source_turn": "top-level USER 6",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "useful for their life",
+        "correction": "useful in their lives",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "English is a key",
+        "correction": "English is the key",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "It isn't only boring subject and test",
+        "correction": "It isn't just a boring subject or a test",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      }
+    ]
+  },
+  {
+    "id": "EE-L06-U07",
+    "lesson_number": 6,
+    "lesson_date": "2026-08-30",
+    "block": "pitch_outline",
+    "source_file": "Черновики/Lesson 6.md",
+    "source_turn": "top-level USER 7",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "with public defense",
+        "correction": "with a public defense",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "for Children 10-14 years old",
+        "correction": "for children aged 10-14",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "useful for their life",
+        "correction": "useful in their lives",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "only boring subject and test",
+        "correction": "just a boring subject or a test",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "creates the situation where",
+        "correction": "creates a situation in which",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "realy",
+        "correction": "really",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L06-U08",
+    "lesson_number": 6,
+    "lesson_date": "2026-08-30",
+    "block": "pitch_first_attempt",
+    "source_file": "Черновики/Lesson 6.md",
+    "source_turn": "top-level USER 8",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "white sport",
+        "correction": "white spot",
+        "category": "chunk",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "with public defense",
+        "correction": "with a public defense",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "children 10 14 years old",
+        "correction": "children aged 10-14",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "What I suggest:",
+        "correction": "What I suggest is ...",
+        "category": "grammar",
+        "covered_status": "covered"
+      },
+      {
+        "error_text": "useful for their life",
+        "correction": "useful in their lives",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "It isn't only a boring subject or a test",
+        "correction": "It isn't just a boring subject or a test",
+        "category": "chunk",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "underground capacity",
+        "correction": "on-the-ground capacity",
+        "category": "chunk",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "off the shelf programs",
+        "correction": "off-the-shelf programs",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L06-U09",
+    "lesson_number": 6,
+    "lesson_date": "2026-08-30",
+    "block": "pitch_retry",
+    "source_file": "Черновики/Lesson 6.md",
+    "source_turn": "top-level USER 9",
+    "capture_status": "backfilled_from_saved_chat",
+    "errors": [
+      {
+        "error_text": "with public defense",
+        "correction": "with a public defense",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "children 10 14 years old",
+        "correction": "children aged 10-14",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "command in AI",
+        "correction": "commanding AI",
+        "category": "chunk",
+        "covered_status": "lexical_or_spelling"
+      },
+      {
+        "error_text": "useful for their life",
+        "correction": "useful in their lives",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "creates the situation where",
+        "correction": "creates a situation in which",
+        "category": "grammar",
+        "covered_status": "not_yet_covered"
+      },
+      {
+        "error_text": "off the shelf programs",
+        "correction": "off-the-shelf programs",
+        "category": "spelling",
+        "covered_status": "lexical_or_spelling"
+      }
+    ]
+  },
+  {
+    "id": "EE-L07-U01",
+    "lesson_number": 7,
+    "lesson_date": "2026-08-31",
+    "block": "weekly_audio_sample",
+    "source_file": "current Codex lesson chat",
+    "source_turn": "learner voice-first response, auto-transcribed and manually self-edited before submission",
+    "source_type": "voice_transcript_manually_self_edited",
+    "capture_status": "captured_live",
+    "process_note": "Learner reports manually correcting approximately half of the auto-transcript and checking approximately two constructions in personal notes. Raw auto-transcript and audio were not retained; do not treat as a spontaneous-fluency benchmark.",
+    "errors": [
+      {
+        "error_text": "with public defense",
+        "correction": "with a public defense",
+        "category": "grammar",
+        "grammar_topic": "articles",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "medium"
+      },
+      {
+        "error_text": "create website about themself",
+        "correction": "create a website about themselves",
+        "category": "grammar",
+        "grammar_topic": "article and reflexive pronoun",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "medium"
+      },
+      {
+        "error_text": "with thanks my course",
+        "correction": "thanks to my course",
+        "category": "chunk",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "meaning_impeding",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "67% of student",
+        "correction": "67% of students",
+        "category": "grammar",
+        "grammar_topic": "plural nouns",
+        "covered_status": "not_yet_covered",
+        "severity": "recurring",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "25% of them shows",
+        "correction": "25% of them show",
+        "category": "grammar",
+        "grammar_topic": "present simple subject-verb agreement",
+        "covered_status": "covered",
+        "severity": "recurring",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "childrens focus",
+        "correction": "children's focus",
+        "category": "spelling",
+        "grammar_topic": "possessive form",
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "English is a key",
+        "correction": "English is the key",
+        "category": "grammar",
+        "grammar_topic": "articles",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "It looks like game",
+        "correction": "It feels like a game",
+        "category": "grammar",
+        "grammar_topic": "article and natural phrasing",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "immideatelly / uducation / stressfull / converstion / colected",
+        "correction": "immediately / education / stressful / conversation / collected",
+        "category": "spelling",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "The second problem is IELTS bubble. English centers colected tuition upfront and closed. It is about 100mln VND more.",
+        "correction": "One problem that really stands out is the IELTS bubble: families may spend up to 100 million VND on test preparation, yet many children still cannot hold a conversation.",
+        "category": "task_pragmatics",
+        "grammar_topic": null,
+        "covered_status": "task_pragmatics",
+        "severity": "meaning_impeding",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "even centers haven't closed",
+        "correction": "even when their centres remain open",
+        "category": "broken_phrase",
+        "grammar_topic": null,
+        "covered_status": "not_yet_covered",
+        "severity": "meaning_impeding",
+        "feedback_shown": false,
+        "confidence": "medium"
+      },
+      {
+        "error_text": "children shows real website",
+        "correction": "children show a real website",
+        "category": "grammar",
+        "grammar_topic": "present simple subject-verb agreement",
+        "covered_status": "covered",
+        "severity": "recurring",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "they protect their project",
+        "correction": "they present and defend their project",
+        "category": "vocabulary",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "Decision 2371 aims English a second language by 2035",
+        "correction": "Decision 2371 aims to make English a second language by 2035",
+        "category": "grammar",
+        "grammar_topic": "aims to make",
+        "covered_status": "not_yet_covered",
+        "severity": "meaning_impeding",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "The date shows",
+        "correction": "The data show",
+        "category": "vocabulary",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "medium"
+      },
+      {
+        "error_text": "about AI narrative",
+        "correction": "about the broader AI narrative",
+        "category": "grammar",
+        "grammar_topic": "article and collocation",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "Both national ambitions and AI trends says",
+        "correction": "Both national ambitions and AI trends say",
+        "category": "grammar",
+        "grammar_topic": "present simple subject-verb agreement",
+        "covered_status": "covered",
+        "severity": "recurring",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "T",
+        "correction": "",
+        "category": "spelling",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "low"
+      }
+    ]
+  },
+  {
+    "id": "EE-L08-U01",
+    "lesson_number": 8,
+    "lesson_date": "2026-09-01",
+    "block": "srs_review_card_41",
+    "source_file": "current Codex lesson chat",
+    "source_turn": "learner definition of guardrails",
+    "source_type": "typed",
+    "capture_status": "captured_live",
+    "errors": [
+      {
+        "error_text": "It means make something to protect or to control",
+        "correction": "It means rules or limits that protect or control something.",
+        "category": "grammar",
+        "grammar_topic": "definition structure",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "for example workflow for AI",
+        "correction": "for example, an AI workflow",
+        "category": "grammar",
+        "grammar_topic": "article and word order",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "EE-L08-U02",
+    "lesson_number": 8,
+    "lesson_date": "2026-09-01",
+    "block": "srs_review_card_41_retry",
+    "source_file": "current Codex lesson chat",
+    "source_turn": "learner retry for guardrails",
+    "source_type": "typed",
+    "capture_status": "captured_live",
+    "errors": [
+      {
+        "error_text": "rules or that protect or control something",
+        "correction": "rules or limits that protect or control something",
+        "category": "broken_phrase",
+        "grammar_topic": "omitted word",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "EE-L08-U03",
+    "lesson_number": 8,
+    "lesson_date": "2026-09-01",
+    "block": "srs_review_card_49",
+    "source_file": "current Codex lesson chat",
+    "source_turn": "learner asks how to restate the factual card",
+    "source_type": "typed",
+    "capture_status": "captured_live",
+    "errors": [
+      {
+        "error_text": "Be honest",
+        "correction": "To be honest",
+        "category": "chunk",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "it's mean",
+        "correction": "it means",
+        "category": "grammar",
+        "grammar_topic": "verb form",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "How can I say in other way",
+        "correction": "How can I say it another way?",
+        "category": "grammar",
+        "grammar_topic": "missing object and fixed phrase",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "EE-L08-U04",
+    "lesson_number": 8,
+    "lesson_date": "2026-09-01",
+    "block": "grammar_check",
+    "source_file": "current Codex lesson chat",
+    "source_turn": "four-sentence grammar check",
+    "source_type": "typed",
+    "capture_status": "captured_live",
+    "errors": [
+      {
+        "error_text": "help teachers to be more efficiently",
+        "correction": "help teachers be more efficient",
+        "category": "grammar",
+        "grammar_topic": "adjective vs adverb",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "EE-L08-U05",
+    "lesson_number": 8,
+    "lesson_date": "2026-09-01",
+    "block": "grammar_clarification_question",
+    "source_file": "current Codex lesson chat",
+    "source_turn": "learner challenges the client-request and laptop-error contrast",
+    "source_type": "voice_transcript_unknown",
+    "capture_status": "captured_live",
+    "process_note": "The response contains speech-like disfluency. Low-confidence fragments are preserved but not treated as stable evidence. The learner's conceptual challenge was correct.",
+    "errors": [
+      {
+        "error_text": "Before I will do this current task",
+        "correction": "Before I do this task",
+        "category": "grammar",
+        "grammar_topic": "future time clause",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "when uh the has just asked for my course outline",
+        "correction": "when the centre has just asked for my course outline",
+        "category": "broken_phrase",
+        "grammar_topic": null,
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "low"
+      },
+      {
+        "error_text": "a laptop shows several messages error messages",
+        "correction": "the laptop shows several error messages",
+        "category": "grammar",
+        "grammar_topic": "word order",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "medium"
+      },
+      {
+        "error_text": "Why because but I think it is the same",
+        "correction": "Why? I think it is the same.",
+        "category": "broken_phrase",
+        "grammar_topic": null,
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "low"
+      }
+    ]
+  }
+]

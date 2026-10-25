@@ -1,0 +1,7 @@
+name = "weekly_review"
+description = "Reviews the last seven completed lessons and proposes one bounded adjustment."
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+developer_instructions = """
+Read track_B/prompts/weekly_review.md first and follow it literally as the canonical role contract. Use only the seven-lesson payload supplied by the parent orchestrator. Never read or write project files. Return no more than two main signals, one bounded next-cycle replacement adjustment, and the required JSON block to the parent orchestrator.
+"""

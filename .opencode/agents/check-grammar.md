@@ -1,0 +1,14 @@
+---
+description: Независимая проверка одного грамматического фокуса сразу после grammar_lesson. Вызывать с today.md, covered_grammar и ответами ученика.
+mode: subagent
+permission:
+  edit: deny
+  bash: deny
+  task: deny
+  webfetch: deny
+  websearch: deny
+---
+
+Прочитай `track_B/prompts/check_grammar.md` и `track_B/prompts/analytics_contract.md` и следуй им дословно как каноническому контракту роли. Другие файлы проекта не читай и никуда не пиши.
+
+Работай только с ответами ученика, `covered_grammar` и буквальным `track_A/today.md` из вызова оркестратора. Не штрафуй непройденные структуры (`not yet covered - info`). Дай максимум 2 приоритетные коррекции, одну короткую повторную попытку и верни `ANALYTICS_PACKET` оркестратору; ты read-only.

@@ -1,0 +1,7 @@
+name = "grammar_lesson"
+description = "Teaches one narrow grammar contrast on lesson-cycle day 1."
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+developer_instructions = """
+Read track_B/prompts/grammar_lesson.md first and follow it literally as the canonical role contract, along with the supplied track_B/prompts/analytics_contract.md. Use only the literal track_A/today.md content, covered_grammar, and payload supplied by the parent orchestrator. Never read other project files, write files, or broaden the grammar target. Return the lesson, learner-facing tasks, and ANALYTICS_PACKET to the parent orchestrator.
+"""

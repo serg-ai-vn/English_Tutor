@@ -1,0 +1,276 @@
+[
+  {
+    "id": 1,
+    "recorded_at": "2026-08-12",
+    "transcript": "I'm launching an AI course for Vietnamese children. I'll explain why my methodology works, what problems parents have, and how my platform solve them.\n\nSo, the first, why I decided to do it: I have learned AI for... I have been learning AI for one and a half year, and I really like it. Also, I'm... I'm a teacher, and I've been learning... I've built... I've been teaching children in Vietnam for almost 4 years, and I decided to do something in this field. So, I know AI, and I know how to be a teacher.\n\nAlso, I see a lot of problems in English centers, that student study English, but after six months, they cannot speak, they cannot answer. They don't understand English, but these courses in English center are very expensive, and kids cannot use their knowledge in their... in their life. And I see that AI is... AI field is growing and growing in Vietnam. This is a very... this is a feature. What every business need, every... maybe every person, to be honest.\n\nSo I decided to create a small course where kids learn English, but they use AI. So they are... they... they learn how to use AI and improve their English, and their English. This is a key for... for using AI, and I decided that in the end of these course, smokers, they need to have something, they need to have a result of their award. And the first idea, this is a website with their own information, where they can introduce yourself and can... they can try to create something by their own. And I thought that it's really worry good thing, and kids will have motivation for it, because it's not so long time, and they can see their result, and then they can share their result with their friends, they can show their result for their parents, and parents can see their result too.\n\nThey understand they pay money, and they have resolved. They pay money and have resolved, and solve a very big problem. And nowadays, because a lot of parents said about current education system, they sometimes wear surprised when they pay money for a seat, or one year, for six months or one year, and after that, the kids cannot speak. But all test, all videos show them that they are so good. They are so perfect. They can do test, that they can do exams, but... but in real life, they cannot speak.\n\nThat's why I decided to make the course, and I did big research in Internet, and... and I took like a basic last methodologist, methodologist, famous companies, famous university in use and do like this. And I decided to do it in a platform, because platform can help one teacher to check each of his students. You don't need TA, you don't need any help, platform can do a lot of things, or platform help you control. Each step of the students, show result, can share these results with parents, and you can understand all the way from all the students way.\n\nI need... what market needs in nowadays, it's the system help... helps the teacher, help the English center to give like face-to-face learning for each student, but they are studying. They are studying in the group. What is really expensive for one family, but when they study in group, it's not so expensive, but the quality is the same.\n\nSo, I don't know what to say else, but it's difficult for me. I didn't prepare for this monologue by that, I think it's... it will be enough for start.",
+    "ai_feedback": {
+      "ta2": {
+        "scores": {
+          "grammar_accuracy": 5,
+          "vocabulary_range": 6,
+          "persuasiveness": 7
+        },
+        "error_count": 53,
+        "errorful_t_units": 37,
+        "t_units_total": 61,
+        "systematics": [
+          "согласование -s",
+          "артикли",
+          "число (results/lives)",
+          "6 сломанных фраз (T35, T43, T49, T50, T51)"
+        ]
+      },
+      "caf": {
+        "t_units": 61,
+        "words": 608,
+        "errors": 53,
+        "e_per_100": 8.7,
+        "eft_per_t": 39,
+        "mlt": 10.0,
+        "subordination": 1.34
+      }
+    },
+    "error_count": 53,
+    "duration_sec": 120
+  },
+  {
+    "id": 2,
+    "recorded_at": "2026-08-18",
+    "lesson_number": 1,
+    "block": "speaking_summary",
+    "attempt": "final",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/1st-lesson-success.json",
+    "source_turn": "USER 52",
+    "transcript": "OK this is one summary the course is the court consists of five lessons where are creating their websites they are practicing with structure they are practicing with vocabulary Umm And also they are practicing to give critical feedback through the course this course is for children 10 -14 uh years oldwith level A2B one the result is website with their information design about And the last lesson is defense Public defense",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L01-U52"
+      ],
+      "backfill_note": "Exact saved-chat wording; no audio available."
+    },
+    "error_count": 10,
+    "duration_sec": null
+  },
+  {
+    "id": 3,
+    "recorded_at": "2026-08-19",
+    "lesson_number": 2,
+    "block": "speaking_monologue",
+    "attempt": "final",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/lesson-2.json",
+    "source_turn": "USER 53",
+    "transcript": "Decision 2371 makes English compulsory from grade one. Before the reform it was grade from grade three. This decision aims to make English a second language by 2035 and this reform covers about 30 million children across 50,000 institutions. As of May 2026 About 102,000 unfilled teaching positions nationwide and 22,000 of them are English positions. This conditions makes a unique situation: there is a gap between the national goals and real posibilities. There for English centers are ready to buy ready-made English programs.",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L02-U53"
+      ],
+      "backfill_note": "Exact saved-chat wording normalised only for paragraph spacing."
+    },
+    "error_count": 6,
+    "duration_sec": null
+  },
+  {
+    "id": 4,
+    "recorded_at": "2026-08-20",
+    "lesson_number": 3,
+    "block": "speaking_retry",
+    "attempt": "final",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/starting-lesson-3.json",
+    "source_turn": "USER 37",
+    "transcript": "Lot of things have changed from May 2026. This decision has made English compulsory from grade one but before it was compulsory only from grade 3. Also Decision 2371 has aimed to make English a second language by 2035. All these changes have created a striking mismatch between national ambitions and underground capacity. There are about 22,000 unfilled teaching positions in English teaching. This demand for teachers has created unique opportunities. English centers are ready to buy off-the-shelf programs. Very important to understand that AI has become popular only since 2023. From this year to now is too short a period for preparing enough professionals in this field, especially combined with teaching positions. A lot of centers have created only AI courses or only English courses and I decided to fill this gap. I have combined both of them. I have taught English for four years and I have worked with AI for two years. It helps me to guess what the market needs",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L03-U37"
+      ],
+      "backfill_note": "Exact saved-chat wording."
+    },
+    "error_count": 8,
+    "duration_sec": null
+  },
+  {
+    "id": 5,
+    "recorded_at": "2026-08-28",
+    "lesson_number": 4,
+    "block": "data_speaking_professional",
+    "attempt": "first",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 10",
+    "transcript": "So what I think about this situation I think that this is the the best for and off the shelf programs This is the best times for the teachers like me because 22,000 Anfield teaching positions it's a very big number and it's impossible to to find them and it means that this market change will change English centers schools kindergartens All these institutions will find decisions and if you can create this decision You can win this when you use AI and you can create uh some apps or courses which can give for one on one tutoring but for the same price and it for one moment I think you have a chance for success",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L04-U10"
+      ],
+      "backfill_note": "Exact saved-chat wording; possible ASR artifact marked low confidence in error events."
+    },
+    "error_count": 10,
+    "duration_sec": null
+  },
+  {
+    "id": 6,
+    "recorded_at": "2026-08-28",
+    "lesson_number": 4,
+    "block": "data_speaking_transfer",
+    "attempt": "first",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 11",
+    "transcript": "I think that these facts show a very clear picture You can only the percent of effectivity and will understand everything because it means that one teacher can do more work at the same time it means that one teacher can teach more student at the same time and it means that uh students will have better results than before for the center it money if we say only about business field it it's money but if say about expect it can be reputation it can be happy children happy parents and it can solve the problem with unfilled teaching positions because in this case instead of 22,000 unfilled teaching position you will need only 10 000for example",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L04-U11"
+      ],
+      "priority_corrections": [
+        "more students",
+        "For the centre, it means more income",
+        "the data may suggest"
+      ]
+    },
+    "error_count": 8,
+    "duration_sec": null
+  },
+  {
+    "id": 7,
+    "recorded_at": "2026-08-28",
+    "lesson_number": 4,
+    "block": "data_speaking_retry",
+    "attempt": "retry",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/Lesson 4.md",
+    "source_turn": "top-level USER 12",
+    "transcript": "OK so I think that this data shows that one teacher can do X2 X3 more work than before. Teachers can support more students. For the center it means more income",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L04-U12"
+      ],
+      "retry_result": "Plural and complete-clause targets corrected; cautious interpretation remained."
+    },
+    "error_count": 1,
+    "duration_sec": null
+  },
+  {
+    "id": 8,
+    "recorded_at": "2026-08-29",
+    "lesson_number": 5,
+    "block": "listening_summary",
+    "attempt": "first",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/Lesson 5.md",
+    "source_turn": "top-level USER 16",
+    "transcript": "Sao Khan opens the talk with threatening. He starts from news about using AI for cheating and he shows this problem. But then he shows the way how to mitigate this problem. He shows opportunitues which AI gives. He shows how to give each student one-on-one tutor by using AI",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L05-U16"
+      ],
+      "backfill_note": "Exact saved-chat wording."
+    },
+    "error_count": 7,
+    "duration_sec": null
+  },
+  {
+    "id": 9,
+    "recorded_at": "2026-08-30",
+    "lesson_number": 6,
+    "block": "pitch_outline",
+    "attempt": "outline",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/Lesson 6.md",
+    "source_turn": "top-level USER 7",
+    "transcript": "The white spot is nobody offers English through AI project work with public defense for Children 10-14 years old. Children do real tasks and get real experience which can be useful for their life and they start to understand that English is a key! It isn't only boring subject and test. And it can change the game. The striking mismatch between national ambitions and on-the-ground capacity creates the situation where English centers are ready to buy off-the-shelf programmes. The number that realy stands out is that Vietnam needs 22000 more English teachers by 2030",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L06-U07"
+      ],
+      "process_note": "The learner also gave the stop signal that hooks had not been taught; the requirement was removed."
+    },
+    "error_count": 6,
+    "duration_sec": null
+  },
+  {
+    "id": 10,
+    "recorded_at": "2026-08-30",
+    "lesson_number": 6,
+    "block": "pitch_first_attempt",
+    "attempt": "first",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/Lesson 6.md",
+    "source_turn": "top-level USER 8",
+    "transcript": "The white sport is nobody offers English through AI project work with public defense for children 10 14 years old. What I suggest: \"English is learned through commanding AI\". It means that children do real tasks and get real experience which can be useful for their life and they start to understand that English is a key. It isn't only a boring subject or a test. And I think that it can change the game. The striking mismatch between national ambitions and underground capacity creates the situation where English centers are ready to buy off the shelf programs. The number that really stands out is that Vietnam needs 22,000 more English teachers by 2030",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L06-U08"
+      ],
+      "priority_corrections": [
+        "white spot",
+        "on-the-ground capacity",
+        "What I suggest is ..."
+      ]
+    },
+    "error_count": 8,
+    "duration_sec": null
+  },
+  {
+    "id": 11,
+    "recorded_at": "2026-08-30",
+    "lesson_number": 6,
+    "block": "pitch_retry",
+    "attempt": "retry",
+    "source_type": "chat_transcript",
+    "audio_verified": false,
+    "source_file": "Черновики/Lesson 6.md",
+    "source_turn": "top-level USER 9",
+    "transcript": "The white spot is nobody offers English through AI project work with public defense for children 10 14 years old What I suggest is \"English is learned through command in AI\". It means that children do real tasks and get real experience which can be useful for their life and they start to understand that English is a key. It isn't only a boring subject or a test. And I think that it can change the game. The striking mismatch between national ambitions and on-the-ground capacity creates the situation where English centers are ready to buy off the shelf programs. The number that really stands out is that Vietnam needs 22,000 more English teachers by 2030.",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L06-U09"
+      ],
+      "retry_result": "Three priority targets corrected; commanding AI surfaced as command in AI."
+    },
+    "error_count": 6,
+    "duration_sec": null
+  },
+  {
+    "id": 12,
+    "recorded_at": "2026-08-31",
+    "lesson_number": 7,
+    "block": "weekly_audio_sample",
+    "attempt": "voice_first_self_repair",
+    "source_type": "voice_transcript_manually_self_edited",
+    "audio_verified": false,
+    "source_file": "current Codex lesson chat",
+    "source_turn": "learner Lesson 7 sample",
+    "transcript": "My course consists of 5 lessons. I offer AI project work with public defense for children 10-14 years old.\nDuring the course children learn  English through commanding AI and create website about themself. T\nI can solve some problems with thanks my course.\nThe first problem is that  67% of student report extreme stress and 25% of them shows signs of clinical depression.  My course changes childrens focus. Here English is a key, not boring subject or test. Children work with AI and they see their results immideatelly. It looks like game and makes their uducation interesting and less stressfull.\nThe second problem is IELTS bubble. English centers colected tuition upfront and closed. It is about 100mln VND more. And also the problem that really stands out is that children cannot hold a converstion even centers haven't closed. So parents now prefer short modules with visible results. My course gives it to them. In the end of the course children shows real website and they protect their project.\n\nWhy now!?\nThe first is Decision 2371. It makes English compulsory from grade one in 2026. These are about thirty million students and 50 thousand institutions. Decision 2371 aims English  a second language by 2035.\nThe date shows that Vietnam needs 22000 more English teachers by 2030. The striking mismatch between national ambitions and on-the-ground capacity creates unique opportunities.  English centres are ready to buy off-the- shelf programs. And we need to remember about AI narrative. Both national ambitions and AI trends says that this is the best time for products like mine.&#x20;",
+    "production_method": {
+      "initial_mode": "spoken response converted by speech-to-text",
+      "manual_self_edit": "approximately half of the transcript",
+      "notes_lookups": "approximately two constructions",
+      "raw_transcript_retained": false,
+      "interpretation": "Evidence of voice-first retrieval and independent written self-repair; not a clean spontaneous-fluency benchmark."
+    },
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L07-U01"
+      ],
+      "learner_facing_clarity_note": "Use one direct IELTS contrast: families may spend up to 100 million VND on test preparation, yet many children still cannot hold a conversation.",
+      "weekly_signals": [
+        "Coherent course-to-market-to-policy narrative.",
+        "Next accuracy/retrieval priority: third-person -s, plural nouns, complete clauses, and precise learned chunks."
+      ],
+      "next_cycle_adjustment": "Replace one pitch-expansion turn with a short revision pass on two existing key claims; no added workload."
+    },
+    "error_count": 18,
+    "duration_sec": null
+  }
+]

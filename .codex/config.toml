@@ -1,0 +1,60 @@
+# Local Codex project config for English_Tutor
+# Run Codex with English_Tutor as the working directory.
+# Top-level `AGENTS.md` is loaded automatically as the orchestrator rulebook.
+# Prompts in `track_B/prompts/` are the single source of truth; `.codex/agents/*.toml` are lightweight read-only wrappers.
+
+[features]
+multi_agent = true
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3
+default_subagent_reasoning_effort = "medium"
+
+[agents.srs_review]
+description = "SRS warm-up (T-A0): run one oldest-due-first batch of up to 5 cards (`due_lesson <= lesson_number`, `reps > 0`, `status != deprecated`), take one combined learner response, give one combined check + at most one bundled retry (max 2 min), and return the structured JSON result."
+config_file = "agents/srs_review.toml"
+
+[agents.grammar_lesson]
+description = "Narrow grammar lesson (T-A-G, Day 1): teach one target grammar contrast in chat (warm-up, rule + 2-3 examples, 5 controlled items, 3 guided sentences across course/work and everyday life) and return learner answers + ANALYTICS_PACKET."
+config_file = "agents/grammar_lesson.toml"
+
+[agents.check_grammar]
+description = "Independent grammar check (T-A3, Day 1): evaluate learner answers strictly against covered_grammar, mark uncovered structures `(not yet covered - info)` without penalty, give max 2 priority corrections + 1 retry, and return ANALYTICS_PACKET."
+config_file = "agents/check_grammar.toml"
+
+[agents.tutor_speaking]
+description = "Speaking tutor (T-A1, Day 2): lead up to 6 learner turns using only covered_grammar and introduced_material (never introduce a new C1 pattern), give delayed feedback (max 3 corrections + 2 chunks + 1 retry), and return ANALYTICS_PACKET."
+config_file = "agents/tutor_speaking.toml"
+
+[agents.reading_tutor]
+description = "Reading tutor (T-A-R, Day 3): give max 3 pre-words, present a 10-14 sentence text in chat (>=70% new facts, <=30% `(review)`), ask 3 comprehension questions (gist, detail, inference) + 60-90s spoken summary, propose max 2 SRS chunks, and return ANALYTICS_PACKET."
+config_file = "agents/reading_tutor.toml"
+
+[agents.data_speaking]
+description = "Data speaking (T-A-D, Day 4): train 60-90s description and interpretation of supplied data in professional and general contexts using only introduced_material, give max 3 delayed corrections + 1 retry, and return ANALYTICS_PACKET."
+config_file = "agents/data_speaking.toml"
+
+[agents.patterns_listening]
+description = "Patterns + listening + drilling (T-A-P, Day 5): introduce exactly 2 scheduled C1 patterns, run 18-22 min authentic audio listening (never substitute reading for audio) with max 3-5 pre-words, run 10-12 min drilling, and return ANALYTICS_PACKET."
+config_file = "agents/patterns_listening.toml"
+
+[agents.pitch_coach]
+description = "Pitch coach (T-A-PITCH, Day 6 W1-W5): coach one pitch segment using only introduced_material without skeptical-director role, give max 3 priority corrections + 1 focused retry + 1 transfer question, and return ANALYTICS_PACKET."
+config_file = "agents/pitch_coach.toml"
+
+[agents.mock_pitch]
+description = "Mock pitch roleplay (T-A4, Day 6 W6-W12): announce `[ТЬЮТОР В РОЛИ]`, play a skeptical education center director using only supplied objections until stop signal, then give mode-appropriate feedback (`practice` or `benchmark`) and return ANALYTICS_PACKET."
+config_file = "agents/mock_pitch.toml"
+
+[agents.check_monologue]
+description = "Qualitative monologue evaluation (T-A2): review transcript in `practice` (max 3 corrections + 5-sentence rewrite + 1 retry) or `benchmark` mode (full covered_grammar table + /10 rubric scores) without counting CAF metrics, and return ANALYTICS_PACKET."
+config_file = "agents/check_monologue.toml"
+
+[agents.check_monologue_caf]
+description = "Quantitative CAF calculator (T-A2-CAF, W4/W8/W12 benchmark only, run 3x in parallel): segment AS-IS transcript into T-units (STEP 1-4) and output the 7-field JSON (`t_units`, `words`, `errors`, `e_per_100`, `eft_per_t`, `mlt`, `subordination`) for median calculation."
+config_file = "agents/check_monologue_caf.toml"
+
+[agents.weekly_review]
+description = "Seven-lesson cycle review (WF-4, Day 7): analyze the last 7 completed lessons (`lesson_sessions.json`, `error_events.json`, `error_log.json`, `srs_items.json`), report max 2 signals and 1 replacement adjustment without increasing time budget, and output the JSON block."
+config_file = "agents/weekly_review.toml"

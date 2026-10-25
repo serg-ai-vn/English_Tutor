@@ -1,0 +1,229 @@
+[
+  {
+    "id": 1,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "how my platform solve them",
+    "correction": "how my platform solves them",
+    "grammar_topic": "согласование 3-е лицо -s",
+    "times_seen": 11,
+    "resolved": false,
+    "last_seen_lesson": 7,
+    "source_event_ids": [
+      "EE-L07-U01"
+    ]
+  },
+  {
+    "id": 2,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "a lot of problems ... that student study English ... they cannot speak",
+    "correction": "that students study English ... they cannot speak",
+    "grammar_topic": "число существительных (plural)",
+    "times_seen": 4,
+    "resolved": false
+  },
+  {
+    "id": 3,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "for one and a half year",
+    "correction": "for one and a half years",
+    "grammar_topic": "число существительных (plural с one and a half)",
+    "times_seen": 2,
+    "resolved": false
+  },
+  {
+    "id": 4,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "in their life",
+    "correction": "in their lives",
+    "grammar_topic": "число существительных (plural)",
+    "times_seen": 3,
+    "resolved": false
+  },
+  {
+    "id": 5,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "smokers, they need to have a result",
+    "correction": "students, they need to have a result",
+    "grammar_topic": "артефакт транскрипции (проверить по аудио)",
+    "times_seen": 1,
+    "resolved": false
+  },
+  {
+    "id": 6,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "they sometimes wear surprised when they pay",
+    "correction": "they are sometimes surprised when they pay",
+    "grammar_topic": "глагол-связка / пассивная конструкция be surprised",
+    "times_seen": 1,
+    "resolved": false
+  },
+  {
+    "id": 7,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "they pay money and have resolved, and solve a very big problem",
+    "correction": "they pay their money and get a real result, solving a very big problem",
+    "grammar_topic": "сломанная фраза (broken phrase)",
+    "times_seen": 2,
+    "resolved": false
+  },
+  {
+    "id": 8,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "This is a feature. What every business need",
+    "correction": "This is a feature that every business needs",
+    "grammar_topic": "относительное что-предложение + -s",
+    "times_seen": 2,
+    "resolved": false
+  },
+  {
+    "id": 9,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "I have learned AI for one and a half year",
+    "correction": "I have been learning AI for one and a half years",
+    "grammar_topic": "Present Perfect vs Present Perfect Continuous",
+    "times_seen": 1,
+    "resolved": false
+  },
+  {
+    "id": 10,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "what market needs in nowadays",
+    "correction": "what the market needs nowadays",
+    "grammar_topic": "артикль + наречие nowadays (без in)",
+    "times_seen": 2,
+    "resolved": false
+  },
+  {
+    "id": 11,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "a lot of parents said about current education system",
+    "correction": "a lot of parents complain about the current education system",
+    "grammar_topic": "выбор глагола + артикль",
+    "times_seen": 1,
+    "resolved": false
+  },
+  {
+    "id": 12,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "famous university in use and do like this",
+    "correction": "famous universities use it like this",
+    "grammar_topic": "сломанная фраза (broken phrase)",
+    "times_seen": 1,
+    "resolved": false
+  },
+  {
+    "id": 13,
+    "created_at": "2026-08-12",
+    "skill": "speaking",
+    "error_text": "I didn't prepare for this monologue by that",
+    "correction": "I didn't prepare for this monologue",
+    "grammar_topic": "лишний предлог/фразовый хвост",
+    "times_seen": 1,
+    "resolved": false
+  },
+  {
+    "id": 14,
+    "created_at": "2026-08-20",
+    "skill": "speaking",
+    "error_text": "from May 2026",
+    "correction": "since May 2026",
+    "grammar_topic": "Present Perfect: since + starting point",
+    "times_seen": 2,
+    "resolved": false,
+    "source_event_ids": [
+      "EE-L03-U28",
+      "EE-L03-U37"
+    ],
+    "last_seen_lesson": 3
+  },
+  {
+    "id": 15,
+    "created_at": "2026-08-20",
+    "skill": "speaking",
+    "error_text": "English has made compulsory / English is rethought",
+    "correction": "English has been made compulsory / English is being repositioned",
+    "grammar_topic": "passive auxiliary be/been/being",
+    "times_seen": 2,
+    "resolved": false,
+    "source_event_ids": [
+      "EE-L03-U44"
+    ],
+    "last_seen_lesson": 3
+  },
+  {
+    "id": 16,
+    "created_at": "2026-08-18",
+    "skill": "speaking",
+    "error_text": "it really important / Very important to understand / As of May 2026 About 102,000...",
+    "correction": "it is really important / It is very important to understand / As of May 2026, there were about 102,000...",
+    "grammar_topic": "complete clause: explicit subject and finite verb",
+    "times_seen": 4,
+    "resolved": false,
+    "source_event_ids": [
+      "EE-L01-U47",
+      "EE-L02-U53",
+      "EE-L03-U37",
+      "EE-L04-U11"
+    ],
+    "last_seen_lesson": 4
+  },
+  {
+    "id": 17,
+    "created_at": "2026-08-20",
+    "skill": "speaking",
+    "error_text": "underground capacity",
+    "correction": "on-the-ground capacity",
+    "grammar_topic": "learned chunk retrieval",
+    "times_seen": 2,
+    "resolved": false,
+    "source_event_ids": [
+      "EE-L03-U37",
+      "EE-L06-U08"
+    ],
+    "last_seen_lesson": 6
+  },
+  {
+    "id": 18,
+    "created_at": "2026-08-29",
+    "skill": "speaking",
+    "error_text": "white sport",
+    "correction": "white spot",
+    "grammar_topic": "learned chunk retrieval",
+    "times_seen": 2,
+    "resolved": false,
+    "source_event_ids": [
+      "EE-L05-U10-U11",
+      "EE-L06-U08"
+    ],
+    "last_seen_lesson": 6
+  },
+  {
+    "id": 19,
+    "created_at": "2026-08-18",
+    "skill": "speaking",
+    "error_text": "compulsary",
+    "correction": "compulsory",
+    "grammar_topic": "recurring spelling in a core pitch word",
+    "times_seen": 5,
+    "resolved": false,
+    "source_event_ids": [
+      "EE-L01-U21",
+      "EE-L02-U51",
+      "EE-L03-U28",
+      "EE-L03-U44"
+    ],
+    "last_seen_lesson": 3
+  }
+]
