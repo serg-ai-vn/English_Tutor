@@ -23,5 +23,5 @@
     "Vocab ids 39-41: undermine (v), mitigate (v), guardrails (n).",
     "Grammar minimal-pair cards ids 60-61: will (decision now / belief prediction) vs be going to (existing plan / present evidence)."
   ],
-  "note": "Refresher Lessons 1–8 closed 2026-10-27; learner reported 70 min vs planned 45 (model wait unmeasured), speaking stopped after 3 turns at request. days_completed remains 8; next Lesson 9, Week 2 Day 2. Pending: automatic time tracking; possible 30-minute lessons only an idea."
+  "note": "Refresher Lessons 1–8 closed 2026-10-27: reported duration 70 min (model wait unmeasured). P25 active for NEXT lesson: all lessons 25–30 min, hard cap 35, stop new questions at minute 25 or final step, fixed step budget. days_completed remains 8; next Lesson 9 Week 2 Day 2 speaking. SRS Lesson 9 oldest-due-first: ids 40, 42, 43, 44, 52 (due_lesson 7); next due_lesson 9: 15, 54, 25, 49, 53, 60, 61."
 }
