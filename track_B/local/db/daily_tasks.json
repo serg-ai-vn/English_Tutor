@@ -284,5 +284,44 @@
     "material_ref": "track_A/today.md",
     "status": "done",
     "notes": "All four final target choices were correct. Learner correctly challenged an ambiguous client-request item; the original I'm going to answer was not treated as an error. Two unambiguous cards were introduced as ids 60-61."
+  },
+  {
+    "task_date": "2026-10-27",
+    "lesson_number": 9,
+    "session_kind": "Refresher",
+    "planned_duration_min": 7,
+    "actual_duration_min": null,
+    "duration_kind": "not_measured_individually",
+    "skill": "srs",
+    "activity": "five SRS cards and one retry",
+    "material_ref": "track_A/today.md",
+    "status": "done",
+    "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks."
+  },
+  {
+    "task_date": "2026-10-27",
+    "lesson_number": 9,
+    "session_kind": "Refresher",
+    "planned_duration_min": 18,
+    "actual_duration_min": null,
+    "duration_kind": "not_measured_individually",
+    "skill": "grammar",
+    "activity": "six controlled sentences and one retry",
+    "material_ref": "track_A/today.md",
+    "status": "done",
+    "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks."
+  },
+  {
+    "task_date": "2026-10-27",
+    "lesson_number": 9,
+    "session_kind": "Refresher",
+    "planned_duration_min": 20,
+    "actual_duration_min": null,
+    "duration_kind": "not_measured_individually",
+    "skill": "speaking",
+    "activity": "three substantial turns; closed on learner request",
+    "material_ref": "track_A/today.md",
+    "status": "closed_early",
+    "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks."
   }
 ]
