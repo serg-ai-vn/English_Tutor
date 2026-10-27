@@ -229,8 +229,8 @@
     "topic": "pattern",
     "ease": 2.5,
     "reps": 1,
-    "lapses": 0,
-    "due_lesson": 6,
+    "lapses": 1,
+    "due_lesson": 9,
     "interval_lessons": 1,
     "example": "Daily: The data clearly shows a strong link between sleep quality and productivity at work.",
     "pitch_section": "evidence",
@@ -536,10 +536,10 @@
     "back": "подрывать, ослаблять (доверие)",
     "topic": "ai",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 1,
-    "due_lesson": 7,
-    "interval_lessons": 3
+    "due_lesson": 15,
+    "interval_lessons": 6
   },
   {
     "id": 40,
@@ -668,10 +668,10 @@
     "back": "Охват реформы: 30 млн учащихся, ~50 000 учреждений",
     "topic": "market",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 0,
-    "due_lesson": 6,
-    "interval_lessons": 3
+    "due_lesson": 15,
+    "interval_lessons": 6
   },
   {
     "id": 51,
@@ -680,10 +680,10 @@
     "back": "Английский обязателен с 1 класса; цель - второй язык к 2035",
     "topic": "market",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 0,
-    "due_lesson": 6,
-    "interval_lessons": 3
+    "due_lesson": 15,
+    "interval_lessons": 6
   },
   {
     "id": 52,
@@ -716,11 +716,11 @@
     "front": "The number that really stands out is that Vietnam needs 22,000 more English teachers by 2030.",
     "back": "S14 — привлечь внимание к цифре. Структура: The number that really stands out is [fact]. Секция: evidence/hook.",
     "topic": "pattern",
-    "due_lesson": 6,
+    "due_lesson": 9,
     "interval_lessons": 1,
     "ease": 2.5,
     "reps": 1,
-    "lapses": 0,
+    "lapses": 1,
     "example": "Daily: The number that really stands out is that 80% of users come back within the first week.",
     "pitch_section": "evidence/hook",
     "register": "spoken"
