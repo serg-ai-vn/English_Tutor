@@ -161,5 +161,21 @@
     "transcript_source": "current Codex lesson chat",
     "completed": true,
     "notes": "SRS hard stop observed. ids 41 and 49 shown; ids 50, 51, 39, and 40 unseen. The original client-request item was ambiguous: both will and be going to can be correct depending on decision-now versus existing-intention meaning. The learner identified the ambiguity and then completed the explicit contrast correctly."
+  },
+  {
+    "lesson_number": 9,
+    "session_kind": "Refresher",
+    "lesson_date": "2026-10-27",
+    "week": 2,
+    "cycle_day": 2,
+    "main_skill": "SRS, grammar, speaking review Lessons 1–8",
+    "planned_learning_min": 45,
+    "actual_learning_min": 70,
+    "wall_clock_span_min": null,
+    "model_wait_min": null,
+    "time_status": "learner_reported_total_wait_unmeasured",
+    "time_source": "Learner explicitly reported 70 minutes in conversation; exact timestamps/model-wait unavailable",
+    "completed": true,
+    "notes": "Refresher after break, no lesson counter advancement. 5 SRS reviewed with retry; 6 grammar checks, passive weak; 3 substantial speaking turns. Exceeded planned duration; tutor failed to monitor time. Possible shift to 30-min lessons is a proposal only."
   }
 ]
