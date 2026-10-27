@@ -26,7 +26,7 @@
         "errors": 53,
         "e_per_100": 8.7,
         "eft_per_t": 39,
-        "mlt": 10.0,
+        "mlt": 10,
         "subordination": 1.34
       }
     },
@@ -271,6 +271,69 @@
       "next_cycle_adjustment": "Replace one pitch-expansion turn with a short revision pass on two existing key claims; no added workload."
     },
     "error_count": 18,
+    "duration_sec": null
+  },
+  {
+    "id": 13,
+    "recorded_at": "2026-10-27",
+    "lesson_number": 8,
+    "session_kind": "Refresher",
+    "block": "speaking",
+    "attempt": "first",
+    "source_type": "voice_transcript_unverified",
+    "audio_verified": false,
+    "source_file": "current ChatGPT Refresher chat",
+    "source_turn": "speaking turn 1",
+    "transcript": "So the first question is what students normally do in traditional English lessons in my opinion and as I see this educational process I see that they always learn vocabulary they learn structure they learn GR and they practice to do exams and this protest is very difficult and boring'cause children can't see their results they don't understand how they can use it in their real life Hmm actually uh I've done my AI English course to solve this problem because uh with this AI English course children can see the results immediately they learn new words they still learn new words they still learn structure but they try to use it in the real task and they can see how their new vocabulary how they knew knowledge can help them to create something and when they see these result they are they really interested in this they want to learn more they want to try more and they try to communicate and I think it really can help them to develop their English skills they do one task they see then they try to change something and again they can see their result and can see some how different structure different words can change their result",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L08R-U02"
+      ],
+      "notes": "Historical verbatim chat transcription, audio not independently verified."
+    },
+    "error_count": 2,
+    "duration_sec": null
+  },
+  {
+    "id": 14,
+    "recorded_at": "2026-10-27",
+    "lesson_number": 8,
+    "session_kind": "Refresher",
+    "block": "speaking",
+    "attempt": "first",
+    "source_type": "voice_transcript_unverified",
+    "audio_verified": false,
+    "source_file": "current ChatGPT Refresher chat",
+    "source_turn": "speaking turn 2",
+    "transcript": "OK I will try to explain for example there are more one of my lessons At first we learn vocabulary umm some special words which can help us to do the task also we learn some grammar for example present perfect and I explain for children what does it mean and how we can use it and after that children try to use these new knowledge in their task for example we we describe our hobbies and children use new vocabulary and describe their hobbies So only this task can help them to practice their new knowledge but on my AI platform well we have some OK and when children understand how they can describe their hobby they try to give a task for and I think it really changes game because one thing when you try to write by yourself but another thing when you try to explain someone what do you want uh and I think it really improve uh commutative skills uh so we have a special structure how we can speak with AI how we can use AI and it it is always and it is also a small part of our AI English course so and the next step when students see that AI didn't produce them result they really want they try to change their task they try to change They tried to add new words they tried to cancel some words They they improve their critical Skills they see result they try to give their opinion they try to create their opinion about what they see and they start to to see what they like and what they don't like Unusual lesson we don't have this task we formulate any opinion about something Because when you have some opinion about a person in your classmate for example about a classmate maybe it's not polite but when we are talking about AI you really can feel free to write everything you want you really can feel free to say that you don't like something and you can say what you like and you try to change it And this process really can help improve their English and it's real task it's not like fiction that we have lesson and we practice something and they go out after that and don't understand how to use it in real life no but when we're talking about English with AI they even at home can practice they can continue do they they know they they have experience and it's interesting for them because it is a real task and it is a real result",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L08R-U03"
+      ],
+      "notes": "Historical verbatim chat transcription, audio not independently verified."
+    },
+    "error_count": 3,
+    "duration_sec": null
+  },
+  {
+    "id": 15,
+    "recorded_at": "2026-10-27",
+    "lesson_number": 8,
+    "session_kind": "Refresher",
+    "block": "speaking",
+    "attempt": "first",
+    "source_type": "voice_transcript_unverified",
+    "audio_verified": false,
+    "source_file": "current ChatGPT Refresher chat",
+    "source_turn": "speaking turn 3",
+    "transcript": "In the end of this course we have a public presentation where children can demonstrate their result for their parents and for their classmates other classmates can ask some questions and this student should answer so this presentation can show their skills In the beginning of the course we will have some small test are and after this course we will have the same so it will be like a small video where student try to to describe what they want and after they will protect they will defend They are projects and also each of my student will have their own website during the course they create their own website about them self And they can show this website for their friends for their parents And only these thing can show their progress of course are my platform will check everything because I can see each are all of our students answers I can see their progress I can see where they make mistakes I can help them because I see on everything in real time",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L08R-U04"
+      ],
+      "notes": "Historical verbatim chat transcription, audio not independently verified."
+    },
+    "error_count": 2,
     "duration_sec": null
   }
 ]
