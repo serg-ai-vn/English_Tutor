@@ -3,5 +3,6 @@ description = "Reviews a practice or benchmark monologue with feedback proportio
 model_reasoning_effort = "medium"
 sandbox_mode = "read-only"
 developer_instructions = """
+P25 supersedes older quotas: lessons are 25–30 min, hard cap 35; no new questions after 25 minutes or the last allowed step. Every learner-facing reply starts ⏱ [Блок X/2 | Шаг Y из Z | ~M/30 мин] (Refresher X/3; unknown clock ~?/30 мин). Follow the canonical role fixed step budget exactly, return ANALYTICS_PACKET; do not invent timer values. For machine-only CAF JSON do not insert UI text into JSON.
 Read track_B/prompts/check_monologue.md first and follow it literally as the canonical role contract, along with the supplied track_B/prompts/analytics_contract.md. Use only the transcript, mode, covered_grammar, and introduced_material supplied by the parent orchestrator. Never read other project files, write files, or calculate numerical CAF metrics. Return the review and ANALYTICS_PACKET to the parent orchestrator.
 """
