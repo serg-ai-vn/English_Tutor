@@ -3,7 +3,7 @@ title: "Refresher Plan — Lessons 1–8 (before Lesson 9)"
 created: 2026-10-27
 updated: 2026-10-27
 tags: [english, lesson, refresher, track-a]
-status: planned
+status: completed
 related: [progress.json, ../AGENTS.md, LESSON_START.md, ../track_B/local/protocol.md]
 ---
 
@@ -14,8 +14,8 @@ related: [progress.json, ../AGENTS.md, LESSON_START.md, ../track_B/local/protoco
 **Goal:** rebuild recall and confidence using only previously covered grammar and introduced course material.
 **Main skills:** grammar accuracy and spoken fluency.
 **planned_learning_min:** 45
-**actual_learning_min:** null (await explicit learner response at closure)
-**model_wait_min:** null
+**actual_learning_min:** 70 (learner reported total; model wait not measured)
+**model_wait_min:** null (unmeasured)
 **Hard cap:** 60 minutes; waiting for model/agent output is not productive learning time.
 
 | Block | Minutes | Agent / Prompt | Expected result |
@@ -76,9 +76,15 @@ No new SRS items on a refresher. Do not modify unshown cards.
 
 ## Closure
 
-- [ ] SRS batch completed; update only the shown cards.
-- [ ] Grammar refresher completed; 6 check sentences reviewed.
-- [ ] Speaking refresher completed; 4–5 conversational turns.
-- [ ] Ask and record actual learner-active time in whole minutes; model wait separately if applicable.
-- [ ] Record Refresher (not numbered Lesson 9 completed) in log, DB and session files, then update progress note/last date without incrementing `days_completed`.
-- [ ] GitHub main synchronized after closure.
+- [x] SRS review completed with one retry, ids 15, 50, 51, 54, 39.
+- [x] Grammar: six check sentences reviewed; passive voice needs more practice.
+- [x] Speaking ended at learner request after three substantial turns, fewer than planned due to overrun.
+- [x] Learner reported 70 minutes; precise time and model wait not independently available.
+- [x] Record Refresher without incrementing days_completed.
+- [x] Close Refresher in GitHub main.
+
+## Timebox incident and future changes
+
+- Lesson planned for 45 minutes; learner reports 70 minutes. The 60-minute cap was exceeded on the reported total. Model-wait duration unavailable, not silently excluded.
+- The tutor kept asking questions without monitoring elapsed time. Learner explicitly requested the lesson end.
+- Pending improvement recorded in `Корректировки_урока.md`: automatic elapsed-time control with stopping/shortening of blocks; possible future 30-minute standard lessons is an IDEA ONLY, not an adopted schedule change.
