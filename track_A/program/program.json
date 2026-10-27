@@ -10,7 +10,7 @@
     "timebox_guard": "Dual Timebox Guard: системный clock + жёсткий Step Budget; ⏱ [Блок X/2 | Шаг Y из Z | ~M/30 мин]. Если часов нет, ~?/30 мин. Стоп новым вопросам с 25-й минуты или после последнего шага; Closure."
   },
   "assessment_protocol": {
-    "formal_benchmarks": "W4, W8, W12: benchmark-монолог/питч с check_monologue_caf x3 на day 6; EF SET reading+listening на day 7. Так каждый отдельный урок остаётся в hard cap 60 минут.",
+    "formal_benchmarks": "W4, W8, W12: benchmark-монолог/питч и check_monologue_caf x3 на day 6 в общем 25–30-минутном уроке (hard cap 35); EF SET reading+listening на day 7 только в пределах доступного времени либо отдельно по согласованию, без нарушения лимита.",
     "weekly": "Day 7: лёгкий неоцениваемый 2-минутный audio sample, чередуя ESP и general English, плюс weekly_review.",
     "practice_feedback": "Полный CAF и полный рубрикатор не запускаются после обычной speaking/pitch-практики."
   },
