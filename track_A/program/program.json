@@ -1,1641 +1,1642 @@
 {
- "course_principles": {
-  "lesson_model": "Один главный навык за урок; обычный урок 40-50 минут, day 7 — 30-45 минут, абсолютный hard cap 60 минут.",
-  "goal_horizons": "12 недель: функциональный B2+/приближение к C1 для pitch и professional Q&A. Долгосрочно: общий spoken C1 для работы, преподавания, клиентов и повседневной жизни.",
-  "topic_balance": "Около 50% AI-курс/продажи, 30% преподавание/AI-работа/клиенты, 20% повседневная и социальная речь; перенос внутри главного навыка.",
-  "correction": "Контролируемая практика: немедленная target-коррекция + одна повторная попытка. Свободная речь: отложенно максимум 2-3 коррекции. Непройденное не штрафуется.",
-  "listening": "Day 5 содержит 18-22 минуты реального listening; на незнакомом акценте первый проход с субтитрами/транскриптом и максимум 3-5 предслов до прослушивания.",
-  "reading": "Максимум 3 предслова; текст 10-14 предложений; известные факты не более 30% и помечаются review; максимум 2 новых chunks.",
-  "materials": "Если material_ref пуст, named agent создаёт оригинальный learner-facing материал из activity и today.md. Весь материал выдаётся в чате; пустая ссылка не означает внешнее домашнее задание."
- },
- "assessment_protocol": {
-  "formal_benchmarks": "W4, W8, W12: benchmark-монолог/питч с check_monologue_caf x3 на day 6; EF SET reading+listening на day 7. Так каждый отдельный урок остаётся в hard cap 60 минут.",
-  "weekly": "Day 7: лёгкий неоцениваемый 2-минутный audio sample, чередуя ESP и general English, плюс weekly_review.",
-  "practice_feedback": "Полный CAF и полный рубрикатор не запускаются после обычной speaking/pitch-практики."
- },
- "grammar_path": [
-  "Диагностика (день 1 Track A, шаг 0.1, ДО старта недели 1): EF SET + Cambridge; затем быстрый срез слабых тем по Collins Work on Your Grammar Advanced - результат в track_A/logs/diagnostics.md",
-  "Если диагностика показывает пробел в базе, он заменяет один ближайший grammar target; параллельный дополнительный юнит и второй grammar-блок не добавляются",
-  "Основной путь: высокочастотные темы B2→C1 по неделям. Номера Hewings — только метки; в конкретный день выбирается один узкий target или контраст, а не весь диапазон юнитов",
-  "Формат: grammar_lesson ведёт мини-урок прямо в чате — один target, короткий контраст, 2-3 примера, контролируемая практика; check_grammar даёт максимум 2 коррекции и одну повторную попытку. Никаких отсылок «открой книгу/файл»",
-  "Номера юнитов Hewings служат только метками тем (последовательность зафиксирована в днях программы); сверка с изданием не нужна - книга не используется"
- ],
- "srs_rules": {
-  "new_items_per_day": 2,
-  "review_policy": "SRS-повторы в начале дней 1-6: due_lesson <= текущий урок, reps > 0, status != deprecated; строгая сортировка (due_lesson ASC, lapses DESC, id ASC), затем первые максимум 5 одним пакетом. Ученик отвечает на все номера одним сообщением; model/agent wait не считается. Первичный retrieval — 5 минут learner-active time; только ошибочные номера получают один общий retry до 2 минут. Всё learner-active SRS-время сверх 5 минут сокращает главный блок. Новые карточки: максимум 2 только из фактически введённого материала; после подтверждения сохранять status active, reps 1, lapses 0, interval_lessons 1, due_lesson = lesson_number + 1. Reps 0 означает ещё не введённый seed. Одна повторяющаяся high-impact ошибка в covered material может заменить один слот, но не добавляется сверх лимита. Паттерны вводятся только в day 5, ровно 2 в неделю. До ответа показывается только front.",
-  "error_card_policy": "Не каждая ошибка становится карточкой. Приоритет: повторяемость, высокая частота и влияние на понятность; not-yet-covered ошибки не логируются и не превращаются в SRS.",
-  "pattern_bank": "track_B/research/pattern_bank_v2.md",
-  "pattern_intro_day": 5,
-  "patterns_per_week": 2
- },
- "weeks": [
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 1, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Один target: present simple vs present continuous для фактов/рутины и текущих изменений. Контекст 1 — AI-курс; перенос — работа учителя или обычная жизнь. grammar_lesson: правило -> короткий контраст -> 2-3 примера -> контролируемая практика; check_grammar: максимум 2 коррекции + одна повторная попытка. До 2 новых карточек.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "2 новых карточки из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 2, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Мой курс: 5 уроков по 90 минут, 10-14 лет, A2-B1, сайт + защита». Курс как продукт. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 3, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Decision 2371: английский обязален с 1 класса, 30 млн учащихся, 22 000 учителей. Бриф рынок/легаль. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 10-14 предложений). 2 новых chunks из текста -> SRS.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 4, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Описать цифры why now (Decision 2371, 102 097 вакансий, 22 000 учителей) выученными chunks. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 5, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S14, S15 (Cat 4 Data). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "Sal Khan TED: вступление 3 мин. Разбор: как открывает, как снимает страх замены. Shadowing 6 повторений.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 6, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "Сегмент 1 мастер-скрипта: хук (контраст зубрёжки и проекта, стиль Robinson) + 2-мин саммари курса. Запись на телефон, разбор, повтор.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "speaking",
-       "duration_min": 15,
-       "activity": "Лёгкий неоцениваемый 2-минутный audio sample: «Мой курс и почему сейчас». Только одна заметка по понятности; CAF не запускать до W4.",
-       "material_ref": ""
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 15,
-       "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла без увеличения объёма.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
+  "course_principles": {
+    "lesson_model": "Один главный навык за урок; стандартный урок 25-30 минут, абсолютный hard cap 35 минут. На 25-й минуте новые вопросы прекращаются и урок переходит к финальному фидбеку и закрытию.",
+    "goal_horizons": "12 недель: функциональный B2+/приближение к C1 для pitch и professional Q&A. Долгосрочно: общий spoken C1 для работы, преподавания, клиентов и повседневной жизни.",
+    "topic_balance": "Около 50% AI-курс/продажи, 30% преподавание/AI-работа/клиенты, 20% повседневная и социальная речь; перенос внутри главного навыка.",
+    "correction": "Контролируемая практика: немедленная target-коррекция + одна повторная попытка. Свободная речь: отложенно максимум 2-3 коррекции. Непройденное не штрафуется.",
+    "listening": "Day 5: 12 минут listening, аудио 1.5–2 мин; субтитры на первом проходе, 2 вопроса, 2–3 shadowing, 3–5 предслов до аудио.",
+    "reading": "До 3 предслов, 8–10 предложений, >=70% новых фактов, 2 вопроса, summary 30–45 сек, до 2 chunks.",
+    "materials": "Если material_ref пуст, named agent создаёт оригинальный learner-facing материал из activity и today.md. Весь материал выдаётся в чате; пустая ссылка не означает внешнее домашнее задание.",
+    "timebox_guard": "Dual Timebox Guard: системный clock + жёсткий Step Budget; ⏱ [Блок X/2 | Шаг Y из Z | ~M/30 мин]. Если часов нет, ~?/30 мин. Стоп новым вопросам с 25-й минуты или после последнего шага; Closure."
   },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 8, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Один target: will vs be going to для спонтанного решения/прогноза и плана с основанием. Контекст курса + общий рабочий перенос. grammar_lesson: короткий контраст, 2-3 примера и контролируемая практика; check_grammar: max 2 коррекции + retry; до 2 карточек.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 9, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Почему сейчас»: цифры реформы, кадровый голод. Present Perfect в каждом ответе. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 10, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Цифры стресса родителей, IELTS-пузырь, готовность платить (29-47% бюджета семьи). Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 10-14 предложений). до 2 новых chunks из текста -> SRS.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 11, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Описать цифры рынка (29-47%, 491 трлн VND, 94%) выученными chunks. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 12, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S16, S17 (Cat 4 Data). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "Luke's English Podcast с транскриптом: 15 мин, shadowing 5-6 фраз.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 13, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "Сегмент 2: боли родителей и учеников (Pathos). Запись, разбор, повтор. Запись на телефон, разбор, повтор.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 20,
-       "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues.",
-       "material_ref": ""
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 15,
-       "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
+  "assessment_protocol": {
+    "formal_benchmarks": "W4, W8, W12: benchmark-монолог/питч с check_monologue_caf x3 на day 6; EF SET reading+listening на day 7. Так каждый отдельный урок остаётся в hard cap 60 минут.",
+    "weekly": "Day 7: лёгкий неоцениваемый 2-минутный audio sample, чередуя ESP и general English, плюс weekly_review.",
+    "practice_feedback": "Полный CAF и полный рубрикатор не запускаются после обычной speaking/pitch-практики."
   },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 15, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Hewings Unit 44: the vs a/an. Фразы методологии: «The teacher acts as a facilitator», «AI is a tool, not a replacement». Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 5 предложений о курсе. до 2 новых chunks/слова по теме -> SRS.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 16, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Методология»: AI как co-pilot, учитель как оператор. Артикли в речи. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 17, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Методология: 5 принципов, AI как ассистент, кейс Apax (короткие модули). Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 10-14 предложений). до 2 новых chunks из текста -> SRS.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 18, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Описать методологию (5 принципов, AI как ассистент) с артиклями. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 19, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S10, S11 (Cat 3 Cause-Effect). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "Robinson «Do Schools Kill Creativity?»: структура открытия, контраст, юмор. Shadowing.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 20, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "Сегмент 3: методология (AI как co-pilot). Запись, разбор. Запись на телефон, разбор, повтор.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 20,
-       "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues.",
-       "material_ref": ""
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 15,
-       "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
+  "grammar_path": [
+    "Диагностика (день 1 Track A, шаг 0.1, ДО старта недели 1): EF SET + Cambridge; затем быстрый срез слабых тем по Collins Work on Your Grammar Advanced - результат в track_A/logs/diagnostics.md",
+    "Если диагностика показывает пробел в базе, он заменяет один ближайший grammar target; параллельный дополнительный юнит и второй grammar-блок не добавляются",
+    "Основной путь: высокочастотные темы B2→C1 по неделям. Номера Hewings — только метки; в конкретный день выбирается один узкий target или контраст, а не весь диапазон юнитов",
+    "Формат: grammar_lesson ведёт мини-урок прямо в чате — один target, короткий контраст, 2-3 примера, контролируемая практика; check_grammar даёт максимум 2 коррекции и одну повторную попытку. Никаких отсылок «открой книгу/файл»",
+    "Номера юнитов Hewings служат только метками тем (последовательность зафиксирована в днях программы); сверка с изданием не нужна - книга не используется"
+  ],
+  "srs_rules": {
+    "new_items_per_day": 2,
+    "review_policy": "SRS-повторы в начале дней 1-6: due_lesson <= текущий урок, reps > 0, status != deprecated; строгая сортировка (due_lesson ASC, lapses DESC, id ASC), затем первые максимум 5 одним пакетом. Ученик отвечает на все номера одним сообщением; model/agent wait не считается. Первичный retrieval — 5 минут learner-active time; только ошибочные номера получают один общий retry до 2 минут. Всё learner-active SRS-время сверх 5 минут сокращает главный блок. Новые карточки: максимум 2 только из фактически введённого материала; после подтверждения сохранять status active, reps 1, lapses 0, interval_lessons 1, due_lesson = lesson_number + 1. Reps 0 означает ещё не введённый seed. Одна повторяющаяся high-impact ошибка в covered material может заменить один слот, но не добавляется сверх лимита. Паттерны вводятся только в day 5, ровно 2 в неделю. До ответа показывается только front.",
+    "error_card_policy": "Не каждая ошибка становится карточкой. Приоритет: повторяемость, высокая частота и влияние на понятность; not-yet-covered ошибки не логируются и не превращаются в SRS.",
+    "pattern_bank": "track_B/research/pattern_bank_v2.md",
+    "pattern_intro_day": 5,
+    "patterns_per_week": 2
   },
-  {
-   "days": [
+  "weeks": [
     {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 22, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Один target: agreement с everyone/each (singular) vs people/students (plural). Контекст платформы + общий рабочий перенос. grammar_lesson и check_grammar по timebox; neither/either оставить на другой цикл; до 2 карточек.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 1, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Один target: present simple vs present continuous для фактов/рутины и текущих изменений. Контекст 1 — AI-курс; перенос — работа учителя или обычная жизнь. grammar_lesson: правило -> короткий контраст -> 2-3 примера -> контролируемая практика; check_grammar: максимум 2 коррекции + одна повторная попытка. До 2 новых карточек. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "2 новых карточки из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 2, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Мой курс: 5 уроков по 90 минут, 10-14 лет, A2-B1, сайт + защита». Курс как продукт. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 3, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Decision 2371: английский обязален с 1 класса, 30 млн учащихся, 22 000 учителей. Бриф рынок/легаль. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 8–10 предложений, 2 вопроса). 2 новых chunks из текста -> SRS. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 4, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Описать цифры why now (Decision 2371, 102 097 вакансий, 22 000 учителей) выученными chunks. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5). P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 5, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S14, S15 (Cat 4 Data). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "Sal Khan TED: вступление 3 мин. Разбор: как открывает, как снимает страх замены. Shadowing 6 повторений. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 6, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "Сегмент 1 мастер-скрипта: хук (контраст зубрёжки и проекта, стиль Robinson) + 2-мин саммари курса. Запись на телефон, разбор, повтор. P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "speaking",
+              "duration_min": 15,
+              "activity": "Лёгкий неоцениваемый 2-минутный audio sample: «Мой курс и почему сейчас». Только одна заметка по понятности; CAF не запускать до W4. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 15,
+              "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла без увеличения объёма. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
     },
     {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 23, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Поля и флоу»: как устроен курс, какие результаты даёт. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 8, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Один target: will vs be going to для спонтанного решения/прогноза и плана с основанием. Контекст курса + общий рабочий перенос. grammar_lesson: короткий контраст, 2-3 примера и контролируемая практика; check_grammar: max 2 коррекции + retry; до 2 карточек. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 9, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Почему сейчас»: цифры реформы, кадровый голод. Present Perfect в каждом ответе. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 10, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Цифры стресса родителей, IELTS-пузырь, готовность платить (29-47% бюджета семьи). Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 8–10 предложений, 2 вопроса). до 2 новых chunks из текста -> SRS. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 11, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Описать цифры рынка (29-47%, 491 трлн VND, 94%) выученными chunks. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5). P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 12, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S16, S17 (Cat 4 Data). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "Luke's English Podcast с транскриптом: 15 мин, shadowing 5-6 фраз. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 13, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "Сегмент 2: боли родителей и учеников (Pathos). Запись, разбор, повтор. Запись на телефон, разбор, повтор. P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 15,
+              "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
     },
     {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 24, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Поля и флоу: структура 5 уроков, что на каждом уроке, результаты пилота. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 10-14 предложений). до 2 новых chunks из текста -> SRS.",
-       "material_ref": ""
-      }
-     ]
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 15, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Hewings Unit 44: the vs a/an. Фразы методологии: «The teacher acts as a facilitator», «AI is a tool, not a replacement». Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 3 controlled + 2 своих предложения о курсе. до 2 новых chunks/слова по теме -> SRS. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 16, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Методология»: AI как co-pilot, учитель как оператор. Артикли в речи. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 17, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Методология: 5 принципов, AI как ассистент, кейс Apax (короткие модули). Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 8–10 предложений, 2 вопроса). до 2 новых chunks из текста -> SRS. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 18, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Описать методологию (5 принципов, AI как ассистент) с артиклями. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5). P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 19, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S10, S11 (Cat 3 Cause-Effect). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "Robinson «Do Schools Kill Creativity?»: структура открытия, контраст, юмор. Shadowing. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 20, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "Сегмент 3: методология (AI как co-pilot). Запись, разбор. Запись на телефон, разбор, повтор. P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 15,
+              "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
     },
     {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 25, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Описать поля и флоу курса (5 уроков, результаты пилота). Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5).",
-       "material_ref": ""
-      }
-     ]
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 22, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Один target: agreement с everyone/each (singular) vs people/students (plural). Контекст платформы + общий рабочий перенос. grammar_lesson и check_grammar по timebox; neither/either оставить на другой цикл; до 2 карточек. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 23, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Поля и флоу»: как устроен курс, какие результаты даёт. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 24, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Поля и флоу: структура 5 уроков, что на каждом уроке, результаты пилота. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 8–10 предложений, 2 вопроса). до 2 новых chunks из текста -> SRS. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 25, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Описать поля и флоу курса (5 уроков, результаты пилота). Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5). P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 26, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S12, S13 (Cat 3 Cause-Effect). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "CodeLaunch: Q&A после питча — как основатели отвечают на жёсткие вопросы. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 27, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "W4 benchmark-монолог: сегменты 1-4, сквозной прогон на таймер. Transcript -> check_monologue benchmark + check_monologue_caf x3 параллельно -> медиана. Повтор после полного разбора не добавлять в этот урок. P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "EF SET reading (бенчмарк). Результат в лог, сравнить с предыдущим. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "listening",
+              "duration_min": 15,
+              "activity": "EF SET listening (бенчмарк). Сравнить с предыдущим. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
     },
     {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 26, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S12, S13 (Cat 3 Cause-Effect). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "CodeLaunch: Q&A после питча — как основатели отвечают на жёсткие вопросы.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 29, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Hewings Units 53-54: relative clauses (who/which/that, defining). «The platform, which adapts the pace...» Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 3 controlled + 2 своих предложения о курсе. до 2 новых chunks/слова по теме -> SRS. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 30, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Рынок»: цифры рынка, готовность платить, конкуренты. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 31, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Цифры рынка: 491 трлн VND = 5.2% ВВП, 94% родителей за сертификат, конкуренты. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 8–10 предложений, 2 вопроса). до 2 новых chunks из текста -> SRS. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 32, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Описать рыночные данные с паттернами Cat 4 (введены W1 день 5). Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5). P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 33, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S1, S2 (Cat 1 Hedging). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "Think Fast, Talk Smart: выпуск о структурных переходах. Shadowing 5 фраз. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 34, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "Сегмент 5: рынок и цифры. Data description с паттернами Cat 4. Запись на телефон, разбор, повтор. P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 15,
+              "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
     },
     {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 27, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "W4 benchmark-монолог: сегменты 1-4, сквозной прогон на таймер. Transcript -> check_monologue benchmark + check_monologue_caf x3 параллельно -> медиана. Повтор после полного разбора не добавлять в этот урок.",
-       "material_ref": ""
-      }
-     ]
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 36, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Один target: present/past passive для фокуса на процессе или результате; контраст с active и решение, когда указывать agent. Контекст платформы + общий рабочий перенос. grammar_lesson и check_grammar по timebox; до 2 новых карточек. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 37, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Платформа»: deep dive, как работает, преимущества. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 38, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Платформа: техническое устройство, безопасность данных, интеграция с центром. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 8–10 предложений, 2 вопроса). до 2 новых chunks из текста -> SRS. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 39, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Описать платформу: техническое устройство, преимущества. Пассив где уместно. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5). P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 40, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S3, S4 (Cat 1 Hedging). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "Wright «Thrive by Five»: раннее развитие, эмоциональный крючок. Shadowing. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 41, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "Сегмент 6: конкуренты и отличие. Полный прогон сегментов 1-6. @mock-pitch (T-A4). P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 15,
+              "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
     },
     {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 25,
-       "activity": "EF SET reading (бенчмарк). Результат в лог, сравнить с предыдущим.",
-       "material_ref": ""
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "EF SET listening (бенчмарк). Сравнить с предыдущим.",
-       "material_ref": ""
-      }
-     ]
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 43, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Hewings Units 28-29: verb + -ing vs to-infinitive. «The center expects us to handle the enrollment». Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 3 controlled + 2 своих предложения о курсе. до 2 новых chunks/слова по теме -> SRS. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 44, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Enrollment»: процесс записи, что центр делает, что мы делаем. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 45, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Enrollment: процесс записи, роли сторон, контракт. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 8–10 предложений, 2 вопроса). до 2 новых chunks из текста -> SRS. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 46, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Полный прогон питча сегментов 1-4 вслух (без записи). Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5). P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 47, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S5, S18 (Cat 1 + Cat 5). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "GSV Cup: питч полуфиналиста. Разбор структуры и тайминга. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 48, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "Сегмент 7: легальность и риски. Полный прогон 1-7 на таймер. @mock-pitch (T-A4). P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 15,
+              "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 50, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Один target: reported statements — backshift после past reporting verb vs no backshift, когда факт всё ещё актуален. Контекст разговора с директором + общий рабочий перенос. grammar_lesson и check_grammar по timebox; до 2 новых карточек. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 51, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Репетиция рассказа «история одного родителя» (нарратив, Pathos). + 30-сек live-демо. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 52, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Новый текст о том, как story-based evidence повышает понятность B2B-презентации. До 3 слов до текста, 8–10 предложений, 2 вопроса, 2 вопроса и summary 30–45 секунд; известные факты <=30% с пометкой review; до 2 новых chunks. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 53, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Data speaking: интерпретация данных по рынку и конкурентам + перенос на знакомые рабочие данные. Только введённые ранее паттерны; EF SET перенесён на benchmark day 7. P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 54, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S19, S20 (Cat 5 Signposting). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "Аутентичное listening по signposting в презентации: максимум 3-5 предслов до аудио, первый проход с субтитрами/транскриптом, затем comprehension и shadowing. EF SET — только day 7. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 55, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "W8 benchmark: полный pitch по памяти + Q&A в @mock-pitch. Transcript -> check_monologue benchmark + check_monologue_caf x3 параллельно -> медиана; оценивать только covered material. P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "EF SET reading (W8 benchmark). Результат сохранить и сравнить с baseline/W4. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "listening",
+              "duration_min": 15,
+              "activity": "EF SET listening (W8 benchmark). Результат сохранить и сравнить с baseline/W4; новые карточки не создавать. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 57, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Hewings Units 66-67: gradable vs non-gradable adjectives. «The platform is absolutely unique», не «very unique». Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 3 controlled + 2 своих предложения о курсе. до 2 новых chunks/слова по теме -> SRS. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 58, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Обработка возражений»: бюджет, обучение учителей, время на внедрение. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 59, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Статья об обработке возражений в B2B (Highspot framework). Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 8–10 предложений, 2 вопроса). до 2 новых chunks из текста -> SRS. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 60, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Обработка возражений aloud: 5 возражений, ответы с hedging-паттернами. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5). P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 61, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S6, S7 (Cat 2 Emphasis). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "Think Fast, Talk Smart: выпуск о работе с возражениями. Shadowing. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 62, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "Обработка возражений: 5 типичных возражений, отработка aloud с паттернами Cat 1. @mock-pitch (T-A4). P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 15,
+              "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 64, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Hewings Units 79-80: real conditionals (if/unless). «If the demo meets your expectations, we can start next month.» Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 3 controlled + 2 своих предложения о курсе. до 2 новых chunks/слова по теме -> SRS. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 65, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Переговоры»: условия, цены, контракт. Conditionals в речи. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 66, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Статья о переговорах в EdTech: условия, ценообразование, контракты. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 8–10 предложений, 2 вопроса). до 2 новых chunks из текста -> SRS. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 67, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Negotiation rehearsal: условия, цена. Conditionals в речи. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5). P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 68, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Новые паттерны: S8, S9 (Cat 2 Emphasis). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "Podcast о переговорах: Batna, anchors, mutual gain. Shadowing. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 69, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "Переговоры: simulated negotiation с директором. Условия, цена, контракт. Conditionals. @mock-pitch (T-A4). P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 15,
+              "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 71, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Один target: what-cleft для естественного устного акцента — «What parents truly want is visibility...». Контекст питча + общий рабочий/повседневный перенос. Не добавлять it-cleft в тот же урок; до 2 карточек. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 72, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Ударное открытие и закрытие»: инверсия и clefts в питче. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 73, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Новый текст об executive communication: как сжимать сложную идею без потери смысла. До 3 слов до текста, 8–10 предложений, 2 вопроса, 2 вопроса и summary 30–45 секунд; известные факты <=30% с пометкой review; до 2 новых chunks. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 74, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Репетиция «блиц-питча» 90 сек + ударное закрытие с инверсией. Паттерны: применять введённые ранее. P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 75, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Pattern review: review all 20. Drilling всех введённых паттернов aloud, применение к теме питча. Возражения aloud с паттернами Cat 1.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "GSV Cup: финальный питч победителя. Разбор открытия и закрытия. Shadowing. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 76, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "Финальный прогон питча: открытие + закрытие с инверсией и clefts. Без записей. @mock-pitch (T-A4). P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 15,
+              "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "days": [
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 78, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "grammar",
+              "duration_min": 22,
+              "activity": "Один target: inversion только в конструкции not only ... but also для устного акцента. Контекст питча + общий рабочий перенос; другие negative adverbials не вводить. Контролируемая практика + retry; до 2 карточек. P25: без warm-up, 2 примера, 3 controlled + 2 своих предложения (1 курс/работа, 1 жизнь), проверка и один retry внутри 22 мин.",
+              "material_ref": ""
+            },
+            {
+              "skill": "srs",
+              "duration_min": 3,
+              "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 79, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Диалог «Блиц-питч» на 90 секунд: сжатие всего курса. Финальная интеграция всех структур. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9). P25: ровно 3 speaking хода и stop.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 80, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "reading",
+              "duration_min": 25,
+              "activity": "Новый текст о поддержании общего spoken C1 после интенсивного курса: input, output, language focus и fluency. До 3 слов до текста, 8–10 предложений, 2 вопроса, 2 вопроса и summary 30–45 секунд; до 2 новых chunks. EF SET — только day 7. P25: 8–10 предложений, 2 вопроса, summary 30–45 сек.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 81, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 25,
+              "activity": "Data description: итоги 12 недель — прогресс метрик (E/100, EFT/T, MLT) своими словами. Паттерны: применять введённые ранее. P25: 2 хода (45–60 сек описание и интерпретация, затем retry + transfer).",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 82, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "Pattern review: review all 20 (final integration). Drilling всех введённых паттернов aloud, применение к теме питча. Возражения aloud с паттернами Cat 1.",
+              "material_ref": "track_B/research/pattern_bank_v2.md"
+            },
+            {
+              "skill": "listening",
+              "duration_min": 12,
+              "activity": "Финальное обычное listening и shadowing по знакомому выпуску: максимум 3-5 предслов, первый проход с транскриптом/субтитрами. EF SET — только day 7. P25: аудио 1.5–2 мин, один проход с субтитрами, два вопроса, 2–3 shadowing.",
+              "material_ref": ""
+            },
+            {
+              "skill": "speaking",
+              "duration_min": 8,
+              "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening. P25: два своих предложения, по одному на паттерн.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "srs",
+              "duration_min": 5,
+              "activity": "SRS: повторы (due_lesson <= 83, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
+              "material_ref": "track_B/local/db/srs_items.json"
+            },
+            {
+              "skill": "pitch",
+              "duration_min": 25,
+              "activity": "W12 benchmark: финальный mock pitch 10 мин + Q&A + 30-сек demo. Transcript -> check_monologue benchmark + check_monologue_caf x3 параллельно -> медиана; оценивать только covered material. P25: два хода pitch_coach или 2–3 возражения mock_pitch.",
+              "material_ref": ""
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "skill": "reading",
+              "duration_min": 15,
+              "activity": "EF SET reading (бенчмарк). Результат в лог, сравнить с предыдущим. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            },
+            {
+              "skill": "listening",
+              "duration_min": 15,
+              "activity": "EF SET listening (бенчмарк). Сравнить с предыдущим. Финальный результат курса. P25: фиксированный шаг и stop, без новых задач после лимита.",
+              "material_ref": ""
+            }
+          ]
+        }
+      ]
     }
-   ]
-  },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 29, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Hewings Units 53-54: relative clauses (who/which/that, defining). «The platform, which adapts the pace...» Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 5 предложений о курсе. до 2 новых chunks/слова по теме -> SRS.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 30, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Рынок»: цифры рынка, готовность платить, конкуренты. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 31, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Цифры рынка: 491 трлн VND = 5.2% ВВП, 94% родителей за сертификат, конкуренты. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 10-14 предложений). до 2 новых chunks из текста -> SRS.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 32, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Описать рыночные данные с паттернами Cat 4 (введены W1 день 5). Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 33, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S1, S2 (Cat 1 Hedging). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "Think Fast, Talk Smart: выпуск о структурных переходах. Shadowing 5 фраз.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 34, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "Сегмент 5: рынок и цифры. Data description с паттернами Cat 4. Запись на телефон, разбор, повтор.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 20,
-       "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues.",
-       "material_ref": ""
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 15,
-       "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 36, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Один target: present/past passive для фокуса на процессе или результате; контраст с active и решение, когда указывать agent. Контекст платформы + общий рабочий перенос. grammar_lesson и check_grammar по timebox; до 2 новых карточек.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 37, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Платформа»: deep dive, как работает, преимущества. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 38, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Платформа: техническое устройство, безопасность данных, интеграция с центром. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 10-14 предложений). до 2 новых chunks из текста -> SRS.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 39, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Описать платформу: техническое устройство, преимущества. Пассив где уместно. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 40, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S3, S4 (Cat 1 Hedging). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "Wright «Thrive by Five»: раннее развитие, эмоциональный крючок. Shadowing.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 41, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "Сегмент 6: конкуренты и отличие. Полный прогон сегментов 1-6. @mock-pitch (T-A4).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 20,
-       "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues.",
-       "material_ref": ""
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 15,
-       "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 43, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Hewings Units 28-29: verb + -ing vs to-infinitive. «The center expects us to handle the enrollment». Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 5 предложений о курсе. до 2 новых chunks/слова по теме -> SRS.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 44, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Enrollment»: процесс записи, что центр делает, что мы делаем. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 45, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Enrollment: процесс записи, роли сторон, контракт. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 10-14 предложений). до 2 новых chunks из текста -> SRS.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 46, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Полный прогон питча сегментов 1-4 вслух (без записи). Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 47, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S5, S18 (Cat 1 + Cat 5). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "GSV Cup: питч полуфиналиста. Разбор структуры и тайминга.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 48, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "Сегмент 7: легальность и риски. Полный прогон 1-7 на таймер. @mock-pitch (T-A4).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 20,
-       "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues.",
-       "material_ref": ""
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 15,
-       "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 50, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Один target: reported statements — backshift после past reporting verb vs no backshift, когда факт всё ещё актуален. Контекст разговора с директором + общий рабочий перенос. grammar_lesson и check_grammar по timebox; до 2 новых карточек.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 51, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Репетиция рассказа «история одного родителя» (нарратив, Pathos). + 30-сек live-демо. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 52, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Новый текст о том, как story-based evidence повышает понятность B2B-презентации. До 3 слов до текста, 10-14 предложений, 3 вопроса и summary 60-90 секунд; известные факты <=30% с пометкой review; до 2 новых chunks.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 53, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Data speaking: интерпретация данных по рынку и конкурентам + перенос на знакомые рабочие данные. Только введённые ранее паттерны; EF SET перенесён на benchmark day 7.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 54, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S19, S20 (Cat 5 Signposting). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "Аутентичное listening по signposting в презентации: максимум 3-5 предслов до аудио, первый проход с субтитрами/транскриптом, затем comprehension и shadowing. EF SET — только day 7.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 55, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "W8 benchmark: полный pitch по памяти + Q&A в @mock-pitch. Transcript -> check_monologue benchmark + check_monologue_caf x3 параллельно -> медиана; оценивать только covered material.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 25,
-       "activity": "EF SET reading (W8 benchmark). Результат сохранить и сравнить с baseline/W4.",
-       "material_ref": ""
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "EF SET listening (W8 benchmark). Результат сохранить и сравнить с baseline/W4; новые карточки не создавать.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 57, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Hewings Units 66-67: gradable vs non-gradable adjectives. «The platform is absolutely unique», не «very unique». Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 5 предложений о курсе. до 2 новых chunks/слова по теме -> SRS.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 58, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Обработка возражений»: бюджет, обучение учителей, время на внедрение. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 59, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Статья об обработке возражений в B2B (Highspot framework). Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 10-14 предложений). до 2 новых chunks из текста -> SRS.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 60, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Обработка возражений aloud: 5 возражений, ответы с hedging-паттернами. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 61, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S6, S7 (Cat 2 Emphasis). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "Think Fast, Talk Smart: выпуск о работе с возражениями. Shadowing.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 62, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "Обработка возражений: 5 типичных возражений, отработка aloud с паттернами Cat 1. @mock-pitch (T-A4).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 20,
-       "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues.",
-       "material_ref": ""
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 15,
-       "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 64, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Hewings Units 79-80: real conditionals (if/unless). «If the demo meets your expectations, we can start next month.» Мини-урок в чате: правило -> контраст с пройденным -> 2-3 примера -> 5 предложений о курсе. до 2 новых chunks/слова по теме -> SRS.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 65, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Переговоры»: условия, цены, контракт. Conditionals в речи. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 66, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Статья о переговорах в EdTech: условия, ценообразование, контракты. Текст в чате (P8: дедупликация vs srs_items, до 3 слов до текста, 10-14 предложений). до 2 новых chunks из текста -> SRS.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 67, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Negotiation rehearsal: условия, цена. Conditionals в речи. Паттерны: применять введённые ранее (сегодня ввод НЕТ — ввод в день 5).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 68, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Новые паттерны: S8, S9 (Cat 2 Emphasis). Питч-версия (готовое предложение с артиклями), читать вслух. Структура и daily-пример в back карточки. Вопросы — max 2-3 строки (P11). Эти 2 паттерна — весь лимит новых карточек. Затем: drilling всех введённых паттернов aloud.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "Podcast о переговорах: Batna, anchors, mutual gain. Shadowing.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 69, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "Переговоры: simulated negotiation с директором. Условия, цена, контракт. Conditionals. @mock-pitch (T-A4).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 20,
-       "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues.",
-       "material_ref": ""
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 15,
-       "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 71, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Один target: what-cleft для естественного устного акцента — «What parents truly want is visibility...». Контекст питча + общий рабочий/повседневный перенос. Не добавлять it-cleft в тот же урок; до 2 карточек.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 72, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Ударное открытие и закрытие»: инверсия и clefts в питче. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 73, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Новый текст об executive communication: как сжимать сложную идею без потери смысла. До 3 слов до текста, 10-14 предложений, 3 вопроса и summary 60-90 секунд; известные факты <=30% с пометкой review; до 2 новых chunks.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 74, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Репетиция «блиц-питча» 90 сек + ударное закрытие с инверсией. Паттерны: применять введённые ранее.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 75, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Pattern review: review all 20. Drilling всех введённых паттернов aloud, применение к теме питча. Возражения aloud с паттернами Cat 1.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "GSV Cup: финальный питч победителя. Разбор открытия и закрытия. Shadowing.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 76, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "Финальный прогон питча: открытие + закрытие с инверсией и clefts. Без записей. @mock-pitch (T-A4).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 20,
-       "activity": "Extensive reading: Cambridge Readers Level 6 или статья. Без словаря, context clues.",
-       "material_ref": ""
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 15,
-       "activity": "@weekly-review: фактическое время, два главных сигнала и одна ограниченная корректировка следующего цикла. Формальный benchmark — только W4/W8/W12.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "days": [
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 78, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин). Без новых.",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "grammar",
-       "duration_min": 35,
-       "activity": "Один target: inversion только в конструкции not only ... but also для устного акцента. Контекст питча + общий рабочий перенос; другие negative adverbials не вводить. Контролируемая практика + retry; до 2 карточек.",
-       "material_ref": ""
-      },
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "до 2 новых карточек из грамматики (фразы/структуры из мини-урока).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 79, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Диалог «Блиц-питч» на 90 секунд: сжатие всего курса. Финальная интеграция всех структур. @tutor-speaking (T-A1). Применение пройдённых паттернов и грамматики. Новый материал НЕ выдаётся (P9).",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 80, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "reading",
-       "duration_min": 35,
-       "activity": "Новый текст о поддержании общего spoken C1 после интенсивного курса: input, output, language focus и fluency. До 3 слов до текста, 10-14 предложений, 3 вопроса и summary 60-90 секунд; до 2 новых chunks. EF SET — только day 7.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 81, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 35,
-       "activity": "Data description: итоги 12 недель — прогресс метрик (E/100, EFT/T, MLT) своими словами. Паттерны: применять введённые ранее.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 82, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "srs",
-       "duration_min": 8,
-       "activity": "Pattern review: review all 20 (final integration). Drilling всех введённых паттернов aloud, применение к теме питча. Возражения aloud с паттернами Cat 1.",
-       "material_ref": "track_B/research/pattern_bank_v2.md"
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "Финальное обычное listening и shadowing по знакомому выпуску: максимум 3-5 предслов, первый проход с транскриптом/субтитрами. EF SET — только day 7.",
-       "material_ref": ""
-      },
-      {
-       "skill": "speaking",
-       "duration_min": 12,
-       "activity": "Drilling: повтор введённых паттернов, применение к теме питча aloud. Shadowing фраз из listening.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "srs",
-       "duration_min": 5,
-       "activity": "SRS: повторы (due_lesson <= 83, пакет до 5, due_lesson ASC / lapses DESC / id ASC, 5 мин learner-active + один retry до 2 мин).",
-       "material_ref": "track_B/local/db/srs_items.json"
-      },
-      {
-       "skill": "pitch",
-       "duration_min": 45,
-       "activity": "W12 benchmark: финальный mock pitch 10 мин + Q&A + 30-сек demo. Transcript -> check_monologue benchmark + check_monologue_caf x3 параллельно -> медиана; оценивать только covered material.",
-       "material_ref": ""
-      }
-     ]
-    },
-    {
-     "blocks": [
-      {
-       "skill": "reading",
-       "duration_min": 25,
-       "activity": "EF SET reading (бенчмарк). Результат в лог, сравнить с предыдущим.",
-       "material_ref": ""
-      },
-      {
-       "skill": "listening",
-       "duration_min": 20,
-       "activity": "EF SET listening (бенчмарк). Сравнить с предыдущим. Финальный результат курса.",
-       "material_ref": ""
-      }
-     ]
-    }
-   ]
-  }
- ]
+  ]
 }
