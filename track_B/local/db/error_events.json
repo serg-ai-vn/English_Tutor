@@ -2118,5 +2118,191 @@
         "confidence": "low"
       }
     ]
+  },
+  {
+    "lesson_number": 8,
+    "session_kind": "Refresher",
+    "lesson_date": "2026-10-27",
+    "source_file": "current ChatGPT Refresher chat (verbatim)",
+    "capture_status": "source_transcript_backfill",
+    "id": "EE-L08R-U01",
+    "block": "refresher_srs_and_grammar",
+    "source_turn": "initial SRS and single retry; 6 grammar sentences and retry",
+    "source_type": "typed",
+    "learner_text": "1. Maybe it's \"Link\": Link between two facts\n2. There are about 30 milion students and 30 000 institution\n3. The decision 2371 makes English compulsory from grade 1 and the goal is \"English as a second language\" by 2035\n4. This expression is \"Stand out\"\n5. To weaken something gradually\n\n1. The data  clearly shows the strong link between Decision 2371 and the surge in demand for English teachers\n2. There are 30 mln students and 50 000 institutions\n3. The number that really stand out is that Vietnam needs 22000 more english teachers by 2030\n\n1. Normally, I teach children in the evenings, but this week I'm preparing a new AI lesson\n2. I used to teach in kindergartens, but i moved to English centers later\n3. While I was explaining the game, the projector suddenly stopped working\n4. I have worked in Vietnam for four years, but I started teaching at this particular center last year\n5. The course has designed for children, and it is being repositioned right now to focus on AI projects\n6. Look at those dark clouds. I is going to rain. I will close the window\n\n1. The new English course is designed for children aged 10–14, and it has being repositioned right now\n2. Look at those clouds! It is going to rain. I think I will take an umbrella.",
+    "errors": [
+      {
+        "error_text": "The course has designed for children",
+        "correction": "The course is designed for children",
+        "category": "grammar",
+        "grammar_topic": "passive voice",
+        "covered_status": "covered",
+        "severity": "recurring",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "it has being repositioned right now",
+        "correction": "it is being repositioned right now",
+        "category": "grammar",
+        "grammar_topic": "passive voice",
+        "covered_status": "covered",
+        "severity": "recurring",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "The number that really stand out",
+        "correction": "The number that really stands out",
+        "category": "pattern",
+        "grammar_topic": "data patterns S14/S15",
+        "covered_status": "covered",
+        "severity": "recurring",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "The data  clearly shows the strong link",
+        "correction": "The data clearly shows a strong link",
+        "category": "pattern",
+        "grammar_topic": "data patterns S14/S15",
+        "covered_status": "covered",
+        "severity": "recurring",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "30 000 institution",
+        "correction": "50,000 institutions",
+        "category": "vocabulary",
+        "grammar_topic": "education reform figures",
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "I is going to rain",
+        "correction": "It is going to rain",
+        "category": "grammar",
+        "grammar_topic": "weather subject",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "lesson_number": 8,
+    "session_kind": "Refresher",
+    "lesson_date": "2026-10-27",
+    "source_file": "current ChatGPT Refresher chat (verbatim)",
+    "capture_status": "source_transcript_backfill",
+    "id": "EE-L08R-U02",
+    "block": "speaking",
+    "source_turn": "turn 1",
+    "source_type": "voice_transcript_unverified",
+    "learner_text": "So the first question is what students normally do in traditional English lessons in my opinion and as I see this educational process I see that they always learn vocabulary they learn structure they learn GR and they practice to do exams and this protest is very difficult and boring'cause children can't see their results they don't understand how they can use it in their real life Hmm actually uh I've done my AI English course to solve this problem because uh with this AI English course children can see the results immediately they learn new words they still learn new words they still learn structure but they try to use it in the real task and they can see how their new vocabulary how they knew knowledge can help them to create something and when they see these result they are they really interested in this they want to learn more they want to try more and they try to communicate and I think it really can help them to develop their English skills they do one task they see then they try to change something and again they can see their result and can see some how different structure different words can change their result",
+    "errors": [
+      {
+        "error_text": "they really interested in this",
+        "correction": "they are really interested in this",
+        "category": "grammar",
+        "grammar_topic": "present simple be",
+        "covered_status": "covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "these result",
+        "correction": "these results",
+        "category": "grammar",
+        "grammar_topic": "plural nouns",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "lesson_number": 8,
+    "session_kind": "Refresher",
+    "lesson_date": "2026-10-27",
+    "source_file": "current ChatGPT Refresher chat (verbatim)",
+    "capture_status": "source_transcript_backfill",
+    "id": "EE-L08R-U03",
+    "block": "speaking",
+    "source_turn": "turn 2",
+    "source_type": "voice_transcript_unverified",
+    "learner_text": "OK I will try to explain for example there are more one of my lessons At first we learn vocabulary umm some special words which can help us to do the task also we learn some grammar for example present perfect and I explain for children what does it mean and how we can use it and after that children try to use these new knowledge in their task for example we we describe our hobbies and children use new vocabulary and describe their hobbies So only this task can help them to practice their new knowledge but on my AI platform well we have some OK and when children understand how they can describe their hobby they try to give a task for and I think it really changes game because one thing when you try to write by yourself but another thing when you try to explain someone what do you want uh and I think it really improve uh commutative skills uh so we have a special structure how we can speak with AI how we can use AI and it it is always and it is also a small part of our AI English course so and the next step when students see that AI didn't produce them result they really want they try to change their task they try to change They tried to add new words they tried to cancel some words They they improve their critical Skills they see result they try to give their opinion they try to create their opinion about what they see and they start to to see what they like and what they don't like Unusual lesson we don't have this task we formulate any opinion about something Because when you have some opinion about a person in your classmate for example about a classmate maybe it's not polite but when we are talking about AI you really can feel free to write everything you want you really can feel free to say that you don't like something and you can say what you like and you try to change it And this process really can help improve their English and it's real task it's not like fiction that we have lesson and we practice something and they go out after that and don't understand how to use it in real life no but when we're talking about English with AI they even at home can practice they can continue do they they know they they have experience and it's interesting for them because it is a real task and it is a real result",
+    "errors": [
+      {
+        "error_text": "it really improve uh commutative skills",
+        "correction": "it really improves communication skills",
+        "category": "grammar",
+        "grammar_topic": "present simple third person",
+        "covered_status": "covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "medium"
+      },
+      {
+        "error_text": "these new knowledge",
+        "correction": "this new knowledge",
+        "category": "grammar",
+        "grammar_topic": "countability",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "they can continue do",
+        "correction": "they can continue doing it",
+        "category": "grammar",
+        "grammar_topic": "verb complementation",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "medium"
+      }
+    ]
+  },
+  {
+    "lesson_number": 8,
+    "session_kind": "Refresher",
+    "lesson_date": "2026-10-27",
+    "source_file": "current ChatGPT Refresher chat (verbatim)",
+    "capture_status": "source_transcript_backfill",
+    "id": "EE-L08R-U04",
+    "block": "speaking",
+    "source_turn": "turn 3",
+    "source_type": "voice_transcript_unverified",
+    "learner_text": "In the end of this course we have a public presentation where children can demonstrate their result for their parents and for their classmates other classmates can ask some questions and this student should answer so this presentation can show their skills In the beginning of the course we will have some small test are and after this course we will have the same so it will be like a small video where student try to to describe what they want and after they will protect they will defend They are projects and also each of my student will have their own website during the course they create their own website about them self And they can show this website for their friends for their parents And only these thing can show their progress of course are my platform will check everything because I can see each are all of our students answers I can see their progress I can see where they make mistakes I can help them because I see on everything in real time",
+    "errors": [
+      {
+        "error_text": "They are projects",
+        "correction": "their projects",
+        "category": "vocabulary",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "low"
+      },
+      {
+        "error_text": "each of my student",
+        "correction": "each of my students",
+        "category": "grammar",
+        "grammar_topic": "plural with each of",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      }
+    ]
   }
 ]
