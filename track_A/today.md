@@ -3,7 +3,7 @@ title: "Lesson 9 — Week 2 Day 2 — Why Now? Speaking"
 created: 2026-10-29
 updated: 2026-10-29
 tags: [english, lesson, speaking, track-a]
-status: planned
+status: completed
 related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protocol.md]
 ---
 
@@ -13,16 +13,16 @@ related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protoco
 **Goal:** Explain why the proposed AI-English course is timely, using previously learned facts about the Vietnamese education reform and the English-teacher shortage.
 **Main skill:** speaking — fluency and accurate use of already covered Present Perfect and other covered grammar.
 **planned_learning_min:** 30
-**actual_learning_min:** null (ask learner at Closure)
-**model_wait_min:** null (record only if measured)
+**actual_learning_min:** 22 (learner explicitly reported; whole minutes)
+**model_wait_min:** null (not measured; do not derive from wall-clock)
 **hard_cap_min:** 35
 **stop_new_questions_at_elapsed_min:** 25
 **lesson_started_at:** 2026-10-29T08:52:56+07:00 (learner confirmed plan)
 **time_source:** platform_local_clock
-**elapsed_min:** 0 (at start)
-**step_index:** 1
+**elapsed_min:** 26 (rounded from system-clock observation at feedback stop, 09:18:34; full session span not measured)
+**step_index:** 2 (speaking stopped after turn 2 of 3 by time guard)
 **step_total:** 2 (lesson blocks; per-block step limits below)
-**stop_new_tasks:** false
+**stop_new_tasks:** true
 
 | Block | Minutes | Agent / Prompt | Expected result |
 |---|---:|---|---|
@@ -91,8 +91,15 @@ related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protoco
 
 ## Closure
 
-- [ ] SRS: record learner responses, update only cards actually reviewed.
-- [ ] Speaking: capture 3 learner turns or earlier timebox stop; delayed corrections; limited retry.
-- [ ] Obtain integer `actual_learning_min` from learner; `model_wait_min` only if known.
-- [ ] Update the canonical lesson log, relevant JSON tables, `progress.json`, `session.md`, and this file (`status: completed`) after the timing gate.
-- [ ] Commit/synchronize the completed lesson to GitHub `main`.
+- [x] SRS: all 5 meanings correctly retrieved (ids 40/42/43/44/52), no retry; only these five cards updated.
+- [x] Speaking: 2 learner turns captured verbatim; third turn and retry skipped due P25 timebox; three delayed corrections issued.
+- [x] Learner explicitly reported `actual_learning_min: 22`; `model_wait_min: null` because not measured.
+- [x] Update daily lesson log, relevant JSON tables, `progress.json`, `session.md` and this plan after timing gate.
+- [x] Synchronize completed lesson files directly to GitHub `main`.
+
+## Outcome — Lesson 9 closure (2026-10-29)
+
+- SRS: all five cards correct first try. No retry and no new SRS cards. Updated only ids 40, 42, 43, 44, 52 to reps 3 / interval 6 / due lesson 15.
+- Speaking: 2 of 3 turns completed. Third turn not asked because the minute-25 stop had been reached; no speaking retry. Verbatim transcripts saved in `speaking_recordings.json`.
+- Timing: learner-reported productive learning **22 minutes**. Platform local clock indicated **25m38s elapsed** from confirmation to stop decision (includes waits), not full chat duration; model wait unmeasured.
+- New grammar and material: none. Next: Lesson 10, Week 2 Day 3, Reading.
