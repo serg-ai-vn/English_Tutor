@@ -335,5 +335,47 @@
     },
     "error_count": 2,
     "duration_sec": null
+  },
+  {
+    "id": 16,
+    "recorded_at": "2026-10-29",
+    "lesson_number": 9,
+    "session_kind": "Lesson",
+    "block": "speaking",
+    "attempt": "first",
+    "source_type": "chat_text_modality_unverified",
+    "audio_verified": false,
+    "source_file": "current ChatGPT Lesson 9 chat",
+    "source_turn": "speaking turn 1 of 3",
+    "transcript": "Vietnamise goverment has big plans for the future. Decision 2371 has made English compulsory from grade one and there is a striking mismatch between national ambitions and on-the-ground capacity. Vietnam needs 22,000 more English teachers by 2030. The reform covers more than 30 million students and 50,000 institutions. Vietnam aims to make English a second language by 2035",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L09-U02"
+      ],
+      "notes": "Clear course-policy overview with correctly used present perfect; feedback delayed until stop."
+    },
+    "error_count": 1,
+    "duration_sec": null
+  },
+  {
+    "id": 17,
+    "recorded_at": "2026-10-29",
+    "lesson_number": 9,
+    "session_kind": "Lesson",
+    "block": "speaking",
+    "attempt": "first",
+    "source_type": "chat_text_modality_unverified",
+    "audio_verified": false,
+    "source_file": "current ChatGPT Lesson 9 chat",
+    "source_turn": "speaking turn 2 of 3",
+    "transcript": "Before AI supported teachers spend 8 hours per week on routing feedback after two months they spent three hours. For the centers it means more income and this data may suggest that teachers can support more students. AI creates opportunities for children who cannot afford a private tutor because with AI teachers can teach more students. For students it means that their lessons can be cheaper with good quality.\n\nEnglish is taught through commanding AI. Prompt engineering is new linguistic discipline, not a grammar test in five years. Students learn English through solving real tasks and see the result of their work immideatelly",
+    "ai_feedback": {
+      "error_event_ids": [
+        "EE-L09-U03"
+      ],
+      "notes": "Explained teacher workload and AI-English value; figures in learner response not independently verified; feedback at minute-25 stop. Third turn and retry not conducted."
+    },
+    "error_count": 5,
+    "duration_sec": null
   }
 ]
