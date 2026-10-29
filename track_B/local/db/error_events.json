@@ -2304,5 +2304,147 @@
         "confidence": "high"
       }
     ]
+  },
+  {
+    "id": "EE-L09-U01",
+    "lesson_number": 9,
+    "session_kind": "Lesson",
+    "lesson_date": "2026-10-29",
+    "block": "srs_review",
+    "source_file": "current ChatGPT Lesson 9 conversation (verbatim)",
+    "source_turn": "SRS combined response 1–5",
+    "source_type": "chat_text_modality_unverified",
+    "capture_status": "in_session",
+    "learner_text": "1. Make something less severe\n2. This the moment before big transformation\n3. How far the number from the average\n4. How values spread acroos a range\n5. It means that they are ready to buy ready programs.",
+    "errors": [
+      {
+        "error_text": "This the moment before big transformation",
+        "correction": "This is the moment before a big transformation",
+        "category": "grammar",
+        "grammar_topic": "present simple: be",
+        "covered_status": "covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "How far the number from the average",
+        "correction": "How far the number is from the average",
+        "category": "grammar",
+        "grammar_topic": "present simple: be",
+        "covered_status": "covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "acroos",
+        "correction": "across",
+        "category": "spelling",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "ready programs",
+        "correction": "ready-made programs",
+        "category": "chunk",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "EE-L09-U02",
+    "lesson_number": 9,
+    "session_kind": "Lesson",
+    "lesson_date": "2026-10-29",
+    "block": "speaking",
+    "source_file": "current ChatGPT Lesson 9 conversation (verbatim)",
+    "source_turn": "speaking turn 1 of 3",
+    "source_type": "chat_text_modality_unverified",
+    "capture_status": "in_session",
+    "learner_text": "Vietnamise goverment has big plans for the future. Decision 2371 has made English compulsory from grade one and there is a striking mismatch between national ambitions and on-the-ground capacity. Vietnam needs 22,000 more English teachers by 2030. The reform covers more than 30 million students and 50,000 institutions. Vietnam aims to make English a second language by 2035",
+    "errors": [
+      {
+        "error_text": "Vietnamise goverment",
+        "correction": "Vietnamese government",
+        "category": "spelling",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "EE-L09-U03",
+    "lesson_number": 9,
+    "session_kind": "Lesson",
+    "lesson_date": "2026-10-29",
+    "block": "speaking",
+    "source_file": "current ChatGPT Lesson 9 conversation (verbatim)",
+    "source_turn": "speaking turn 2 of 3",
+    "source_type": "chat_text_modality_unverified",
+    "capture_status": "in_session",
+    "learner_text": "Before AI supported teachers spend 8 hours per week on routing feedback after two months they spent three hours. For the centers it means more income and this data may suggest that teachers can support more students. AI creates opportunities for children who cannot afford a private tutor because with AI teachers can teach more students. For students it means that their lessons can be cheaper with good quality.\n\nEnglish is taught through commanding AI. Prompt engineering is new linguistic discipline, not a grammar test in five years. Students learn English through solving real tasks and see the result of their work immideatelly",
+    "errors": [
+      {
+        "error_text": "Before AI supported teachers spend 8 hours per week",
+        "correction": "Before AI support, teachers spent eight hours per week",
+        "category": "grammar",
+        "grammar_topic": "past simple vs present simple",
+        "covered_status": "covered",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "routing feedback",
+        "correction": "routine feedback",
+        "category": "vocabulary",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "medium"
+      },
+      {
+        "error_text": "their lessons can be cheaper with good quality",
+        "correction": "more affordable lessons without sacrificing quality",
+        "category": "chunk",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      },
+      {
+        "error_text": "Prompt engineering is new linguistic discipline",
+        "correction": "Prompt engineering is a new linguistic discipline",
+        "category": "grammar",
+        "grammar_topic": "articles",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "immideatelly",
+        "correction": "immediately",
+        "category": "spelling",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      }
+    ]
   }
 ]
