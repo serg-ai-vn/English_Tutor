@@ -1,9 +1,9 @@
 {
   "current_week": 2,
-  "current_day": 2,
+  "current_day": 3,
   "start_date": "2026-08-18",
-  "last_completed_date": "2026-10-27",
-  "days_completed": 8,
+  "last_completed_date": "2026-10-29",
+  "days_completed": 9,
   "covered_grammar": [
     "Present simple vs present continuous for facts, routines, and current changes (Lesson 1)",
     "Past simple vs past continuous and used to (Lesson 2)",
@@ -23,5 +23,5 @@
     "Vocab ids 39-41: undermine (v), mitigate (v), guardrails (n).",
     "Grammar minimal-pair cards ids 60-61: will (decision now / belief prediction) vs be going to (existing plan / present evidence)."
   ],
-  "note": "Refresher Lessons 1–8 closed 2026-10-27: reported duration 70 min (model wait unmeasured). P25 active for NEXT lesson: all lessons 25–30 min, hard cap 35, stop new questions at minute 25 or final step, fixed step budget. days_completed remains 8; next Lesson 9 Week 2 Day 2 speaking. SRS Lesson 9 oldest-due-first: ids 40, 42, 43, 44, 52 (due_lesson 7); next due_lesson 9: 15, 54, 25, 49, 53, 60, 61."
+  "note": "Lesson 9 (Week 2 Day 2, speaking) completed on 2026-10-29. Learner-reported productive time 22 min; model wait unmeasured. SRS 5/5 ids 40/42/43/44/52 easy, due_lesson now 15. Speaking 2 of 3 turns: third omitted due P25 minute-25 stop; no speaking retry. Covered grammar and introduced material unchanged. Next Lesson 10 Week 2 Day 3 reading."
 }
