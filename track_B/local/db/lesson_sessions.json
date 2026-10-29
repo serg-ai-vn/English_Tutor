@@ -177,5 +177,37 @@
     "time_source": "Learner explicitly reported 70 minutes in conversation; exact timestamps/model-wait unavailable",
     "completed": true,
     "notes": "Refresher after break, no lesson counter advancement. 5 SRS reviewed with retry; 6 grammar checks, passive weak; 3 substantial speaking turns. Exceeded planned duration; tutor failed to monitor time. Possible shift to 30-min lessons is a proposal only."
+  },
+  {
+    "lesson_number": 9,
+    "session_kind": "Lesson",
+    "lesson_date": "2026-10-29",
+    "week": 2,
+    "cycle_day": 2,
+    "main_skill": "speaking: Why Now? Vietnam's English reform and AI-English education",
+    "planned_learning_min": 30,
+    "actual_learning_min": 22,
+    "wall_clock_span_min": null,
+    "model_wait_min": null,
+    "time_status": "explicit_learner_productive_time_with_unmeasured_wait",
+    "time_source": "Learner explicitly reported 22 active learning minutes after lesson; platform-local clock observed ~25m38s at block stop, not full session span",
+    "variance_reasons": [
+      "Third of three speaking turns deliberately not issued after minute-25 stop",
+      "No spoken retry issued after time guard; block-level learner-active times not independently measured",
+      "Model wait time unmeasured"
+    ],
+    "transcript_source": "current ChatGPT Lesson 9 conversation",
+    "srs_reviewed_ids": [
+      40,
+      42,
+      43,
+      44,
+      52
+    ],
+    "srs_results": "5/5 meanings correct on initial response; no retry",
+    "speaking_turns_completed": 2,
+    "speaking_turns_planned": 3,
+    "completed": true,
+    "notes": "P25 timebox stopped questions at ~25.6 minutes of measured elapsed wall-clock since learner confirmed start (2026-10-29 08:52:56+07:00; stop clock 09:18:34+07:00). Productive learning was explicitly reported as 22 minutes, not derived from clock. Presentation/speaking texts saved verbatim. Two new cards not introduced; completed with early closure."
   }
 ]
