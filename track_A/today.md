@@ -1,44 +1,58 @@
 ---
-title: "Refresher Plan — Lessons 1–8 (before Lesson 9)"
-created: 2026-10-27
-updated: 2026-10-27
-tags: [english, lesson, refresher, track-a]
-status: completed
-related: [progress.json, ../AGENTS.md, LESSON_START.md, ../track_B/local/protocol.md]
+title: "Lesson 9 — Week 2 Day 2 — Why Now? Speaking"
+created: 2026-10-29
+updated: 2026-10-29
+tags: [english, lesson, speaking, track-a]
+status: planned
+related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protocol.md]
 ---
 
-# Refresher — review of Lessons 1–8
+# Lesson 9 — Week 2, Day 2: Why Now?
 
-**Mode:** practice; refresher after a break (no advancement of lesson number).
-**Next scheduled lesson after this refresher:** Lesson 9, Week 2 Day 2.
-**Goal:** rebuild recall and confidence using only previously covered grammar and introduced course material.
-**Main skills:** grammar accuracy and spoken fluency.
-**planned_learning_min:** 45
-**actual_learning_min:** 70 (learner reported total; model wait not measured)
-**model_wait_min:** null (unmeasured)
-**Hard cap:** 60 minutes; waiting for model/agent output is not productive learning time.
+**Mode:** practice; standard scheduled lesson.
+**Goal:** Explain why the proposed AI-English course is timely, using previously learned facts about the Vietnamese education reform and the English-teacher shortage.
+**Main skill:** speaking — fluency and accurate use of already covered Present Perfect and other covered grammar.
+**planned_learning_min:** 30
+**actual_learning_min:** null (ask learner at Closure)
+**model_wait_min:** null (record only if measured)
+**hard_cap_min:** 35
+**stop_new_questions_at_elapsed_min:** 25
+**lesson_started_at:** null (set at learner plan confirmation if an actual clock is available)
+**time_source:** pending_confirmation
+**elapsed_min:** null
+**step_index:** 0
+**step_total:** 2 (lesson blocks; per-block step limits below)
+**stop_new_tasks:** false
 
 | Block | Minutes | Agent / Prompt | Expected result |
 |---|---:|---|---|
-| SRS review | 5–7 | `srs_review` | One package of 5 oldest-due cards, one combined evaluation, at most one combined retry |
-| Grammar refresher | 18 | `grammar_lesson` → `check_grammar` | Brief contrasts of all covered topics and 6 check sentences; no new rules |
-| Speaking refresher | 20 | `tutor_speaking` | 4–5 meaningful learner turns on previously introduced course facts and figures, with delayed correction |
-| **Total planned** | **45** | | |
+| 1/2 — SRS review | 5 | `srs_review` | Exactly one batch of the first five oldest-due cards; one combined check; at most one bundled retry of incorrect cards |
+| 2/2 — Speaking | 25 | `tutor_speaking` | Exactly 3 meaningful learner turns: warm-up, course/market explanation, transfer into work or everyday context; delayed feedback, at most 3 corrections, 2 chunks and one brief retry of one phrase |
+| **Total** | **30** | | Stop new questions by elapsed minute 25 or after final allotted step, whichever is first; hard cap 35 |
 
-## SRS reviews — canonical P21 batch
+## SRS reviews — canonical ordered batch
 
-- Selection condition: `status != deprecated`, `reps > 0`, `due_lesson <= 9`.
-- Sort: `(due_lesson ASC, lapses DESC, id ASC)`; take first 5.
-- `initial_learner_active_target_min: 5`; `bundled_retry_cap_min: 2`; excess active SRS time reduces the grammar portion, with no lesson extension.
-- Show only `front` during first retrieval, in one numbered batch; answers 1–5 in a single reply; `не помню` allowed.
+- Eligibility: `status != deprecated`, `reps > 0`, `due_lesson <= 9`.
+- Sort: `due_lesson ASC, lapses DESC, id ASC` and use the first five only.
+- `srs_step_total: 2` — (1) one numbered package, all responses in one message; (2) combined check and at most one bundled retry for incorrect items.
+- `initial_learner_active_target_min: 3-4`, `total_srs_target_min: 5`, `bundled_retry_cap_min: 2`.
+- Additional SRS learner-active time reduces speaking time and never extends the lesson.
+- Show only these `front` fields during initial retrieval, never `back` before the learner's first answer.
 
-1. id 15 (due 6, lapses 0) — front: The data clearly shows a strong link between Decision 2371 and the surge in demand for English teachers.
-2. id 50 (due 6, lapses 0) — front: The reform covers about 30 million students across 50,000 institutions.
-3. id 51 (due 6, lapses 0) — front: Decision 2371 makes English compulsory from Grade 1 in 2026/27 and aims to make English a second language by 2035.
-4. id 54 (due 6, lapses 0) — front: The number that really stands out is that Vietnam needs 22,000 more English teachers by 2030.
-5. id 39 (due 7, lapses 1) — front: undermine (v) — Students using AI to cheat undermines trust in the new technology.
+1. id 40 (due 7, lapses 1, type vocab) — front: mitigate (v) — Guardrails help mitigate the risks of AI.
+2. id 42 (due 7, lapses 0, type vocab) — front: cusp (n) — We are on the cusp of a transformation in education.
+3. id 43 (due 7, lapses 0, type vocab) — front: deviation (n) — Tutoring lifts students two standard deviations above average.
+4. id 44 (due 7, lapses 0, type vocab) — front: distribution (n) — A normal distribution shows most scores in the middle.
+5. id 52 (due 7, lapses 0, type chunk) — front: English centers are ready to buy off-the-shelf programs.
 
-No new SRS items on a refresher. Do not modify unshown cards.
+## Speaking — strictly 3 turns (P25)
+
+- Theme: **Why Now?** Vietnam's English-education reform, staffing shortage, the urgency of a practical AI-English course.
+- `speaking_step_total: 3`: [Ход 1 из 3] brief warm-up; [Ход 2 из 3] longer explanation of why now with previously learned figures; [Ход 3 из 3] transfer to the learner's teaching/work or ordinary life.
+- Practice previously covered Present Perfect in the replies where context permits; do not introduce or require any new C1 grammar/pattern.
+- No fourth speaking question. After turn 3 (or the 25-minute stop): delayed feedback, at most 3 high-value corrections, at most 2 useful chunks (not introduced as new required material), and one brief retry of one corrected phrase.
+- Use only facts in `introduced_material`; treat reform numbers as previously studied material rather than externally verified facts.
+- Follow `track_B/prompts/tutor_speaking.md` and `track_B/prompts/analytics_contract.md`.
 
 ## covered_grammar
 
@@ -63,28 +77,22 @@ No new SRS items on a refresher. Do not modify unshown cards.
 
 ## not_scored_yet
 
-- Any structure not explicitly in the `covered_grammar` list is `not yet covered — info`, without score deduction, grammar drill, or SRS candidate.
-- No new C1 patterns, facts, or vocabulary required.
+- All grammar not explicitly present in `covered_grammar` is `not yet covered - info` and must not trigger a score penalty, drill, SRS error card, or aggregated error log. Keep raw events privately for analytics when relevant.
+- No new C1 patterns or vocabulary are required for today's speaking block.
 
-## Agent payload
+## Agent payload and timing guard
 
-- `mode: practice`; `lesson_number: 9` for SRS due filtering only; `session_kind: Refresher`.
-- Grammar: short English-language recap of present simple vs present continuous; past simple vs past continuous and used to; present perfect vs past simple with for/since/already/yet; practiced passive forms; will vs be going to. Exactly 6 discriminating sentences spanning these covered contrasts. Correct target mistakes only, at most two priority corrections, one short retry. No new grammar.
-- Speaking: 4–5 turns building from basic description of learning English THROUGH using AI to explain the Vietnam education reform figures and the market need, with optional transfer to teaching or daily work. Require only supplied introduced material. Never assume an external fact is verified beyond its status as previously learned course material. Do not enter mock-pitch role. Fluency-first: delayed feedback, at most 3 high-value corrections, one focused retry.
-- Use `track_B/prompts/analytics_contract.md` quietly; record verbatim learner utterances and only judge previously covered grammar.
-- All exercises and learning materials are given directly in chat, in English. Switch to Russian only if specifically requested.
+- `lesson_number: 9`; `week: 2`; `day: 2`; `mode: practice`; `session_kind: Lesson`.
+- Provide this plan, the block-specific payload, and the literal `track_B/prompts/analytics_contract.md` to each read-only role in sequence. The orchestrator is the only writer.
+- Per role, supply `step_index`, `step_total`, `elapsed_min` (or null), `time_source` and `stop_new_tasks`.
+- First line of each learner-facing **teaching** message: `⏱ [Блок X/2 | Шаг Y из Z | ~M/30 мин]`. When no clock is available, use `~?/30 мин` and rely on Step Budget without inventing measured time.
+- Start lesson timer only after the learner confirms this plan; stop new questions at measured minute 25, at the last permitted step, or earlier if the learner stops. Safety hard cap 35.
+- All prompts, cards, examples and exercises are shown in the chat. Learner explanations/tasks default to English.
 
 ## Closure
 
-- [x] SRS review completed with one retry, ids 15, 50, 51, 54, 39.
-- [x] Grammar: six check sentences reviewed; passive voice needs more practice.
-- [x] Speaking ended at learner request after three substantial turns, fewer than planned due to overrun.
-- [x] Learner reported 70 minutes; precise time and model wait not independently available.
-- [x] Record Refresher without incrementing days_completed.
-- [x] Close Refresher in GitHub main.
-
-## Timebox incident and future changes
-
-- Lesson planned for 45 minutes; learner reports 70 minutes. The 60-minute cap was exceeded on the reported total. Model-wait duration unavailable, not silently excluded.
-- The tutor kept asking questions without monitoring elapsed time. Learner explicitly requested the lesson end.
-- Pending improvement recorded in `Корректировки_урока.md`: automatic elapsed-time control with stopping/shortening of blocks; possible future 30-minute standard lessons is an IDEA ONLY, not an adopted schedule change.
+- [ ] SRS: record learner responses, update only cards actually reviewed.
+- [ ] Speaking: capture 3 learner turns or earlier timebox stop; delayed corrections; limited retry.
+- [ ] Obtain integer `actual_learning_min` from learner; `model_wait_min` only if known.
+- [ ] Update the canonical lesson log, relevant JSON tables, `progress.json`, `session.md`, and this file (`status: completed`) after the timing gate.
+- [ ] Commit/synchronize the completed lesson to GitHub `main`.
