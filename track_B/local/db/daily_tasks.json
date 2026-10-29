@@ -323,5 +323,33 @@
     "material_ref": "track_A/today.md",
     "status": "closed_early",
     "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks."
+  },
+  {
+    "task_date": "2026-10-29",
+    "lesson_number": 9,
+    "session_kind": "Lesson",
+    "planned_duration_min": 5,
+    "actual_duration_min": null,
+    "duration_kind": "lesson_total_reported_block_not_measured",
+    "duration_min": 5,
+    "skill": "srs",
+    "activity": "SRS batch of five oldest-due items: ids 40, 42, 43, 44, 52",
+    "material_ref": "track_A/today.md",
+    "status": "done",
+    "notes": "All five meanings correctly retrieved on first attempt. No retry and no newly introduced cards. Learner reported 22 productive minutes for lesson total, not by block; model wait unmeasured."
+  },
+  {
+    "task_date": "2026-10-29",
+    "lesson_number": 9,
+    "session_kind": "Lesson",
+    "planned_duration_min": 25,
+    "actual_duration_min": null,
+    "duration_kind": "lesson_total_reported_block_not_measured",
+    "duration_min": 25,
+    "skill": "speaking",
+    "activity": "Why Now? Reform, teacher shortages, AI-English opportunity: turns 1–2 of planned 3; feedback, no retry",
+    "material_ref": "track_A/today.md",
+    "status": "closed_early",
+    "notes": "Two complete learner turns preserved verbatim; stop new tasks at measured ~25.6 minutes after lesson start, before third planned turn. Two of three attempted, feedback shown. Total learner productive time 22 min; per-block time unknown."
   }
 ]
