@@ -548,10 +548,10 @@
     "back": "смягчать, снижать (риск)",
     "topic": "ai",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 1,
-    "due_lesson": 7,
-    "interval_lessons": 3
+    "due_lesson": 15,
+    "interval_lessons": 6
   },
   {
     "id": 41,
@@ -572,10 +572,10 @@
     "back": "грань, порог; be on the cusp of = на пороге",
     "topic": "ai",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 0,
-    "due_lesson": 7,
-    "interval_lessons": 3
+    "due_lesson": 15,
+    "interval_lessons": 6
   },
   {
     "id": 43,
@@ -584,10 +584,10 @@
     "back": "отклонение; standard deviation = стандартное отклонение (стат.)",
     "topic": "ai",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 0,
-    "due_lesson": 7,
-    "interval_lessons": 3
+    "due_lesson": 15,
+    "interval_lessons": 6
   },
   {
     "id": 44,
@@ -596,10 +596,10 @@
     "back": "распределение (статистическое)",
     "topic": "ai",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 0,
-    "due_lesson": 7,
-    "interval_lessons": 3
+    "due_lesson": 15,
+    "interval_lessons": 6
   },
   {
     "id": 45,
@@ -692,10 +692,10 @@
     "back": "Готовые коробочные программы - центры готовы их покупать",
     "topic": "market",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 0,
-    "due_lesson": 7,
-    "interval_lessons": 3
+    "due_lesson": 15,
+    "interval_lessons": 6
   },
   {
     "id": 53,
