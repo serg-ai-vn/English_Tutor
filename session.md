@@ -1,7 +1,7 @@
 ---
 title: Журнал сессий - English_Tutor
 created: 2026-08-11
-updated: 2026-10-27
+updated: 2026-10-29
 tags: [english, daily-log, status, github]
 status: active
 related: [AGENTS.md, track_A/LESSON_START.md, План_реализации.md, Корректировки_урока.md]
@@ -19,8 +19,28 @@ related: [AGENTS.md, track_A/LESSON_START.md, План_реализации.md, 
   - **GitHub-дисциплина:** вся история обучения ведётся последовательно в основной ветке `main` (`git pull --rebase` перед стартом сессии; `git add -A && git commit && git push` при закрытии урока или после применения патча; в облачных средах с временными ветками — слияние PR в `main` сразу после завершения урока).
 - **Формат урока P25:** любой урок (Day 1–7 и Refresher) **25–30 мин, hard cap 35 мин**. С 25-й минуты новые вопросы прекращаются, после последнего шага тоже. Dual Timebox Guard: системные часы при доступности + фиксированный Step Budget, индикатор `⏱ [Блок X/2 | Шаг Y из Z | ~M/30 мин]`, если часов нет `~?/30 мин`. SRS до 5 карточек, 1 пакет / 1 проверка / до 1 retry (4–5 мин). Speaking ровно 3 хода; grammar 3 controlled + 2 своих; reading 8–10 предложений и 2 вопроса; Refresher 4 grammar + 2 speaking.
 - **Цели:** 12-недельный горизонт — функциональный B2+/приближение к C1 для pitch/professional Q&A; полный общий spoken C1 — долгосрочный результат. Баланс тем: 50% AI-курс/продажи, 30% teaching/AI work/clients, 20% everyday/social. EF SET baseline: 52 B2 (Reading 56 B2, Listening 48 B1).
-- **Track A (прогресс):** уроки 1–8 завершены, Refresher 2026-10-27 дозакрыт, `days_completed=8`. Следующий **Lesson 9 (Week 2 Day 2 — speaking)** в новом 30-минутном формате. Отсортированный пакет SRS для Lesson 9 `(due_lesson ASC, lapses DESC, id ASC)`: **40, 42, 43, 44, 52** (все `due_lesson: 7`); далее карточки `15, 54, 25, 49, 53, 60, 61` с `due_lesson: 9`.
+- **Track A (прогресс):** уроки 1–9 завершены (`days_completed=9`), включая Lesson 9 от 2026-10-29: 22 минуты активной учёбы по сообщению ученика, SRS 5/5 (40,42,43,44,52), Speaking 2/3 хода — третий пропущен по P25 stop на 25-й минуте. Следующий **Lesson 10 (Week 2 Day 3 — reading)**. Очередь SRS пересчитывать при старте урока; обновлены только просмотренные карточки.
 - **База курса и память об изменениях:** `course_base/` (24 файла, read-only); в `Корректировки_урока.md` закреплён реестр **P1–P25**, Pending пуст.
+
+---
+
+## Session 41 - 2026-10-29
+
+### Done
+
+- Закрыт **Lesson 9, Week 2 Day 2 (Speaking — Why Now?)** по P25: 22 productive minutes из явного ответа ученика; `model_wait_min: null` (не измерен).
+- SRS: 5/5 правильных значений с первого раза, id 40, 42, 43, 44, 52. Только они перенесены на `due_lesson: 15`; retry не было, новых SRS не вводилось.
+- Speaking: два содержательных ответа о реформе образования и AI-English, третий вопрос не задавался из-за достижения minute-25 guard; delayed feedback, без retry. Дословная речь зафиксирована и связана с `error_events.json`.
+- Обновлены `track_A/logs/2026-10-29.md`, JSON базы, `track_A/today.md` и `track_A/progress.json`. Новых грамматических тем и введённых паттернов не было.
+- Фактическое учебное время 22 минуты не выводилось из wall-clock; platform clock проверен для отсечения новых заданий, время ожидания модели неизвестно.
+
+### Next step
+
+- **Lesson 10, Week 2 Day 3 — Reading.** Применить P25: 25–30 минут, hard cap 35, stop-new-questions в минуту 25; новый SRS пакет выбрать по текущему `progress.json` и отсортированным `due_lesson`.
+
+### Blocked
+
+- No blocker.
 
 ---
 
