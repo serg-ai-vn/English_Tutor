@@ -3,7 +3,7 @@ title: "Lesson 10 — Week 2 Day 3 — Parents, IELTS and Value of English Learn
 created: 2026-10-30
 updated: 2026-10-30
 tags: [english, lesson, reading, track-a]
-status: planned
+status: completed
 related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protocol.md]
 ---
 
@@ -13,16 +13,16 @@ related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protoco
 **Goal:** Read and understand a short text about parents' education spending, exam preparation and the difference between test results and practical communication.
 **Main skill:** reading — identify the main message, distinguish details and inference, and summarize in your own words.
 **planned_learning_min:** 30
-**actual_learning_min:** null (ask learner at closure; whole minutes)
+**actual_learning_min:** 35 (learner explicitly reported)
 **model_wait_min:** null (only record measured wait)
 **hard_cap_min:** 35
 **stop_new_questions_at_elapsed_min:** 25
 **lesson_started_at:** 2026-10-30T07:53:33+07:00 (learner confirmed plan)
 **time_source:** platform_local_clock (time widget)
-**elapsed_min:** null
-**step_index:** 1
+**elapsed_min:** 37 (last measured at 08:30:34; not learner-active time)
+**step_index:** 2
 **step_total:** 2
-**stop_new_tasks:** false
+**stop_new_tasks:** true
 
 | Block | Minutes | Agent / Prompt | Expected result |
 |---|---:|---|---|
@@ -88,8 +88,12 @@ related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protoco
 
 ## Closure
 
-- [ ] SRS: run the exact five-card package and record results for shown cards only.
-- [ ] Reading: deliver the text, two questions and one summary prompt, within P25 step/time budget.
-- [ ] Ask learner for integer `actual_learning_min`, and record measured model waiting separately if available.
-- [ ] Update daily log, the relevant JSON tables, `progress.json`, `session.md`, and this plan.
-- [ ] Synchronize completed lesson files to GitHub `main`.
+- [x] SRS: five cards 15,54,25,49,53 reviewed, 5/5 after instruction clarification, no retry.
+- [x] Reading text and 2 questions delivered; gist correct, detail partly correct; summary omitted at time limit. P25 wall-clock hard cap was exceeded.
+- [x] Learner-reported actual_learning_min 35; model_wait_min null (unmeasured).
+- [x] Log, JSON records, progress, session, and plan updated.
+- [x] Synchronize completed lesson files to GitHub main.
+
+## Lesson 10 outcome
+
+SRS 5/5 ids 15,54,25,49,53, no retry; ids 15/54 now due 13, ids 25/49/53 due 16. Reading: 10 sentences, two comprehension questions; gist correct, detail partly correct. Summary skipped due elapsed time. Learner explicitly reported 35 productive minutes; waiting time not measured. Elapsed 07:53:33–08:30:34 exceeded 35-minute hard cap, a protocol violation noted without concealing it. No new cards or grammar. Next Lesson 11 Week 2 Day 4 Data Speaking.
