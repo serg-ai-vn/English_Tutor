@@ -209,5 +209,31 @@
     "speaking_turns_planned": 3,
     "completed": true,
     "notes": "P25 timebox stopped questions at ~25.6 minutes of measured elapsed wall-clock since learner confirmed start (2026-10-29 08:52:56+07:00; stop clock 09:18:34+07:00). Productive learning was explicitly reported as 22 minutes, not derived from clock. Presentation/speaking texts saved verbatim. Two new cards not introduced; completed with early closure."
+  },
+  {
+    "lesson_number": 10,
+    "session_kind": "Lesson",
+    "lesson_date": "2026-10-30",
+    "week": 2,
+    "cycle_day": 3,
+    "main_skill": "Reading: English education spending and outcomes",
+    "planned_learning_min": 30,
+    "actual_learning_min": 35,
+    "model_wait_min": null,
+    "wall_clock_span_min": null,
+    "time_status": "learner_reported_35_min_model_wait_unmeasured",
+    "time_source": "Learner explicitly reported 35 productive minutes; elapsed from confirmation 07:53:33 to stop check 08:30:34 was about 37 minutes",
+    "completed": true,
+    "srs_reviewed_ids": [
+      15,
+      54,
+      25,
+      49,
+      53
+    ],
+    "srs_results": "5/5 correct after clarification, no retry",
+    "reading_questions_answered": 2,
+    "reading_summary_completed": false,
+    "notes": "P25 wall-clock hard cap exceeded; summary omitted. Initial SRS instruction ambiguous; Pending correction recorded. No new SRS cards."
   }
 ]
