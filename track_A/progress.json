@@ -23,5 +23,31 @@
     "Vocab ids 39-41: undermine (v), mitigate (v), guardrails (n).",
     "Grammar minimal-pair cards ids 60-61: will (decision now / belief prediction) vs be going to (existing plan / present evidence)."
   ],
-  "note": "Lesson 10 completed. 35 learner-reported active minutes; SRS 5/5, reading questions 2/2, summary omitted at time limit. Model wait unmeasured. Next: Lesson 11, Week 2 Day 4, Data Speaking."
+  "note": "Lesson 10 completed. 35 learner-reported active minutes; SRS 5/5, reading questions answered 2; gist correct, detail partly correct, summary omitted at time limit. Model wait unmeasured. Next: Lesson 11, Week 2 Day 4, Data Speaking.",
+  "material_exposure": [
+    {
+      "term": "upfront",
+      "status": "explained",
+      "lesson_number": 10,
+      "session_id": "2026-10-30-lesson-10",
+      "source": "Lesson 10 pre-reading vocabulary, shared chat 6ae40670-1174-83ec-a879-f9bd21d5a5e6",
+      "retrieval_confirmed": false
+    },
+    {
+      "term": "commitment",
+      "status": "explained",
+      "lesson_number": 10,
+      "session_id": "2026-10-30-lesson-10",
+      "source": "Lesson 10 pre-reading vocabulary, shared chat 6ae40670-1174-83ec-a879-f9bd21d5a5e6",
+      "retrieval_confirmed": false
+    },
+    {
+      "term": "evidence",
+      "status": "explained",
+      "lesson_number": 10,
+      "session_id": "2026-10-30-lesson-10",
+      "source": "Lesson 10 pre-reading vocabulary, shared chat 6ae40670-1174-83ec-a879-f9bd21d5a5e6",
+      "retrieval_confirmed": false
+    }
+  ]
 }

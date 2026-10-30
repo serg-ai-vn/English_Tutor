@@ -2191,7 +2191,8 @@
         "feedback_shown": true,
         "confidence": "high"
       }
-    ]
+    ],
+    "session_id": "2026-10-27-refresher-before-9"
   },
   {
     "lesson_number": 8,
@@ -2225,7 +2226,8 @@
         "feedback_shown": true,
         "confidence": "medium"
       }
-    ]
+    ],
+    "session_id": "2026-10-27-refresher-before-9"
   },
   {
     "lesson_number": 8,
@@ -2269,7 +2271,8 @@
         "feedback_shown": true,
         "confidence": "medium"
       }
-    ]
+    ],
+    "session_id": "2026-10-27-refresher-before-9"
   },
   {
     "lesson_number": 8,
@@ -2303,7 +2306,8 @@
         "feedback_shown": false,
         "confidence": "high"
       }
-    ]
+    ],
+    "session_id": "2026-10-27-refresher-before-9"
   },
   {
     "id": "EE-L09-U01",
@@ -2357,7 +2361,8 @@
         "feedback_shown": false,
         "confidence": "high"
       }
-    ]
+    ],
+    "session_id": "2026-10-29-lesson-9"
   },
   {
     "id": "EE-L09-U02",
@@ -2381,7 +2386,8 @@
         "feedback_shown": false,
         "confidence": "high"
       }
-    ]
+    ],
+    "session_id": "2026-10-29-lesson-9"
   },
   {
     "id": "EE-L09-U03",
@@ -2445,7 +2451,8 @@
         "feedback_shown": true,
         "confidence": "high"
       }
-    ]
+    ],
+    "session_id": "2026-10-29-lesson-9"
   },
   {
     "id": "EE-L10-U01",
@@ -2479,7 +2486,8 @@
         "feedback_shown": true,
         "confidence": "high"
       }
-    ]
+    ],
+    "session_id": "2026-10-30-lesson-10"
   },
   {
     "id": "EE-L10-U02",
@@ -2513,7 +2521,8 @@
         "feedback_shown": false,
         "confidence": "high"
       }
-    ]
+    ],
+    "session_id": "2026-10-30-lesson-10"
   },
   {
     "id": "EE-L10-U03",
@@ -2555,6 +2564,61 @@
         "covered_status": "task_pragmatics",
         "severity": "slip",
         "feedback_shown": true,
+        "confidence": "high"
+      }
+    ],
+    "session_id": "2026-10-30-lesson-10"
+  },
+  {
+    "id": "EE-P26-L10-U02-D",
+    "session_id": "2026-10-30-lesson-10",
+    "lesson_number": 10,
+    "lesson_date": "2026-10-30",
+    "session_kind": "Lesson",
+    "block": "reading",
+    "source_event_id": "EE-L10-U02",
+    "source_file": "ChatGPT Lesson 10 conversation",
+    "source_turn": "EE-L10-U02",
+    "source_type": "chat_text_modality_unverified",
+    "capture_status": "post_lesson_audit",
+    "audited_at": "2026-10-30",
+    "learner_text": "1. The main idea is that parents pay money, but they don't see any results of their kids until of the end of course. And lots of English centers ask for upfront tuitions. Also there is another one problem. Parents pay money for IELTS preparations, but after that courses kids can pass exams yet can't speak in real conversation",
+    "errors": [
+      {
+        "error_text": "after that courses",
+        "correction": "after those courses",
+        "category": "grammar",
+        "grammar_topic": "demonstrative agreement",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "EE-P26-L10-U01-D",
+    "session_id": "2026-10-30-lesson-10",
+    "lesson_number": 10,
+    "lesson_date": "2026-10-30",
+    "session_kind": "Lesson",
+    "block": "srs",
+    "source_event_id": "EE-L10-U01",
+    "source_file": "ChatGPT Lesson 10 conversation",
+    "source_turn": "EE-L10-U01",
+    "source_type": "chat_text_modality_unverified",
+    "capture_status": "post_lesson_audit",
+    "audited_at": "2026-10-30",
+    "learner_text": "1. A strong link between something means a strong connection between two or more facts\n2. The number that really stands out means really important information\n3. English is a key for solving real world tasks\n4. These two numbers is about shortage of all teachers(100 000) and English teachers (22,000)\n5. Striking mismatch it is difference between something for example a striking mismatch between Vietnamese ambitions and on the ground capacity",
+    "errors": [
+      {
+        "error_text": "Striking mismatch it is difference",
+        "correction": "A striking mismatch is a difference",
+        "category": "broken_phrase",
+        "grammar_topic": "definition construction",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
         "confidence": "high"
       }
     ]

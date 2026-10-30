@@ -1,7 +1,7 @@
 ---
 title: Индекс базы курса - что ученик обязан объяснять на C1
 created: 2026-08-11
-updated: 2026-10-24
+updated: 2026-10-30
 tags: [english, education, strategy]
 status: active
 related: [../../AGENTS.md, ../../План_реализации.md, ../../session.md]
@@ -49,4 +49,7 @@ related: [../../AGENTS.md, ../../План_реализации.md, ../../session
 
 - `program.json`: speaking- и pitch-блоки опираются на конкретные файлы из `course_base/`
 - `mock_pitch.md` (T-A4): AI-директор центра атакует по банку возражений выше
-- `reading_tutor.md` (T-A-R): новые факты из отчётов подаются дозированно (10–14 предложений, до 2 chunks в SRS)
+- `reading_tutor.md` (T-A-R): новые факты из отчётов подаются дозированно (8–10 предложений, до 2 chunks в SRS)
+
+
+Текущее исполнение и сохранение: `track_B/local/lesson_contract.md`. Перед уроком прочитать его; подтверждение успеха только после перечитывания main. Копия старого проекта владельца — архив.

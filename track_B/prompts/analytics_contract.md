@@ -1,7 +1,7 @@
 ---
 title: Контракт тихой аналитики урока
 created: 2026-08-30
-updated: 2026-08-30
+updated: 2026-10-30
 tags: [english, analytics, lesson, agents]
 status: active
 related: [../local/protocol.md, ../../track_A/LESSON_START.md]
@@ -62,3 +62,8 @@ related: [../local/protocol.md, ../../track_A/LESSON_START.md]
 - каждый пакет случаев ошибок — `track_B/local/db/error_events.json`;
 - содержательные speaking/pitch/data попытки — `track_B/local/db/speaking_recordings.json`;
 - только повторяющиеся/high-impact covered errors — агрегированно в `error_log.json` и, при необходимости, максимум одна error-card в пределах дневного лимита SRS.
+
+
+## P26: происхождение и полнота
+
+Применять раздел аналитики `track_B/local/lesson_contract.md`, переданный оркестратором. Каждый содержательный ответ — verbatim событие даже при errors:[]; session_id обязателен для новых записей. Последующий аудит хранить отдельным событием с source_event_id и feedback_shown:false, не подменяя слова и прежние оценки. Полнота массива errors не ограничена количеством показанных коррекций.

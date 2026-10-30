@@ -1,0 +1,16 @@
+{
+  "version": "P26",
+  "success_intervals": [
+    1,
+    3,
+    6,
+    12,
+    24
+  ],
+  "maximum": 24,
+  "lapse_interval": 1,
+  "reps": "lifetime successful reviews; lapse does not erase successful review count",
+  "retry": "successful retry counts as easy under legacy policy; initial/retry outcomes stored separately",
+  "refresher": "uses next ordinary lesson number for due calculation without advancing course counter",
+  "historical_intervals": "preserved; this policy is prospective"
+}

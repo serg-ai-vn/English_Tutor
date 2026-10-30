@@ -296,7 +296,8 @@
     "activity": "five SRS cards and one retry",
     "material_ref": "track_A/today.md",
     "status": "done",
-    "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks."
+    "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks.",
+    "session_id": "2026-10-27-refresher-before-9"
   },
   {
     "task_date": "2026-10-27",
@@ -309,7 +310,8 @@
     "activity": "six controlled sentences and one retry",
     "material_ref": "track_A/today.md",
     "status": "done",
-    "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks."
+    "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks.",
+    "session_id": "2026-10-27-refresher-before-9"
   },
   {
     "task_date": "2026-10-27",
@@ -322,7 +324,8 @@
     "activity": "three substantial turns; closed on learner request",
     "material_ref": "track_A/today.md",
     "status": "closed_early",
-    "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks."
+    "notes": "Total 70 minutes learner-reported; model wait unmeasured; exceeded timebox; no extra tasks.",
+    "session_id": "2026-10-27-refresher-before-9"
   },
   {
     "task_date": "2026-10-29",
@@ -336,7 +339,8 @@
     "activity": "SRS batch of five oldest-due items: ids 40, 42, 43, 44, 52",
     "material_ref": "track_A/today.md",
     "status": "done",
-    "notes": "All five meanings correctly retrieved on first attempt. No retry and no newly introduced cards. Learner reported 22 productive minutes for lesson total, not by block; model wait unmeasured."
+    "notes": "All five meanings correctly retrieved on first attempt. No retry and no newly introduced cards. Learner reported 22 productive minutes for lesson total, not by block; model wait unmeasured.",
+    "session_id": "2026-10-29-lesson-9"
   },
   {
     "task_date": "2026-10-29",
@@ -350,7 +354,8 @@
     "activity": "Why Now? Reform, teacher shortages, AI-English opportunity: turns 1–2 of planned 3; feedback, no retry",
     "material_ref": "track_A/today.md",
     "status": "closed_early",
-    "notes": "Two complete learner turns preserved verbatim; stop new tasks at measured ~25.6 minutes after lesson start, before third planned turn. Two of three attempted, feedback shown. Total learner productive time 22 min; per-block time unknown."
+    "notes": "Two complete learner turns preserved verbatim; stop new tasks at measured ~25.6 minutes after lesson start, before third planned turn. Two of three attempted, feedback shown. Total learner productive time 22 min; per-block time unknown.",
+    "session_id": "2026-10-29-lesson-9"
   },
   {
     "task_date": "2026-10-30",
@@ -363,7 +368,8 @@
     "activity": "Batch ids 15,54,25,49,53; meanings 5/5 following clarification",
     "material_ref": "track_A/today.md",
     "status": "done",
-    "notes": "No retry; block time not measured; 35 productive minutes total reported by learner."
+    "notes": "No retry; block time not measured; 35 productive minutes total reported by learner.",
+    "session_id": "2026-10-30-lesson-10"
   },
   {
     "task_date": "2026-10-30",
@@ -376,6 +382,7 @@
     "activity": "Ten-sentence text, two comprehension questions, feedback; summary skipped",
     "material_ref": "track_A/today.md",
     "status": "closed_early",
-    "notes": "Gist correct, second answer partly correct; clock cap exceeded."
+    "notes": "Gist correct, second answer partly correct; clock cap exceeded.",
+    "session_id": "2026-10-30-lesson-10"
   }
 ]

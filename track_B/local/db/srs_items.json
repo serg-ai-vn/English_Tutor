@@ -3,8 +3,8 @@
     "id": 1,
     "item_type": "pattern",
     "status": "active",
-    "front": "I totally get why you'd worry about kids spending more time on screens. But actually, the platform frees up teachers for more face-to-face activities.",
-    "back": "S2 — валидация concern перед pivot. Структура: I totally get why you'd think [X]. But actually, [Y]. Секция: problem->solution.",
+    "front": "I totally get why you'd think [X]. But actually, [Y].",
+    "back": "S2 — валидация concern перед pivot. Функция/контекст: problem->solution.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -13,14 +13,25 @@
     "interval_lessons": 1,
     "example": "Daily: I get why you'd think it's too expensive. But actually, it pays for itself in two months.",
     "pitch_section": "problem/solution",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "i totally get why you'd think [x]. but actually, [y].",
+    "answer_criteria": "S2 — валидация concern перед pivot. Функция/контекст: problem->solution.",
+    "accepted_answers": [
+      "S2 — валидация concern перед pivot. Функция/контекст: problem->solution."
+    ],
+    "examples": [
+      "Daily: I get why you'd think it's too expensive. But actually, it pays for itself in two months.",
+      "I totally get why you'd worry about kids spending more time on screens. But actually, the platform frees up teachers for more face-to-face activities."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 2,
     "item_type": "pattern",
     "status": "active",
-    "front": "What we tend to see is that students progress faster when the platform adapts to their pace.",
-    "back": "S5 — смягчение утверждения. Структура: What we tend to see is that [Subject] [Verb] when [Condition]. Секция: evidence.",
+    "front": "What we tend to see is that [Subject] [Verb] when [Condition].",
+    "back": "S5 — смягчение утверждения. Функция/контекст: evidence.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -29,14 +40,25 @@
     "interval_lessons": 1,
     "example": "Daily: What we tend to see is that people stick with it when they see quick results.",
     "pitch_section": "evidence",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "what we tend to see is that [subject] [verb] when [condition].",
+    "answer_criteria": "S5 — смягчение утверждения. Функция/контекст: evidence.",
+    "accepted_answers": [
+      "S5 — смягчение утверждения. Функция/контекст: evidence."
+    ],
+    "examples": [
+      "Daily: What we tend to see is that people stick with it when they see quick results.",
+      "What we tend to see is that students progress faster when the platform adapts to their pace."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 3,
     "item_type": "pattern",
     "status": "active",
-    "front": "Instead of seeing AI as a replacement for your teachers, it's more useful to think of it as a teaching assistant that never gets tired.",
-    "back": "S3 — рефрейминг негатива. Структура: Instead of seeing [X] as [negative], it's more useful to think of it as [positive]. Секция: problem->solution.",
+    "front": "Instead of seeing [X] as [negative], it's more useful to think of it as [positive].",
+    "back": "S3 — рефрейминг негатива. Функция/контекст: problem->solution.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -45,14 +67,25 @@
     "interval_lessons": 1,
     "example": "Daily: Instead of seeing the new schedule as a problem, think of it as a chance to reorganize.",
     "pitch_section": "problem/solution",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "instead of seeing [x] as [negative], it's more useful to think of it as [positive].",
+    "answer_criteria": "S3 — рефрейминг негатива. Функция/контекст: problem->solution.",
+    "accepted_answers": [
+      "S3 — рефрейминг негатива. Функция/контекст: problem->solution."
+    ],
+    "examples": [
+      "Daily: Instead of seeing the new schedule as a problem, think of it as a chance to reorganize.",
+      "Instead of seeing AI as a replacement for your teachers, it's more useful to think of it as a teaching assistant that never gets tired."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 4,
     "item_type": "pattern",
     "status": "active",
-    "front": "That's a fair concern about the cost. Let me show you what happened when three centers in Hanoi adopted this last year.",
-    "back": "S4 — ответ на concern с evidence. Структура: That's a fair concern. Let me show you what happened when [someone] tried this. Секция: evidence.",
+    "front": "That's a fair concern. Let me show you what happened when [someone] tried this.",
+    "back": "S4 — ответ на concern с evidence. Функция/контекст: evidence.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -61,14 +94,25 @@
     "interval_lessons": 1,
     "example": "Daily: That's a fair concern. Let me show you what happened when my colleague tried the same approach.",
     "pitch_section": "evidence",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "that's a fair concern. let me show you what happened when [someone] tried this.",
+    "answer_criteria": "S4 — ответ на concern с evidence. Функция/контекст: evidence.",
+    "accepted_answers": [
+      "S4 — ответ на concern с evidence. Функция/контекст: evidence."
+    ],
+    "examples": [
+      "Daily: That's a fair concern. Let me show you what happened when my colleague tried the same approach.",
+      "That's a fair concern about the cost. Let me show you what happened when three centers in Hanoi adopted this last year."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 5,
     "item_type": "pattern",
     "status": "active",
-    "front": "The main objection assumes you need technical staff to run this, but that doesn't account for the automated setup — it runs itself.",
-    "back": "S19 — отбивание возражения. Структура: The main objection assumes [X], but that doesn't account for [Y]. Секция: problem->solution.",
+    "front": "The main objection assumes [X], but that doesn't account for [Y].",
+    "back": "S19 — отбивание возражения. Функция/контекст: problem->solution.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -77,14 +121,25 @@
     "interval_lessons": 1,
     "example": "Daily: The main objection assumes it takes months, but that doesn't account for the streamlined onboarding.",
     "pitch_section": "problem/solution",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "the main objection assumes [x], but that doesn't account for [y].",
+    "answer_criteria": "S19 — отбивание возражения. Функция/контекст: problem->solution.",
+    "accepted_answers": [
+      "S19 — отбивание возражения. Функция/контекст: problem->solution."
+    ],
+    "examples": [
+      "Daily: The main objection assumes it takes months, but that doesn't account for the streamlined onboarding.",
+      "The main objection assumes you need technical staff to run this, but that doesn't account for the automated setup — it runs itself."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 6,
     "item_type": "pattern",
     "status": "active",
-    "front": "What really makes this work is the adaptive algorithm that pinpoints each student's weak spots.",
-    "back": "S6 — it-cleft для акцента. Структура: What really makes this work is [NP]. Секция: solution.",
+    "front": "What really makes this work is [NP].",
+    "back": "S6 — it-cleft для акцента. Функция/контекст: solution.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -93,14 +148,25 @@
     "interval_lessons": 1,
     "example": "Daily: What really makes this work is the simplicity — anyone can pick it up in a day.",
     "pitch_section": "solution",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "what really makes this work is [np].",
+    "answer_criteria": "S6 — it-cleft для акцента. Функция/контекст: solution.",
+    "accepted_answers": [
+      "S6 — it-cleft для акцента. Функция/контекст: solution."
+    ],
+    "examples": [
+      "Daily: What really makes this work is the simplicity — anyone can pick it up in a day.",
+      "What really makes this work is the adaptive algorithm that pinpoints each student's weak spots."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 7,
     "item_type": "pattern",
     "status": "active",
-    "front": "What sets us apart from the usual approach is that students get instant feedback on every sentence they speak.",
-    "back": "S7 — what-cleft для дифференциации. Структура: What sets us apart from the usual approach is [NP]. Секция: solution.",
+    "front": "What sets us apart from the usual approach is [NP].",
+    "back": "S7 — what-cleft для дифференциации. Функция/контекст: solution.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -109,14 +175,25 @@
     "interval_lessons": 1,
     "example": "Daily: What sets this place apart from the others is the chef actually comes to your table.",
     "pitch_section": "solution",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "what sets us apart from the usual approach is [np].",
+    "answer_criteria": "S7 — what-cleft для дифференциации. Функция/контекст: solution.",
+    "accepted_answers": [
+      "S7 — what-cleft для дифференциации. Функция/контекст: solution."
+    ],
+    "examples": [
+      "Daily: What sets this place apart from the others is the chef actually comes to your table.",
+      "What sets us apart from the usual approach is that students get instant feedback on every sentence they speak."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 8,
     "item_type": "pattern",
     "status": "active",
-    "front": "Not only does it reduce your teachers' workload, but it also gives parents real-time updates on their child's progress.",
-    "back": "S8 — dual benefit. Структура: Not only does it [X], but it also [Y]. Секция: solution/evidence.",
+    "front": "Not only does it [X], but it also [Y].",
+    "back": "S8 — dual benefit. Функция/контекст: solution/evidence.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -125,14 +202,25 @@
     "interval_lessons": 1,
     "example": "Daily: Not only does it save time, but it also cuts costs by about thirty percent.",
     "pitch_section": "solution/evidence",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "not only does it [x], but it also [y].",
+    "answer_criteria": "S8 — dual benefit. Функция/контекст: solution/evidence.",
+    "accepted_answers": [
+      "S8 — dual benefit. Функция/контекст: solution/evidence."
+    ],
+    "examples": [
+      "Daily: Not only does it save time, but it also cuts costs by about thirty percent.",
+      "Not only does it reduce your teachers' workload, but it also gives parents real-time updates on their child's progress."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 9,
     "item_type": "pattern",
     "status": "active",
-    "front": "You rarely see a platform that actually keeps kids engaged for more than two weeks.",
-    "back": "S9 — редкость результата. Структура: You rarely see a [NP] that actually [Verb]. Секция: solution.",
+    "front": "You rarely see a [NP] that actually [Verb].",
+    "back": "S9 — редкость результата. Функция/контекст: solution.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -141,14 +229,25 @@
     "interval_lessons": 1,
     "example": "Daily: You rarely see a manager who actually listens to feedback like that.",
     "pitch_section": "solution",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "you rarely see a [np] that actually [verb].",
+    "answer_criteria": "S9 — редкость результата. Функция/контекст: solution.",
+    "accepted_answers": [
+      "S9 — редкость результата. Функция/контекст: solution."
+    ],
+    "examples": [
+      "Daily: You rarely see a manager who actually listens to feedback like that.",
+      "You rarely see a platform that actually keeps kids engaged for more than two weeks."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 10,
     "item_type": "pattern",
     "status": "active",
-    "front": "So it's really up to directors like you to adopt this before your competitors do.",
-    "back": "S13 — ответственность. Структура: So it's really up to [person] like you to [action] before [consequence]. Секция: ask.",
+    "front": "So it's really up to [person] like you to [action] before [consequence].",
+    "back": "S13 — ответственность. Функция/контекст: ask.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -157,14 +256,25 @@
     "interval_lessons": 1,
     "example": "Daily: So it's up to you to set the tone before the team loses motivation.",
     "pitch_section": "ask",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "so it's really up to [person] like you to [action] before [consequence].",
+    "answer_criteria": "S13 — ответственность. Функция/контекст: ask.",
+    "accepted_answers": [
+      "S13 — ответственность. Функция/контекст: ask."
+    ],
+    "examples": [
+      "Daily: So it's up to you to set the tone before the team loses motivation.",
+      "So it's really up to directors like you to adopt this before your competitors do."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 11,
     "item_type": "pattern",
     "status": "active",
-    "front": "The platform adjusts difficulty in real time, thereby keeping every student in their optimal learning zone.",
-    "back": "S10 — прямое следствие. Структура: [Main clause], thereby [gerund] [object]. Секция: evidence.",
+    "front": "[Main clause], thereby [gerund] [object].",
+    "back": "S10 — прямое следствие. Функция/контекст: evidence.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -173,14 +283,25 @@
     "interval_lessons": 1,
     "example": "Daily: We automated the reports, thereby saving each teacher about three hours a week.",
     "pitch_section": "evidence",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "[main clause], thereby [gerund] [object].",
+    "answer_criteria": "S10 — прямое следствие. Функция/контекст: evidence.",
+    "accepted_answers": [
+      "S10 — прямое следствие. Функция/контекст: evidence."
+    ],
+    "examples": [
+      "Daily: We automated the reports, thereby saving each teacher about three hours a week.",
+      "The platform adjusts difficulty in real time, thereby keeping every student in their optimal learning zone."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 12,
     "item_type": "pattern",
     "status": "active",
-    "front": "The main reason is simply that students practice more when the content feels relevant to their lives.",
-    "back": "S11 — объяснение причины. Структура: The main reason is simply that [Clause]. Секция: evidence.",
+    "front": "The main reason is simply that [Clause].",
+    "back": "S11 — объяснение причины. Функция/контекст: evidence.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -189,7 +310,18 @@
     "interval_lessons": 1,
     "example": "Daily: The main reason is simply that people don't know the rules, not that they don't care.",
     "pitch_section": "evidence",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "the main reason is simply that [clause].",
+    "answer_criteria": "S11 — объяснение причины. Функция/контекст: evidence.",
+    "accepted_answers": [
+      "S11 — объяснение причины. Функция/контекст: evidence."
+    ],
+    "examples": [
+      "Daily: The main reason is simply that people don't know the rules, not that they don't care.",
+      "The main reason is simply that students practice more when the content feels relevant to their lives."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 13,
@@ -208,8 +340,8 @@
     "id": 14,
     "item_type": "pattern",
     "status": "active",
-    "front": "By combining AI conversation practice with teacher-led activities, we directly address the shortage of qualified English teachers.",
-    "back": "S12 — стратегическое выравнивание. Структура: By combining [X] with [Y], we directly address [problem]. Секция: solution.",
+    "front": "By combining [X] with [Y], we directly address [problem].",
+    "back": "S12 — стратегическое выравнивание. Функция/контекст: solution.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -218,14 +350,25 @@
     "interval_lessons": 1,
     "example": "Daily: By combining exercise with diet changes, you directly address the root cause, not just the symptoms.",
     "pitch_section": "solution",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "by combining [x] with [y], we directly address [problem].",
+    "answer_criteria": "S12 — стратегическое выравнивание. Функция/контекст: solution.",
+    "accepted_answers": [
+      "S12 — стратегическое выравнивание. Функция/контекст: solution."
+    ],
+    "examples": [
+      "Daily: By combining exercise with diet changes, you directly address the root cause, not just the symptoms.",
+      "By combining AI conversation practice with teacher-led activities, we directly address the shortage of qualified English teachers."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 15,
     "item_type": "pattern",
     "status": "active",
-    "front": "The data clearly shows a strong link between Decision 2371 and the surge in demand for English teachers.",
-    "back": "S15 — связь двух фактов. Структура: The data clearly shows a strong link between [A] and [B]. Секция: evidence.",
+    "front": "The data clearly shows a strong link between [A] and [B].",
+    "back": "S15 — связь двух фактов. Функция/контекст: evidence.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 2,
@@ -234,14 +377,25 @@
     "interval_lessons": 3,
     "example": "Daily: The data clearly shows a strong link between sleep quality and productivity at work.",
     "pitch_section": "evidence",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "the data clearly shows a strong link between [a] and [b].",
+    "answer_criteria": "Показать тесную связь между A и B; связь сама по себе не доказывает причинность.",
+    "accepted_answers": [
+      "S15 — связь двух фактов. Функция/контекст: evidence."
+    ],
+    "examples": [
+      "Daily: The data clearly shows a strong link between sleep quality and productivity at work.",
+      "The data clearly shows a strong link between Decision 2371 and the surge in demand for English teachers."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 16,
     "item_type": "pattern",
     "status": "active",
-    "front": "When you put it all together, the numbers clearly show that centers using AI tools fill their classes faster than those that don't.",
-    "back": "S16 — синтез вывода. Структура: When you put it all together, the numbers clearly show that [Clause]. Секция: evidence.",
+    "front": "When you put it all together, the numbers clearly show that [Clause].",
+    "back": "S16 — синтез вывода. Функция/контекст: evidence.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -250,14 +404,25 @@
     "interval_lessons": 1,
     "example": "Daily: When you put it all together, the numbers clearly show that remote work isn't going away.",
     "pitch_section": "evidence",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "when you put it all together, the numbers clearly show that [clause].",
+    "answer_criteria": "S16 — синтез вывода. Функция/контекст: evidence.",
+    "accepted_answers": [
+      "S16 — синтез вывода. Функция/контекст: evidence."
+    ],
+    "examples": [
+      "Daily: When you put it all together, the numbers clearly show that remote work isn't going away.",
+      "When you put it all together, the numbers clearly show that centers using AI tools fill their classes faster than those that don't."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 17,
     "item_type": "pattern",
     "status": "active",
-    "front": "Our first trial showed a clear improvement in speaking confidence — students went from avoiding English to volunteering in class.",
-    "back": "S17 — результаты пилота. Структура: Our first trial showed a clear improvement in [area]. Секция: evidence.",
+    "front": "Our first trial showed a clear improvement in [area].",
+    "back": "S17 — результаты пилота. Функция/контекст: evidence.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -266,7 +431,18 @@
     "interval_lessons": 1,
     "example": "Daily: Our first attempt showed a clear improvement in response time.",
     "pitch_section": "evidence",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "our first trial showed a clear improvement in [area].",
+    "answer_criteria": "S17 — результаты пилота. Функция/контекст: evidence.",
+    "accepted_answers": [
+      "S17 — результаты пилота. Функция/контекст: evidence."
+    ],
+    "examples": [
+      "Daily: Our first attempt showed a clear improvement in response time.",
+      "Our first trial showed a clear improvement in speaking confidence — students went from avoiding English to volunteering in class."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 18,
@@ -285,8 +461,8 @@
     "id": 19,
     "item_type": "pattern",
     "status": "active",
-    "front": "Now that we've covered the theory, let me show you how it actually works in a real classroom.",
-    "back": "S18 — переход к практике. Структура: Now that we've covered the theory, let me show you how it actually works. Секция: solution.",
+    "front": "Now that we've covered the theory, let me show you how it actually works.",
+    "back": "S18 — переход к практике. Функция/контекст: solution.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -295,14 +471,25 @@
     "interval_lessons": 1,
     "example": "Daily: Now that we've covered the basics, let me show you how it actually works in practice.",
     "pitch_section": "solution",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "now that we've covered the theory, let me show you how it actually works.",
+    "answer_criteria": "S18 — переход к практике. Функция/контекст: solution.",
+    "accepted_answers": [
+      "S18 — переход к практике. Функция/контекст: solution."
+    ],
+    "examples": [
+      "Daily: Now that we've covered the basics, let me show you how it actually works in practice.",
+      "Now that we've covered the theory, let me show you how it actually works in a real classroom."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 20,
     "item_type": "pattern",
     "status": "active",
-    "front": "So to wrap up — bringing this in puts your center in a position to offer something no competitor in your district currently has.",
-    "back": "S20 — закрытие и призыв. Структура: So to wrap up — bringing this in puts your center in a position to [Verb]. Секция: ask/close.",
+    "front": "So to wrap up — bringing this in puts your center in a position to [Verb].",
+    "back": "S20 — закрытие и призыв. Функция/контекст: ask/close.",
     "topic": "pattern",
     "ease": 2.5,
     "reps": 0,
@@ -311,67 +498,128 @@
     "interval_lessons": 1,
     "example": "Daily: So to wrap up — making this change puts you in a position to attract better talent.",
     "pitch_section": "ask/close",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "so to wrap up — bringing this in puts your center in a position to [verb].",
+    "answer_criteria": "S20 — закрытие и призыв. Функция/контекст: ask/close.",
+    "accepted_answers": [
+      "S20 — закрытие и призыв. Функция/контекст: ask/close."
+    ],
+    "examples": [
+      "Daily: So to wrap up — making this change puts you in a position to attract better talent.",
+      "So to wrap up — bringing this in puts your center in a position to offer something no competitor in your district currently has."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 21,
     "item_type": "chunk",
-    "front": "You are the Operator. AI is your co-pilot, not your captain.",
-    "back": "Ядро позиционирования платформы",
+    "front": "AI as your co-pilot",
+    "back": "ИИ как помощник/второй пилот; человек управляет",
     "topic": "platform",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "ai as your co-pilot",
+    "answer_criteria": "ИИ как помощник/второй пилот; человек управляет",
+    "accepted_answers": [
+      "ИИ как помощник/второй пилот; человек управляет"
+    ],
+    "examples": [
+      "You are the Operator. AI is your co-pilot, not your captain."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 22,
     "item_type": "chunk",
-    "front": "How can I critically partner with Artificial Intelligence to build a digital portfolio that authentically represents who I am to the world?",
-    "back": "Цитата-вопрос: защита портфолио ученика",
+    "front": "a digital portfolio",
+    "back": "цифровое портфолио",
     "topic": "output",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "a digital portfolio",
+    "answer_criteria": "цифровое портфолио",
+    "accepted_answers": [
+      "цифровое портфолио"
+    ],
+    "examples": [
+      "How can I critically partner with Artificial Intelligence to build a digital portfolio that authentically represents who I am to the world?"
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 23,
     "item_type": "chunk",
-    "front": "AI is a computer system that finds patterns in data. It uses these patterns to make predictions. Predictions get better as more data is added.",
-    "back": "Базовое объяснение AI простыми словами",
+    "front": "AI (artificial intelligence)",
+    "back": "Искусственный интеллект: система, находящая закономерности в данных и использующая их для прогнозов",
     "topic": "ai",
     "ease": 2.5,
     "reps": 3,
     "lapses": 0,
     "due_lesson": 11,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "definition",
+    "retrieval_target": "ai (artificial intelligence)",
+    "answer_criteria": "Искусственный интеллект: система, находящая закономерности в данных и использующая их для прогнозов",
+    "accepted_answers": [
+      "Искусственный интеллект: система, находящая закономерности в данных и использующая их для прогнозов"
+    ],
+    "examples": [
+      "AI is a computer system that finds patterns in data. It uses these patterns to make predictions. Predictions get better as more data is added."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 24,
     "item_type": "chunk",
-    "front": "A prompt is a set of clear instructions you write to tell the AI exactly what to make or write for you.",
-    "back": "Определение промпта",
+    "front": "a prompt",
+    "back": "Чёткие инструкции для ИИ: что создать или написать",
     "topic": "ai",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "definition",
+    "retrieval_target": "a prompt",
+    "answer_criteria": "Чёткие инструкции для ИИ: что создать или написать",
+    "accepted_answers": [
+      "Чёткие инструкции для ИИ: что создать или написать"
+    ],
+    "examples": [
+      "A prompt is a set of clear instructions you write to tell the AI exactly what to make or write for you."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 25,
     "item_type": "chunk",
-    "front": "English is learned THROUGH commanding AI: the child uses English as a key to solve real tasks.",
-    "back": "Английский учится ЧЕРЕЗ командование ИИ: ребёнок использует английский как ключ к решению реальных задач",
+    "front": "English through commanding AI",
+    "back": "Учить английский через инструкции ИИ на английском для решения реальных задач",
     "topic": "methodology",
     "ease": 2.5,
     "reps": 3,
     "lapses": 0,
     "due_lesson": 16,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "definition",
+    "retrieval_target": "english through commanding ai",
+    "answer_criteria": "Учить английский через инструкции ИИ на английском для решения реальных задач",
+    "accepted_answers": [
+      "Учить английский через инструкции ИИ на английском для решения реальных задач"
+    ],
+    "examples": [
+      "English is learned THROUGH commanding AI: the child uses English as a key to solve real tasks."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 26,
@@ -383,7 +631,9 @@
     "reps": 3,
     "lapses": 0,
     "due_lesson": 11,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "status": "deprecated",
+    "retired_reason": "P26: factual recall moved out of language SRS; historical fact preserved"
   },
   {
     "id": 27,
@@ -395,7 +645,9 @@
     "reps": 3,
     "lapses": 0,
     "due_lesson": 11,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "status": "deprecated",
+    "retired_reason": "P26: factual recall moved out of language SRS; historical fact preserved"
   },
   {
     "id": 28,
@@ -407,7 +659,9 @@
     "reps": 3,
     "lapses": 1,
     "due_lesson": 11,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "status": "deprecated",
+    "retired_reason": "P26: factual topic replaced by a new, unintroduced language target"
   },
   {
     "id": 29,
@@ -419,7 +673,9 @@
     "reps": 3,
     "lapses": 1,
     "due_lesson": 11,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "status": "deprecated",
+    "retired_reason": "P26: factual topic replaced by a new, unintroduced language target"
   },
   {
     "id": 30,
@@ -431,223 +687,405 @@
     "reps": 3,
     "lapses": 1,
     "due_lesson": 11,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "status": "deprecated",
+    "retired_reason": "P26: factual topic replaced by a new, unintroduced language target"
   },
   {
     "id": 31,
     "item_type": "chunk",
-    "front": "The course runs through licensed partner centers; data is protected by the digital mask and dual consent under PDPL.",
-    "back": "Легальность: PDPL и защита данных",
+    "front": "dual consent",
+    "back": "двойное согласие",
     "topic": "legal",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "dual consent",
+    "answer_criteria": "двойное согласие",
+    "accepted_answers": [
+      "двойное согласие"
+    ],
+    "examples": [
+      "The course runs through licensed partner centers; data is protected by the digital mask and dual consent under PDPL."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 32,
     "item_type": "chunk",
-    "front": "We do not sell access to a model; we sell the methodology, the gating, the rubric and the platform.",
-    "back": "Что мы продаём на самом деле",
+    "front": "a grading rubric",
+    "back": "критерии/рубрика оценивания",
     "topic": "offer",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "a grading rubric",
+    "answer_criteria": "критерии/рубрика оценивания",
+    "accepted_answers": [
+      "критерии/рубрика оценивания"
+    ],
+    "examples": [
+      "We do not sell access to a model; we sell the methodology, the gating, the rubric and the platform."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 33,
     "item_type": "chunk",
-    "front": "AI scales one-on-one tutoring (the two-sigma effect) while keeping the human teacher at the center.",
-    "back": "Методологический аргумент: two-sigma",
+    "front": "one-on-one tutoring",
+    "back": "индивидуальное обучение",
     "topic": "methodology",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "one-on-one tutoring",
+    "answer_criteria": "индивидуальное обучение",
+    "accepted_answers": [
+      "индивидуальное обучение"
+    ],
+    "examples": [
+      "AI scales one-on-one tutoring (the two-sigma effect) while keeping the human teacher at the center."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 34,
     "item_type": "chunk",
-    "front": "A working website plus a public defense in English is demonstrated output: parents film it and share it.",
-    "back": "Демонстрация результата",
+    "front": "demonstrated output",
+    "back": "наглядно продемонстрированный результат",
     "topic": "output",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "demonstrated output",
+    "answer_criteria": "наглядно продемонстрированный результат",
+    "accepted_answers": [
+      "наглядно продемонстрированный результат"
+    ],
+    "examples": [
+      "A working website plus a public defense in English is demonstrated output: parents film it and share it."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 35,
     "item_type": "chunk",
-    "front": "The course is built on the CLIL 4C framework: Content, Communication, Cognition and Culture are targeted in every single lesson.",
-    "back": "Методология: CLIL 4C",
+    "front": "target something",
+    "back": "целенаправленно прорабатывать что-либо",
     "topic": "methodology",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "target something",
+    "answer_criteria": "целенаправленно прорабатывать что-либо",
+    "accepted_answers": [
+      "целенаправленно прорабатывать что-либо"
+    ],
+    "examples": [
+      "The course is built on the CLIL 4C framework: Content, Communication, Cognition and Culture are targeted in every single lesson."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 36,
     "item_type": "chunk",
-    "front": "The course covers all seven Gold Standard PBL elements: a challenging problem, sustained inquiry, authenticity, student voice and choice, reflection, critique and revision, and a public product.",
-    "back": "Методология: PBL Gold Standard (7 элементов)",
+    "front": "sustained inquiry",
+    "back": "длительное исследование",
     "topic": "methodology",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "sustained inquiry",
+    "answer_criteria": "длительное исследование",
+    "accepted_answers": [
+      "длительное исследование"
+    ],
+    "examples": [
+      "The course covers all seven Gold Standard PBL elements: a challenging problem, sustained inquiry, authenticity, student voice and choice, reflection, critique and revision, and a public product."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 37,
     "item_type": "chunk",
-    "front": "Every lesson follows the Gradual Release of Responsibility: I do, We do, You do together, You do - scaffolding is removed step by step.",
-    "back": "Методология: GRR (gradual release)",
+    "front": "remove scaffolding",
+    "back": "убирать учебные подсказки/подпорки",
     "topic": "methodology",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "remove scaffolding",
+    "answer_criteria": "убирать учебные подсказки/подпорки",
+    "accepted_answers": [
+      "убирать учебные подсказки/подпорки"
+    ],
+    "examples": [
+      "Every lesson follows the Gradual Release of Responsibility: I do, We do, You do together, You do - scaffolding is removed step by step."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 38,
     "item_type": "chunk",
-    "front": "The rubric weighs process over product: 40% Prompt Journal, 30% oral defense, 30% the site itself.",
-    "back": "Рубрика оценивания 40/30/30",
+    "front": "weigh process over product",
+    "back": "придавать процессу больше значения, чем готовому продукту",
     "topic": "rubric",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 1,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "weigh process over product",
+    "answer_criteria": "придавать процессу больше значения, чем готовому продукту",
+    "accepted_answers": [
+      "придавать процессу больше значения, чем готовому продукту"
+    ],
+    "examples": [
+      "The rubric weighs process over product: 40% Prompt Journal, 30% oral defense, 30% the site itself."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 39,
     "item_type": "vocab",
-    "front": "undermine (v) — Students using AI to cheat undermines trust in the new technology.",
+    "front": "undermine (v)",
     "back": "подрывать, ослаблять (доверие)",
     "topic": "ai",
     "ease": 2.5,
     "reps": 3,
     "lapses": 1,
     "due_lesson": 15,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "meaning",
+    "retrieval_target": "undermine (v)",
+    "answer_criteria": "подрывать, ослаблять (доверие)",
+    "accepted_answers": [
+      "подрывать, ослаблять (доверие)"
+    ],
+    "examples": [
+      "undermine (v) — Students using AI to cheat undermines trust in the new technology."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 40,
     "item_type": "vocab",
-    "front": "mitigate (v) — Guardrails help mitigate the risks of AI.",
+    "front": "mitigate (v)",
     "back": "смягчать, снижать (риск)",
     "topic": "ai",
     "ease": 2.5,
     "reps": 3,
     "lapses": 1,
     "due_lesson": 15,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "meaning",
+    "retrieval_target": "mitigate (v)",
+    "answer_criteria": "смягчать, снижать (риск)",
+    "accepted_answers": [
+      "смягчать, снижать (риск)"
+    ],
+    "examples": [
+      "mitigate (v) — Guardrails help mitigate the risks of AI."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 41,
     "item_type": "vocab",
-    "front": "guardrails (n) — AI tools need guardrails to keep students safe.",
+    "front": "guardrails (n)",
     "back": "защитные рамки, ограничения",
     "topic": "ai",
     "ease": 2.5,
     "reps": 3,
     "lapses": 0,
     "due_lesson": 14,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "meaning",
+    "retrieval_target": "guardrails (n)",
+    "answer_criteria": "защитные рамки, ограничения",
+    "accepted_answers": [
+      "защитные рамки, ограничения"
+    ],
+    "examples": [
+      "guardrails (n) — AI tools need guardrails to keep students safe."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 42,
     "item_type": "vocab",
-    "front": "cusp (n) — We are on the cusp of a transformation in education.",
+    "front": "cusp (n)",
     "back": "грань, порог; be on the cusp of = на пороге",
     "topic": "ai",
     "ease": 2.5,
     "reps": 3,
     "lapses": 0,
     "due_lesson": 15,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "meaning",
+    "retrieval_target": "cusp (n)",
+    "answer_criteria": "грань, порог; be on the cusp of = на пороге",
+    "accepted_answers": [
+      "грань, порог; be on the cusp of = на пороге"
+    ],
+    "examples": [
+      "cusp (n) — We are on the cusp of a transformation in education."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 43,
     "item_type": "vocab",
-    "front": "deviation (n) — Tutoring lifts students two standard deviations above average.",
+    "front": "deviation (n)",
     "back": "отклонение; standard deviation = стандартное отклонение (стат.)",
     "topic": "ai",
     "ease": 2.5,
     "reps": 3,
     "lapses": 0,
     "due_lesson": 15,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "meaning",
+    "retrieval_target": "deviation (n)",
+    "answer_criteria": "отклонение; standard deviation = стандартное отклонение (стат.)",
+    "accepted_answers": [
+      "отклонение; standard deviation = стандартное отклонение (стат.)"
+    ],
+    "examples": [
+      "deviation (n) — Tutoring lifts students two standard deviations above average."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 44,
     "item_type": "vocab",
-    "front": "distribution (n) — A normal distribution shows most scores in the middle.",
+    "front": "distribution (n)",
     "back": "распределение (статистическое)",
     "topic": "ai",
     "ease": 2.5,
     "reps": 3,
     "lapses": 0,
     "due_lesson": 15,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "meaning",
+    "retrieval_target": "distribution (n)",
+    "answer_criteria": "распределение (статистическое)",
+    "accepted_answers": [
+      "распределение (статистическое)"
+    ],
+    "examples": [
+      "distribution (n) — A normal distribution shows most scores in the middle."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 45,
     "item_type": "vocab",
-    "front": "asterisks (n, pl) — He put asterisks next to the numbers that were estimates.",
+    "front": "asterisks (n, pl)",
     "back": "звёздочки (знак *)",
     "topic": "ai",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 4,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "asterisks (n, pl)",
+    "answer_criteria": "звёздочки (знак *)",
+    "accepted_answers": [
+      "звёздочки (знак *)"
+    ],
+    "examples": [
+      "asterisks (n, pl) — He put asterisks next to the numbers that were estimates."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 46,
     "item_type": "vocab",
-    "front": "approximate (adj) — These are approximate numbers, not exact ones.",
+    "front": "approximate (adj)",
     "back": "приблизительный, примерный",
     "topic": "ai",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 4,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "approximate (adj)",
+    "answer_criteria": "приблизительный, примерный",
+    "accepted_answers": [
+      "приблизительный, примерный"
+    ],
+    "examples": [
+      "approximate (adj) — These are approximate numbers, not exact ones."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 47,
     "item_type": "vocab",
-    "front": "safeguards (n, pl) — Safeguards protect children's data from misuse.",
+    "front": "safeguards (n, pl)",
     "back": "меры защиты, предохранители",
     "topic": "ai",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 4,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "safeguards (n, pl)",
+    "answer_criteria": "меры защиты, предохранители",
+    "accepted_answers": [
+      "меры защиты, предохранители"
+    ],
+    "examples": [
+      "safeguards (n, pl) — Safeguards protect children's data from misuse."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 48,
     "item_type": "vocab",
-    "front": "appreciate (v) — I appreciate how complex the technology is.",
+    "front": "appreciate (v)",
     "back": "понимать (в полной мере), ценить",
     "topic": "ai",
     "ease": 2.5,
     "reps": 0,
     "lapses": 0,
     "due_lesson": 4,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "meaning",
+    "retrieval_target": "appreciate (v)",
+    "answer_criteria": "понимать (в полной мере), ценить",
+    "accepted_answers": [
+      "понимать (в полной мере), ценить"
+    ],
+    "examples": [
+      "appreciate (v) — I appreciate how complex the technology is."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 49,
@@ -659,7 +1097,9 @@
     "reps": 3,
     "lapses": 0,
     "due_lesson": 16,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "status": "deprecated",
+    "retired_reason": "P26: factual recall moved out of language SRS; historical fact preserved"
   },
   {
     "id": 50,
@@ -671,7 +1111,9 @@
     "reps": 3,
     "lapses": 0,
     "due_lesson": 15,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "status": "deprecated",
+    "retired_reason": "P26: factual recall moved out of language SRS; historical fact preserved"
   },
   {
     "id": 51,
@@ -683,38 +1125,60 @@
     "reps": 3,
     "lapses": 0,
     "due_lesson": 15,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "status": "deprecated",
+    "retired_reason": "P26: factual recall moved out of language SRS; historical fact preserved"
   },
   {
     "id": 52,
     "item_type": "chunk",
-    "front": "English centers are ready to buy off-the-shelf programs.",
-    "back": "Готовые коробочные программы - центры готовы их покупать",
+    "front": "an off-the-shelf program",
+    "back": "готовая программа, доступная для покупки и использования",
     "topic": "market",
     "ease": 2.5,
     "reps": 3,
     "lapses": 0,
     "due_lesson": 15,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "meaning",
+    "retrieval_target": "an off-the-shelf program",
+    "answer_criteria": "готовая программа, доступная для покупки и использования",
+    "accepted_answers": [
+      "готовая программа, доступная для покупки и использования"
+    ],
+    "examples": [
+      "English centers are ready to buy off-the-shelf programs."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 53,
     "item_type": "chunk",
-    "front": "There is a striking mismatch between national ambitions and on-the-ground capacity.",
-    "back": "Разительный разрыв между национальными амбициями и реальными возможностями на местах",
+    "front": "a striking mismatch",
+    "back": "разительное несоответствие",
     "topic": "market",
     "ease": 2.5,
     "reps": 3,
     "lapses": 0,
     "due_lesson": 16,
-    "interval_lessons": 6
+    "interval_lessons": 6,
+    "exercise_type": "meaning",
+    "retrieval_target": "a striking mismatch",
+    "answer_criteria": "разительное несоответствие",
+    "accepted_answers": [
+      "разительное несоответствие"
+    ],
+    "examples": [
+      "There is a striking mismatch between national ambitions and on-the-ground capacity."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 54,
     "item_type": "pattern",
     "status": "active",
-    "front": "The number that really stands out is that Vietnam needs 22,000 more English teachers by 2030.",
-    "back": "S14 — привлечь внимание к цифре. Структура: The number that really stands out is [fact]. Секция: evidence/hook.",
+    "front": "The number that really stands out is [fact].",
+    "back": "S14 — привлечь внимание к цифре. Функция/контекст: evidence/hook.",
     "topic": "pattern",
     "due_lesson": 13,
     "interval_lessons": 3,
@@ -723,7 +1187,18 @@
     "lapses": 1,
     "example": "Daily: The number that really stands out is that 80% of users come back within the first week.",
     "pitch_section": "evidence/hook",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "the number that really stands out is [fact].",
+    "answer_criteria": "S14 — привлечь внимание к цифре. Функция/контекст: evidence/hook.",
+    "accepted_answers": [
+      "S14 — привлечь внимание к цифре. Функция/контекст: evidence/hook."
+    ],
+    "examples": [
+      "Daily: The number that really stands out is that 80% of users come back within the first week.",
+      "The number that really stands out is that Vietnam needs 22,000 more English teachers by 2030."
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 55,
@@ -742,8 +1217,8 @@
     "id": 56,
     "item_type": "pattern",
     "status": "active",
-    "front": "Let's say we could cut your teachers' grading time in half — what would that mean for your center's schedule?",
-    "back": "S1 — гипотетический вопрос. Структура: Let's say we could [X] — what would that mean for your [Y]? Секция: solution/ask.",
+    "front": "Let's say we could [X] — what would that mean for your [Y]?",
+    "back": "S1 — гипотетический вопрос. Функция/контекст: solution/ask.",
     "topic": "pattern",
     "due_lesson": 33,
     "interval_lessons": 0,
@@ -752,7 +1227,18 @@
     "lapses": 0,
     "example": "Daily: Let's say we could leave an hour earlier — what would you do with the time?",
     "pitch_section": "solution/ask",
-    "register": "spoken"
+    "register": "spoken",
+    "exercise_type": "meaning",
+    "retrieval_target": "let's say we could [x] — what would that mean for your [y]?",
+    "answer_criteria": "S1 — гипотетический вопрос. Функция/контекст: solution/ask.",
+    "accepted_answers": [
+      "S1 — гипотетический вопрос. Функция/контекст: solution/ask."
+    ],
+    "examples": [
+      "Daily: Let's say we could leave an hour earlier — what would you do with the time?",
+      "Let's say we could cut your teachers' grading time in half — what would that mean for your center's schedule?"
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 57,
@@ -804,7 +1290,17 @@
     "reps": 1,
     "lapses": 0,
     "due_lesson": 9,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "gapfill",
+    "retrieval_target": "will:decision-vs-plan",
+    "answer_criteria": "I'll send it. / I'm going to send it. Will = decision now; be going to = existing plan.",
+    "accepted_answers": [
+      "I'll send it. / I'm going to send it. Will = decision now; be going to = existing plan."
+    ],
+    "examples": [
+      "I decide at this moment to send it: ‘I ___ send it.’ / I had already planned to send it today: ‘I ___ send it.’"
+    ],
+    "migration_version": "P26"
   },
   {
     "id": 61,
@@ -817,6 +1313,76 @@
     "reps": 1,
     "lapses": 0,
     "due_lesson": 9,
-    "interval_lessons": 1
+    "interval_lessons": 1,
+    "exercise_type": "gapfill",
+    "retrieval_target": "will:belief-vs-evidence",
+    "answer_criteria": "It will succeed. / It is going to succeed. Will = belief prediction; be going to = prediction based on present evidence.",
+    "accepted_answers": [
+      "It will succeed. / It is going to succeed. Will = belief prediction; be going to = prediction based on present evidence."
+    ],
+    "examples": [
+      "I think the course will succeed, but I have no evidence: ‘It ___ succeed.’ / Registrations are already high: ‘It ___ succeed.’"
+    ],
+    "migration_version": "P26"
+  },
+  {
+    "id": 62,
+    "item_type": "chunk",
+    "status": "seed",
+    "front": "hold a conversation",
+    "back": "поддерживать разговор",
+    "topic": "market",
+    "retrieval_target": "hold a conversation",
+    "exercise_type": "meaning",
+    "answer_criteria": "поддерживать разговор",
+    "accepted_answers": [
+      "поддерживать разговор"
+    ],
+    "reps": 0,
+    "lapses": 0,
+    "interval_lessons": 1,
+    "due_lesson": 11,
+    "ease": 2.5,
+    "replaces_id": 28
+  },
+  {
+    "id": 63,
+    "item_type": "chunk",
+    "status": "seed",
+    "front": "pay tuition upfront",
+    "back": "платить за обучение заранее",
+    "topic": "market",
+    "retrieval_target": "pay tuition upfront",
+    "exercise_type": "meaning",
+    "answer_criteria": "платить за обучение заранее",
+    "accepted_answers": [
+      "платить за обучение заранее"
+    ],
+    "reps": 0,
+    "lapses": 0,
+    "interval_lessons": 1,
+    "due_lesson": 11,
+    "ease": 2.5,
+    "replaces_id": 29
+  },
+  {
+    "id": 64,
+    "item_type": "chunk",
+    "status": "seed",
+    "front": "a gap in the market",
+    "back": "свободная ниша на рынке",
+    "topic": "offer",
+    "retrieval_target": "a gap in the market",
+    "exercise_type": "meaning",
+    "answer_criteria": "свободная ниша на рынке",
+    "accepted_answers": [
+      "свободная ниша на рынке"
+    ],
+    "reps": 0,
+    "lapses": 0,
+    "interval_lessons": 1,
+    "due_lesson": 11,
+    "ease": 2.5,
+    "replaces_id": 30
   }
 ]
