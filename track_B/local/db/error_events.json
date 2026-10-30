@@ -2446,5 +2446,117 @@
         "confidence": "high"
       }
     ]
+  },
+  {
+    "id": "EE-L10-U01",
+    "lesson_number": 10,
+    "session_kind": "Lesson",
+    "lesson_date": "2026-10-30",
+    "block": "srs",
+    "source_file": "ChatGPT Lesson 10 conversation",
+    "source_turn": "EE-L10-U01",
+    "source_type": "chat_text_modality_unverified",
+    "capture_status": "in_session",
+    "learner_text": "1. A strong link between something means a strong connection between two or more facts\n2. The number that really stands out means really important information\n3. English is a key for solving real world tasks\n4. These two numbers is about shortage of all teachers(100 000) and English teachers (22,000)\n5. Striking mismatch it is difference between something for example a striking mismatch between Vietnamese ambitions and on the ground capacity",
+    "errors": [
+      {
+        "error_text": "These two numbers is",
+        "correction": "These two numbers are",
+        "category": "grammar",
+        "grammar_topic": "present simple agreement",
+        "covered_status": "covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "really important information",
+        "correction": "particularly noticeable information",
+        "category": "vocabulary",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "EE-L10-U02",
+    "lesson_number": 10,
+    "session_kind": "Lesson",
+    "lesson_date": "2026-10-30",
+    "block": "reading",
+    "source_file": "ChatGPT Lesson 10 conversation",
+    "source_turn": "EE-L10-U02",
+    "source_type": "chat_text_modality_unverified",
+    "capture_status": "in_session",
+    "learner_text": "1. The main idea is that parents pay money, but they don't see any results of their kids until of the end of course. And lots of English centers ask for upfront tuitions. Also there is another one problem. Parents pay money for IELTS preparations, but after that courses kids can pass exams yet can't speak in real conversation",
+    "errors": [
+      {
+        "error_text": "until of the end of course",
+        "correction": "until the end of the course",
+        "category": "grammar",
+        "grammar_topic": "prepositions and articles",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "another one problem",
+        "correction": "another problem",
+        "category": "grammar",
+        "grammar_topic": "determiners",
+        "covered_status": "not_yet_covered",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      }
+    ]
+  },
+  {
+    "id": "EE-L10-U03",
+    "lesson_number": 10,
+    "session_kind": "Lesson",
+    "lesson_date": "2026-10-30",
+    "block": "reading",
+    "source_file": "ChatGPT Lesson 10 conversation",
+    "source_turn": "EE-L10-U03",
+    "source_type": "chat_text_modality_unverified",
+    "capture_status": "in_session",
+    "learner_text": "2. It can be because of some reasons. The first is low advertised mounthly price can hide the information about upfront tuition for entire course. And another reason is different numbers of speaking practice especially with foreign teachers",
+    "errors": [
+      {
+        "error_text": "mounthly",
+        "correction": "monthly",
+        "category": "spelling",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "different numbers of speaking practice",
+        "correction": "different amounts of speaking practice",
+        "category": "vocabulary",
+        "grammar_topic": null,
+        "covered_status": "lexical_or_spelling",
+        "severity": "slip",
+        "feedback_shown": false,
+        "confidence": "high"
+      },
+      {
+        "error_text": "upfront tuition",
+        "correction": "Upfront tuition explains cost, not the difference in learning outcomes.",
+        "category": "task_pragmatics",
+        "grammar_topic": null,
+        "covered_status": "task_pragmatics",
+        "severity": "slip",
+        "feedback_shown": true,
+        "confidence": "high"
+      }
+    ]
   }
 ]
