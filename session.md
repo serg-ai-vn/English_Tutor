@@ -1,7 +1,7 @@
 ---
 title: Журнал сессий - English_Tutor
 created: 2026-08-11
-updated: 2026-10-29
+updated: 2026-10-30
 tags: [english, daily-log, status, github]
 status: active
 related: [AGENTS.md, track_A/LESSON_START.md, План_реализации.md, Корректировки_урока.md]
@@ -19,8 +19,25 @@ related: [AGENTS.md, track_A/LESSON_START.md, План_реализации.md, 
   - **GitHub-дисциплина:** вся история обучения ведётся последовательно в основной ветке `main` (`git pull --rebase` перед стартом сессии; `git add -A && git commit && git push` при закрытии урока или после применения патча; в облачных средах с временными ветками — слияние PR в `main` сразу после завершения урока).
 - **Формат урока P25:** любой урок (Day 1–7 и Refresher) **25–30 мин, hard cap 35 мин**. С 25-й минуты новые вопросы прекращаются, после последнего шага тоже. Dual Timebox Guard: системные часы при доступности + фиксированный Step Budget, индикатор `⏱ [Блок X/2 | Шаг Y из Z | ~M/30 мин]`, если часов нет `~?/30 мин`. SRS до 5 карточек, 1 пакет / 1 проверка / до 1 retry (4–5 мин). Speaking ровно 3 хода; grammar 3 controlled + 2 своих; reading 8–10 предложений и 2 вопроса; Refresher 4 grammar + 2 speaking.
 - **Цели:** 12-недельный горизонт — функциональный B2+/приближение к C1 для pitch/professional Q&A; полный общий spoken C1 — долгосрочный результат. Баланс тем: 50% AI-курс/продажи, 30% teaching/AI work/clients, 20% everyday/social. EF SET baseline: 52 B2 (Reading 56 B2, Listening 48 B1).
-- **Track A (прогресс):** уроки 1–9 завершены (`days_completed=9`), включая Lesson 9 от 2026-10-29: 22 минуты активной учёбы по сообщению ученика, SRS 5/5 (40,42,43,44,52), Speaking 2/3 хода — третий пропущен по P25 stop на 25-й минуте. Следующий **Lesson 10 (Week 2 Day 3 — reading)**. Очередь SRS пересчитывать при старте урока; обновлены только просмотренные карточки.
-- **База курса и память об изменениях:** `course_base/` (24 файла, read-only); в `Корректировки_урока.md` закреплён реестр **P1–P25**, Pending пуст.
+- **Track A (прогресс):** уроки 1–10 завершены (`days_completed=10`). Lesson 10: 35 минут learner-reported, SRS 5/5 (15,54,25,49,53), два reading-вопроса, summary пропущено. P25 elapsed hard cap был превышен. Следующий **Lesson 11 (Week 2 Day 4 — Data Speaking)**.
+- **База курса и память об изменениях:** `course_base/` (24 read-only files), реестр патчей P1–P25; в Pending замечание по SRS-инструкции из Lesson 10.
+
+---
+
+## Session 42 - 2026-10-30
+
+### Done
+
+- Lesson 10 (Week 2 Day 3, Reading) closed. Learner explicitly reported 35 productive minutes. Model wait unmeasured.
+- SRS 5/5 ids 15,54,25,49,53, no retry. Stored new intervals and due lessons; untouched items preserved.
+- Reading: 10-sentence passage, 2 comprehension questions answered (gist correct, detail partly correct); summary skipped due time cap. No new cards or new covered grammar.
+- Actual elapsed ~37 min to the last clock check, exceeding P25 elapsed hard cap. The breach is recorded.
+- Learner's request to improve repetitive/ambiguous SRS prompts recorded in Pending.
+- Daily log, today.md, progress.json, session and JSON state synced to main.
+
+### Next step
+
+- Lesson 11, Week 2 Day 4 — Data Speaking. Apply strict time and step budget.
 
 ---
 
