@@ -17,10 +17,10 @@ related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protoco
 **model_wait_min:** null (only record measured wait)
 **hard_cap_min:** 35
 **stop_new_questions_at_elapsed_min:** 25
-**lesson_started_at:** null (set on learner's explicit confirmation)
-**time_source:** null (capture real clock on confirmation; if unavailable use Step Budget and ~?/30 min)
+**lesson_started_at:** 2026-10-30T07:53:33+07:00 (learner confirmed plan)
+**time_source:** platform_local_clock (time widget)
 **elapsed_min:** null
-**step_index:** 0
+**step_index:** 1
 **step_total:** 2
 **stop_new_tasks:** false
 
