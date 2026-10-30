@@ -1,58 +1,56 @@
 ---
-title: "Lesson 9 — Week 2 Day 2 — Why Now? Speaking"
-created: 2026-10-29
-updated: 2026-10-29
-tags: [english, lesson, speaking, track-a]
-status: completed
+title: "Lesson 10 — Week 2 Day 3 — Parents, IELTS and Value of English Learning"
+created: 2026-10-30
+updated: 2026-10-30
+tags: [english, lesson, reading, track-a]
+status: planned
 related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protocol.md]
 ---
 
-# Lesson 9 — Week 2, Day 2: Why Now?
+# Lesson 10 — Week 2, Day 3: Parents, IELTS and Value of English Learning
 
 **Mode:** practice; standard scheduled lesson.
-**Goal:** Explain why the proposed AI-English course is timely, using previously learned facts about the Vietnamese education reform and the English-teacher shortage.
-**Main skill:** speaking — fluency and accurate use of already covered Present Perfect and other covered grammar.
+**Goal:** Read and understand a short text about parents' education spending, exam preparation and the difference between test results and practical communication.
+**Main skill:** reading — identify the main message, distinguish details and inference, and summarize in your own words.
 **planned_learning_min:** 30
-**actual_learning_min:** 22 (learner explicitly reported; whole minutes)
-**model_wait_min:** null (not measured; do not derive from wall-clock)
+**actual_learning_min:** null (ask learner at closure; whole minutes)
+**model_wait_min:** null (only record measured wait)
 **hard_cap_min:** 35
 **stop_new_questions_at_elapsed_min:** 25
-**lesson_started_at:** 2026-10-29T08:52:56+07:00 (learner confirmed plan)
-**time_source:** platform_local_clock
-**elapsed_min:** 26 (rounded from system-clock observation at feedback stop, 09:18:34; full session span not measured)
-**step_index:** 2 (speaking stopped after turn 2 of 3 by time guard)
-**step_total:** 2 (lesson blocks; per-block step limits below)
-**stop_new_tasks:** true
+**lesson_started_at:** null (set on learner's explicit confirmation)
+**time_source:** null (capture real clock on confirmation; if unavailable use Step Budget and ~?/30 min)
+**elapsed_min:** null
+**step_index:** 0
+**step_total:** 2
+**stop_new_tasks:** false
 
 | Block | Minutes | Agent / Prompt | Expected result |
 |---|---:|---|---|
-| 1/2 — SRS review | 5 | `srs_review` | Exactly one batch of the first five oldest-due cards; one combined check; at most one bundled retry of incorrect cards |
-| 2/2 — Speaking | 25 | `tutor_speaking` | Exactly 3 meaningful learner turns: warm-up, course/market explanation, transfer into work or everyday context; delayed feedback, at most 3 corrections, 2 chunks and one brief retry of one phrase |
-| **Total** | **30** | | Stop new questions by elapsed minute 25 or after final allotted step, whichever is first; hard cap 35 |
+| 1/2 — SRS review | 5 | `srs_review` | One numbered package of first five oldest-due cards; single combined check; at most one bundled retry for incorrect items |
+| 2/2 — Reading | 25 | `reading_tutor` | Up to 3 necessary pre-words, 8–10-sentence text with >=70% new facts, exactly 2 comprehension questions, then 30–45-second summary (2–3 sentences), maximum 2 corrections, up to 2 SRS chunk candidates |
+| **Total** | **30** | | At measured elapsed minute 25 (or last step) stop new questions and close; hard cap 35 |
 
 ## SRS reviews — canonical ordered batch
 
-- Eligibility: `status != deprecated`, `reps > 0`, `due_lesson <= 9`.
-- Sort: `due_lesson ASC, lapses DESC, id ASC` and use the first five only.
-- `srs_step_total: 2` — (1) one numbered package, all responses in one message; (2) combined check and at most one bundled retry for incorrect items.
-- `initial_learner_active_target_min: 3-4`, `total_srs_target_min: 5`, `bundled_retry_cap_min: 2`.
-- Additional SRS learner-active time reduces speaking time and never extends the lesson.
-- Show only these `front` fields during initial retrieval, never `back` before the learner's first answer.
+- `lesson_number: 10`; filter `status != deprecated`, `reps > 0`, `due_lesson <= 10`.
+- Sort strictly `(due_lesson ASC, lapses DESC, id ASC)`; select first 5, leaving others unmodified.
+- `srs_step_total: 2`: (1) show all five numbered `front` only and receive one combined reply; (2) one combined check, with at most one bundled retry for wrong answers.
+- `initial_learner_active_target_min: 3-4`; `total_srs_target_min: 5`; `bundled_retry_cap_min: 2`. Any excess over five minutes replaces reading time.
+- Do not reveal `back` until the learner responds.
 
-1. id 40 (due 7, lapses 1, type vocab) — front: mitigate (v) — Guardrails help mitigate the risks of AI.
-2. id 42 (due 7, lapses 0, type vocab) — front: cusp (n) — We are on the cusp of a transformation in education.
-3. id 43 (due 7, lapses 0, type vocab) — front: deviation (n) — Tutoring lifts students two standard deviations above average.
-4. id 44 (due 7, lapses 0, type vocab) — front: distribution (n) — A normal distribution shows most scores in the middle.
-5. id 52 (due 7, lapses 0, type chunk) — front: English centers are ready to buy off-the-shelf programs.
+1. id 15 (due 9, lapses 1, pattern) — front: The data clearly shows a strong link between Decision 2371 and the surge in demand for English teachers.
+2. id 54 (due 9, lapses 1, pattern) — front: The number that really stands out is that Vietnam needs 22,000 more English teachers by 2030.
+3. id 25 (due 9, lapses 0, chunk) — front: English is learned THROUGH commanding AI: the child uses English as a key to solve real tasks.
+4. id 49 (due 9, lapses 0, chunk) — front: As of May 2026, there were 102,097 unfilled teaching positions nationwide, about 22,000 of them in English.
+5. id 53 (due 9, lapses 0, chunk) — front: There is a striking mismatch between national ambitions and on-the-ground capacity.
 
-## Speaking — strictly 3 turns (P25)
+## Reading — strictly 2 steps (P25)
 
-- Theme: **Why Now?** Vietnam's English-education reform, staffing shortage, the urgency of a practical AI-English course.
-- `speaking_step_total: 3`: [Ход 1 из 3] brief warm-up; [Ход 2 из 3] longer explanation of why now with previously learned figures; [Ход 3 из 3] transfer to the learner's teaching/work or ordinary life.
-- Practice previously covered Present Perfect in the replies where context permits; do not introduce or require any new C1 grammar/pattern.
-- No fourth speaking question. After turn 3 (or the 25-minute stop): delayed feedback, at most 3 high-value corrections, at most 2 useful chunks (not introduced as new required material), and one brief retry of one corrected phrase.
-- Use only facts in `introduced_material`; treat reform numbers as previously studied material rather than externally verified facts.
-- Follow `track_B/prompts/tutor_speaking.md` and `track_B/prompts/analytics_contract.md`.
+- Theme from `program.json`, Week 2 Day 3: parents' stress around education costs, the IELTS test-preparation bubble, and reported willingness to spend 29–47% of family budget on education. Distinguish numbers from interpretations; do not invent statistics or imply that different expenditure figures have identical denominators.
+- `reading_step_total: 2`. Step 1: explain at most 3 essential words with brief Russian glosses; print complete 8–10-sentence reading text in chat, >=70% of facts new relative to `introduced_material`, any review sentences explicitly marked `(review)`; ask exactly 2 questions (gist; detail/inference) in one message.
+- Step 2: after comprehension reply, ask for a 30–45-second summary (2–3 sentences); after learner's answer give at most 2 high-value corrections and select up to 2 useful chunks (one professional and one general-use), without extra questions.
+- No additional C1 pattern or unintroduced grammar required; every learning prompt and reading text appears in the chat.
+- Apply `track_B/prompts/reading_tutor.md` and `track_B/prompts/analytics_contract.md`.
 
 ## covered_grammar
 
@@ -77,29 +75,21 @@ related: [progress.json, LESSON_START.md, ../AGENTS.md, ../track_B/local/protoco
 
 ## not_scored_yet
 
-- All grammar not explicitly present in `covered_grammar` is `not yet covered - info` and must not trigger a score penalty, drill, SRS error card, or aggregated error log. Keep raw events privately for analytics when relevant.
-- No new C1 patterns or vocabulary are required for today's speaking block.
+- Grammar outside `covered_grammar` = `not yet covered - info`; no penalty, unsolicited drill, aggregated `error_log` entry or SRS error card; raw events may be saved privately as analytics.
 
 ## Agent payload and timing guard
 
-- `lesson_number: 9`; `week: 2`; `day: 2`; `mode: practice`; `session_kind: Lesson`.
-- Provide this plan, the block-specific payload, and the literal `track_B/prompts/analytics_contract.md` to each read-only role in sequence. The orchestrator is the only writer.
-- Per role, supply `step_index`, `step_total`, `elapsed_min` (or null), `time_source` and `stop_new_tasks`.
-- First line of each learner-facing **teaching** message: `⏱ [Блок X/2 | Шаг Y из Z | ~M/30 мин]`. When no clock is available, use `~?/30 мин` and rely on Step Budget without inventing measured time.
-- Start lesson timer only after the learner confirms this plan; stop new questions at measured minute 25, at the last permitted step, or earlier if the learner stops. Safety hard cap 35.
-- All prompts, cards, examples and exercises are shown in the chat. Learner explanations/tasks default to English.
+- `lesson_number: 10`; `week: 2`; `day: 3`; `mode: practice`; `session_kind: Lesson`.
+- Hand current plan, relevant block-only payload, and literal `track_B/prompts/analytics_contract.md` to read-only roles sequentially; orchestrator is the only writer.
+- Provide each role `step_index`, `step_total`, `elapsed_min` (or null), `time_source`, `stop_new_tasks`.
+- First line of every learner-facing teaching message: `⏱ [Блок X/2 | Шаг Y из Z | ~M/30 мин]`. If system clock cannot be read, use `~?/30 мин` and step-budget guard.
+- Start timer on explicit learner confirmation; stop new tasks at minute 25 or last planned step, whichever comes first. Safety hard cap 35.
+- Default language English, apart from the permitted short Russian glosses for reading pre-words.
 
 ## Closure
 
-- [x] SRS: all 5 meanings correctly retrieved (ids 40/42/43/44/52), no retry; only these five cards updated.
-- [x] Speaking: 2 learner turns captured verbatim; third turn and retry skipped due P25 timebox; three delayed corrections issued.
-- [x] Learner explicitly reported `actual_learning_min: 22`; `model_wait_min: null` because not measured.
-- [x] Update daily lesson log, relevant JSON tables, `progress.json`, `session.md` and this plan after timing gate.
-- [x] Synchronize completed lesson files directly to GitHub `main`.
-
-## Outcome — Lesson 9 closure (2026-10-29)
-
-- SRS: all five cards correct first try. No retry and no new SRS cards. Updated only ids 40, 42, 43, 44, 52 to reps 3 / interval 6 / due lesson 15.
-- Speaking: 2 of 3 turns completed. Third turn not asked because the minute-25 stop had been reached; no speaking retry. Verbatim transcripts saved in `speaking_recordings.json`.
-- Timing: learner-reported productive learning **22 minutes**. Platform local clock indicated **25m38s elapsed** from confirmation to stop decision (includes waits), not full chat duration; model wait unmeasured.
-- New grammar and material: none. Next: Lesson 10, Week 2 Day 3, Reading.
+- [ ] SRS: run the exact five-card package and record results for shown cards only.
+- [ ] Reading: deliver the text, two questions and one summary prompt, within P25 step/time budget.
+- [ ] Ask learner for integer `actual_learning_min`, and record measured model waiting separately if available.
+- [ ] Update daily log, the relevant JSON tables, `progress.json`, `session.md`, and this plan.
+- [ ] Synchronize completed lesson files to GitHub `main`.
