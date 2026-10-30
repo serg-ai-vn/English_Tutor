@@ -351,5 +351,31 @@
     "material_ref": "track_A/today.md",
     "status": "closed_early",
     "notes": "Two complete learner turns preserved verbatim; stop new tasks at measured ~25.6 minutes after lesson start, before third planned turn. Two of three attempted, feedback shown. Total learner productive time 22 min; per-block time unknown."
+  },
+  {
+    "task_date": "2026-10-30",
+    "lesson_number": 10,
+    "session_kind": "Lesson",
+    "planned_duration_min": 5,
+    "actual_duration_min": null,
+    "duration_kind": "lesson_total_reported_block_not_measured",
+    "skill": "srs",
+    "activity": "Batch ids 15,54,25,49,53; meanings 5/5 following clarification",
+    "material_ref": "track_A/today.md",
+    "status": "done",
+    "notes": "No retry; block time not measured; 35 productive minutes total reported by learner."
+  },
+  {
+    "task_date": "2026-10-30",
+    "lesson_number": 10,
+    "session_kind": "Lesson",
+    "planned_duration_min": 25,
+    "actual_duration_min": null,
+    "duration_kind": "lesson_total_reported_block_not_measured",
+    "skill": "reading",
+    "activity": "Ten-sentence text, two comprehension questions, feedback; summary skipped",
+    "material_ref": "track_A/today.md",
+    "status": "closed_early",
+    "notes": "Gist correct, second answer partly correct; clock cap exceeded."
   }
 ]
