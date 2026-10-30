@@ -228,10 +228,10 @@
     "back": "S15 — связь двух фактов. Структура: The data clearly shows a strong link between [A] and [B]. Секция: evidence.",
     "topic": "pattern",
     "ease": 2.5,
-    "reps": 1,
+    "reps": 2,
     "lapses": 1,
-    "due_lesson": 9,
-    "interval_lessons": 1,
+    "due_lesson": 13,
+    "interval_lessons": 3,
     "example": "Daily: The data clearly shows a strong link between sleep quality and productivity at work.",
     "pitch_section": "evidence",
     "register": "spoken"
@@ -368,10 +368,10 @@
     "back": "Английский учится ЧЕРЕЗ командование ИИ: ребёнок использует английский как ключ к решению реальных задач",
     "topic": "methodology",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 0,
-    "due_lesson": 9,
-    "interval_lessons": 3
+    "due_lesson": 16,
+    "interval_lessons": 6
   },
   {
     "id": 26,
@@ -656,10 +656,10 @@
     "back": "Дефицит кадров: 102 097 вакансий, из них ~22 000 по английскому",
     "topic": "market",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 0,
-    "due_lesson": 9,
-    "interval_lessons": 1
+    "due_lesson": 16,
+    "interval_lessons": 6
   },
   {
     "id": 50,
@@ -704,10 +704,10 @@
     "back": "Разительный разрыв между национальными амбициями и реальными возможностями на местах",
     "topic": "market",
     "ease": 2.5,
-    "reps": 2,
+    "reps": 3,
     "lapses": 0,
-    "due_lesson": 9,
-    "interval_lessons": 3
+    "due_lesson": 16,
+    "interval_lessons": 6
   },
   {
     "id": 54,
@@ -716,10 +716,10 @@
     "front": "The number that really stands out is that Vietnam needs 22,000 more English teachers by 2030.",
     "back": "S14 — привлечь внимание к цифре. Структура: The number that really stands out is [fact]. Секция: evidence/hook.",
     "topic": "pattern",
-    "due_lesson": 9,
-    "interval_lessons": 1,
+    "due_lesson": 13,
+    "interval_lessons": 3,
     "ease": 2.5,
-    "reps": 1,
+    "reps": 2,
     "lapses": 1,
     "example": "Daily: The number that really stands out is that 80% of users come back within the first week.",
     "pitch_section": "evidence/hook",
